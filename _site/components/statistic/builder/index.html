@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Preconnect -->
+    <link rel="dns-prefetch" href="//cdn.brand.illinois.edu">
+    <link rel="dns-prefetch" href="//cdn.disability.illinois.edu">
+    <link rel="dns-prefetch" href="//onetrust.techservices.illinois.edu">
+
+    <!-- Illinois Toolkit -->
+    <link rel="icon" href="https://cdn.brand.illinois.edu/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.brand.illinois.edu/toolkit/dev/toolkit.css" media="all">
+    <script src="https://cdn.brand.illinois.edu/toolkit/dev/toolkit.js"></script>
+
+    <title>Statistic</title>
+</head>
+<body style="margin: 0;">
+    <header>
+        <il-header>
+            <div slot="wordmark">
+                <il-unit-wordmark>
+                    <h1><a href="../../../index.html">Component Builder Information</a></h1>
+                </il-unit-wordmark>
+            </div>
+        </il-header>
+    </header>
+    <main>
+
+
+    
+<script>
+const componentBuilder = {
+    component_name: "il-statistic",
+    component_template: `<em slot="stat">#6</em> Overall ranking among undergraduate programs in the U.S.`,
+    background: ["", "white", "orange", "blue", "gradient", "orangegradient"],
+    size: ["small", "medium", "large", "extralarge"],
+    width: "230px"
+}
+</script>
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function(event) {
+    let options = document.getElementById('options');
+    document.getElementById('name').innerHTML = componentBuilder.component_name;
+    document.getElementById('template').innerHTML = componentBuilder.component_template;
+    const singleItem = new Map();
+    const multipleItems = new Array();
+    for (const [key, value] of Object.entries(componentBuilder)) {
+        if (Array.isArray(value)) {
+            let label = document.createElement('label');
+            let select = document.createElement('select');
+            select.name = key;
+            select.id = key;
+            value.forEach(element => { 
+                let option = document.createElement('option'); 
+                option.value = element;
+                option.innerHTML = element;
+                select.append(option);
+            });
+            label.innerHTML = key;
+            label.append(select);
+            options.append(label);
+        } else if (key != 'component_name' && key != 'component_template') {
+            let label = document.createElement('label');
+            let input = document.createElement('input');
+            input.id = key;
+            input.value = value;
+            input.name = key;
+            label.innerHTML = key;
+            label.append(input);
+            options.append(label);
+        }
+    }
+});
+
+function build() {
+    let builder = document.getElementById('builder');
+    builder.innerHTML = '';
+    let buildingCode = document.getElementById('buildingCode');
+    let builderObject = document.createElement(componentBuilder.component_name);
+    for (const [key, value] of Object.entries(componentBuilder)) {
+         if (key != 'component_name' && key != 'component_template') {
+             let valueEntered = document.getElementById(key).value;
+             builderObject.setAttribute(key, valueEntered);
+         }
+    }
+    builderObject.innerHTML = document.getElementById('template').value;
+    buildingCode.innerText = builderObject.outerHTML;
+    builder.append(builderObject);
+}
+
+</script>
+
+<style>
+#options label {
+    display: block;
+    margin-top: 10px;
+}
+
+.headingarea {
+    padding: 0 50px;
+}
+
+#options input, #options select {
+    margin-left: 10px;
+    width: 500px;
+}
+
+code#buildingCode {
+    display: block;
+    padding: 30px;
+    background: var(--il-cloud);
+    margin: 20px;
+    border: thin solid black;
+}
+
+textarea#template {
+    width: 800px;
+    height: 200px;
+}
+</style>
+<div class="il-formatted headingarea">
+<h1 id="name"></h1>
+<div id="options">
+    <textarea id="template"></textarea>
+</div>
+
+<p><button class="il-button" onclick="build();">Build Component</button>
+</div>
+
+<div id="builder" class="il-formatted"></div>
+
+<code id="buildingCode"></code>
+
+</div>
+
+</main>
+</body>
+</html>
