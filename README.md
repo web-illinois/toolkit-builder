@@ -18,4 +18,4 @@ All of the components are driven through a .md file and a .json file in the /com
 
 ## Adding environments
 
-All of the environments are driven through a .json file in the /environments folder. If you add a new json file, it should add all the components to point to the new environment. 
+All of the environments are driven through a .json file in the /environments folder. If you add a new json file, it should add all the components to point to the new environment. The order of the 
