@@ -1,0 +1,32 @@
+{
+    "title": "Image Feature",
+    "slug" : "image-feature",
+    "description": "The Image Feature component adds a picture on one side and text with a background on the other side.",
+    "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-image-feature",
+    "attributes" : [
+        {
+            "name": "align",
+            "description" : "Align variables",
+            "type": "dropdown",
+            "values" : [ "left", "right" ]
+        },
+        {
+            "name": "background",
+            "description" : "Background of the text",
+            "type": "dropdown",
+            "values" : [ "", "white", "solid", "orange" ]
+        },
+        {
+            "name": "size",
+            "description" : "Size of the picture",
+            "type": "dropdown",
+            "values" : [ "", "small" , "large", "portrait" ]
+        },
+        {
+            "name": "src",
+            "description" : "URL of the image",
+            "type": "url",
+            "value": "https://picsum.photos/1200/400"
+        }
+    ]
+}

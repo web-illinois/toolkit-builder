@@ -1,0 +1,25 @@
+{
+    "title": "Button (anchor)",
+    "slug" : "button-anchor",
+    "description": "",
+    "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-button",
+    "attributes" : [
+        {
+            "name": "href",
+            "description" : "URL of where the link goes to",
+            "type": "url",
+            "value": "https://www.example.com"
+        }
+    ],
+    "classes" : [
+        {
+            "type": "fixed",
+            "value": "il-button"
+        },
+        {
+            "description" : "Button Theme",
+            "type": "dropdown",
+            "values": ["il-white-blue", "il-white-orange", "il-blue", "il-orange"]
+        }
+    ]
+}

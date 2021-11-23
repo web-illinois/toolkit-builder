@@ -1,0 +1,14 @@
+{
+    "title": "Breadcrumbs",
+    "slug" : "breadcrumbs",
+    "description": "",
+    "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-breadcrumbs",
+    "attributes" : [
+        {
+            "name": "title",
+            "description" : "The heading for the breadcrumbs section, provided for accessibility purposes, defaults to 'You are here'",
+            "type": "string",
+            "value": ""
+        }
+    ]
+}

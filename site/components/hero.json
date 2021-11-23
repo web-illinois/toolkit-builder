@@ -1,0 +1,26 @@
+{
+    "title": "Hero Image",
+    "slug" : "hero-image",
+    "description": "",
+    "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-hero",
+    "attributes" : [
+        {
+            "name": "align",
+            "description" : "Align text in the image",
+            "type": "dropdown",
+            "values" : [ "top left", "top center", "top right", "center left", "center center", "center right", "bottom left", "bottom center", "bottom right" ]
+        },
+        {
+            "name": "background",
+            "description" : "URL of the image",
+            "type": "url",
+            "value": "https://picsum.photos/1920/1280"
+        },
+        {
+            "name": "color",
+            "description" : "Theme color while the image is loading -- note that in a blue theme, the buttons are orange and vice versa",
+            "type": "dropdown",
+            "values": ["blue", "orange"]
+        }
+    ]
+}

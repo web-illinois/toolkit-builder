@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="dns-prefetch" href="{{ environment.prefetch }}">
+    <link rel="icon" href="https://cdn.brand.illinois.edu/favicon.ico">
+    <link rel="stylesheet" href="{{ environment.path }}/toolkit.css" media="all">
+    <script src="{{ environment.path }}/toolkit.js"></script>
+    <script src="/scripts/component.js"></script>
+    <link rel="stylesheet" href="/styles/component.css" media="all">
+    <title>Header Information on {{ environment.name }} | U of I </title>
+</head>
+<body style="margin: 0;">
+<header>
+    <il-header>
+        <div slot="wordmark">
+            <il-unit-wordmark>
+                <h1><a href="/index.html">Component Builder Information</a></h1>
+            </il-unit-wordmark>
+        </div>
+    </il-header>
+</header>
+<main>
+
+<div class="il-formatted headingarea text">
+    <h1>Header Information on {{ environment.name }}</h1>
+</div>
+
+<div class="il-formatted headingarea">
+<h2>How to add it to your page</h2>
+
+<p>Copy and paste this in your &lt;head&gt; tag in your HTML page.</p>
+
+<code id="buildingCode">
+{{ environment.name || buildHeader: environments }}
+</code>
+
+</div>
+
+</main>
+</body>
+</html>

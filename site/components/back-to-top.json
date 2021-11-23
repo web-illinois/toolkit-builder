@@ -1,0 +1,20 @@
+{
+    "title": "Back to Top",
+    "slug" : "back-to-top",
+    "description": "",
+    "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-back-to-top",
+    "attributes" : [
+        {
+            "name": "target",
+            "description" : "The ID of the element which represents the top of the page. If provided, the page will scroll to this element.",
+            "type": "string",
+            "value": ""
+        },
+        {
+            "name": "alt",
+            "description" : "The accessible text label of the button, defaults to 'Back to top'",
+            "type": "string",
+            "value": ""
+        }
+    ]
+}

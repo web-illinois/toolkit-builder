@@ -1,0 +1,32 @@
+{
+    "title": "Clickable Card",
+    "slug" : "clickable-card",
+    "description": "",
+    "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-clickable-card",
+    "attributes" : [
+        {
+            "name": "width",
+            "description" : "Length of the component. If left blank, it will span the entire width of the container",
+            "type": "length",
+            "value": "500px"
+        },
+        {
+            "name": "src",
+            "description" : "URL of the image",
+            "type": "url",
+            "value": "https://picsum.photos/1920/1280"
+        },
+        {
+            "name": "href",
+            "description" : "URL of where the clickable card goes to",
+            "type": "url",
+            "value": "https://www.example.com"
+        },
+        {
+            "name": "background",
+            "description" : "Background of the text. Note that hovering or focusing will swap the color",
+            "type": "dropdown",
+            "values": ["white", "blue"]
+        }
+    ]
+}

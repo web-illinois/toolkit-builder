@@ -1,0 +1,20 @@
+{
+    "title": "Call To Action",
+    "slug" : "call-to-action",
+    "description": "",
+    "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-call-to-action",
+    "attributes" : [
+        {
+            "name": "alignment",
+            "description" : "Alignment of the text",
+            "type": "dropdown",
+            "values": ["left", "center", "right"]
+        },
+        {
+            "name": "background",
+            "description" : "Background of the text",
+            "type": "dropdown",
+            "values": [ "white", "blue", "orange", "orangegradient", "gradient" ]
+        }
+    ]
+}

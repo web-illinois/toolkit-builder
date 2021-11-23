@@ -1,0 +1,17 @@
+{
+    "title": "Button",
+    "slug" : "button",
+    "description": "",
+    "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-button",
+    "classes" : [
+        {
+            "type": "fixed",
+            "value": "il-button"
+        },
+        {
+            "description" : "Button Theme",
+            "type": "dropdown",
+            "values": ["il-white-blue", "il-white-orange", "il-blue", "il-orange"]
+        }
+    ]
+}

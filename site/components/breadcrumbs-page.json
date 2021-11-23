@@ -1,0 +1,26 @@
+{
+    "title": "Breadcrumbs Page",
+    "slug" : "breadcrumbs-page",
+    "description": "",
+    "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-breadcrumbs-page",
+    "attributes" : [
+        {
+            "name": "home",
+            "description" : "A boolean value if this is the home page",
+            "type": "string",
+            "value": ""
+        },
+        {
+            "name": "current",
+            "description" : "A boolean value if this is the current page",
+            "type": "string",
+            "value": ""
+        },
+        {
+            "name": "href",
+            "description" : "The link to the page this refers to",
+            "type": "string",
+            "value": ""
+        }
+    ]
+}

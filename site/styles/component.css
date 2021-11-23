@@ -1,0 +1,49 @@
+.headingarea {
+    padding: 0 50px;
+}
+
+.il-formatted.headingarea h2 {
+    padding-top: 1rem;
+    border-top: solid thin var(--il-blue);
+}
+
+.headingarea.text {
+    max-width: var(--il-content-max-width);
+    margin: 40px auto;
+}
+
+.headingarea .built {
+    display: flex; 
+    column-gap: 50px;
+}
+
+.headingarea .built .children {
+    flex: 1;
+}
+
+#options label, #class-list label {
+    display: block;
+    margin-top: 10px;
+}
+
+#options input, #options select, #class-list input, #class-list select{
+    margin-left: 10px;
+    width: 300px;
+}
+
+code#buildingCode {
+    display: block;
+    padding: 30px;
+    background: var(--il-cloud);
+    margin:  20px 0;
+    border: thin solid black;
+}
+
+textarea#template {
+    width: 100%;
+    height: 200px;
+}
+
+#template-information {
+    display: none;
+}

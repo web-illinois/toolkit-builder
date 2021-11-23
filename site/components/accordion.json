@@ -1,0 +1,17 @@
+{
+    "title": "Accordion",
+    "slug" : "accordion",
+    "description": "",
+    "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-accordion",
+    "classes" : [
+        {
+            "type": "fixed",
+            "value": "il-accordion"
+        },
+        {
+            "description" : "Style of the accordion",
+            "type": "dropdown",
+            "values": ["il-details-solid", "il-details-bordered"]
+        }
+    ]
+}
