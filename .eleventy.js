@@ -85,7 +85,7 @@ module.exports = function (eleventyConfig) {
     returnValue += `<tr><th scope='row'>Setup Information</th>`;
     returnValue += `<td><a href='https://github.com/web-illinois/toolkit/wiki/Recommended-HTML-Header'>Read Documentation</a></td>`;
     environments.forEach(e => {
-      returnValue += `<td><a href='/${e.slug}'>Try Out</a></td>`;
+      returnValue += `<td><a href='/${e.slug}/index.html'>Try Out</a></td>`;
     });
 
     returnValue += "</tr>";
@@ -93,7 +93,7 @@ module.exports = function (eleventyConfig) {
       returnValue += `<tr><th scope='row'>${c.title}</th>`;
       returnValue += `<td><a href='${c.documentation}'>Read Documentation</a></td>`;
       environments.forEach(e => {
-        returnValue += `<td><a href='/${e.slug}/${c.slug}'>Try Out</a></td>`;
+        returnValue += `<td><a href='/${e.slug}/${c.slug}/index.html'>Try Out</a></td>`;
       });
       returnValue += "</tr>";
     });
