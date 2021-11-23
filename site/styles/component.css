@@ -18,17 +18,21 @@
 }
 
 .headingarea .built .children {
-    flex: 1;
+    flex: 1 0 0;
 }
 
 #options label, #class-list label {
     display: block;
     margin-top: 10px;
+    background: var(--il-cloud-1);
+    padding: 10px;
+    font-family: var(--il-source-sans);
 }
 
 #options input, #options select, #class-list input, #class-list select{
     margin-left: 10px;
     width: 300px;
+    font: 1rem var(--il-source-sans);
 }
 
 code#buildingCode {

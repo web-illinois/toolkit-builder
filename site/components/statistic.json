@@ -1,0 +1,32 @@
+{
+    "title": "Statistic",
+    "slug" : "statistic",
+    "description": "",
+    "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-statistic",
+    "attributes" : [
+        {
+            "name": "size",
+            "description" : "Size of the statistic",
+            "type": "dropdown",
+            "values" : [ "small", "medium", "large", "extralarge" ]
+        },
+        {
+            "name": "width",
+            "description" : "Width of the statistic. If not present, it will stretch to the full width",
+            "type": "length",
+            "value": "500px"
+        }
+    ],
+    "classes": [
+        {
+            "description" : "Theme",
+            "type": "dropdown",
+            "values": ["il-theme-gray", "il-theme-white", "il-theme-orange", "il-theme-blue", "il-theme-blue-gradient", "il-theme-orange-gradient"]
+        },
+        {
+            "description" : "Color of the text if you want to override it. Not all colors will work with all themes",
+            "type": "dropdown",
+            "values": ["", "il-orange", "il-industrial-blue", "il-arches-blue", "il-arches-blue-dark", "il-patina", "il-orange-light", "il-harvest", "il-harvest-light", "il-arches-blue-light"]
+        }
+    ]
+}
