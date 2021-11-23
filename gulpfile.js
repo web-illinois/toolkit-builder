@@ -1,7 +1,5 @@
 var gulp = require("gulp");
-const jsonConcat = require('gulp-json-concat');
 const concat = require('gulp-concat');
-
 
 gulp.task('concat-components', () => {
     return gulp.src('./site/components/*.json')
