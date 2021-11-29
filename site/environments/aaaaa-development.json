@@ -3,5 +3,6 @@
     "slug": "latest",
     "prefetch": "//dev.toolkit.illinois.edu",
     "path": "//dev.toolkit.illinois.edu/latest",
-    "externalCode": ""
+    "externalCodePre": "",
+    "externalCodePost": ""
   }

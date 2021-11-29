@@ -1,0 +1,13 @@
+{
+    "title": "Icons",
+    "slug" : "icon",
+    "description": "",
+    "documentation" : "https://github.com/web-illinois/toolkit/wiki",
+    "classes" : [
+        {
+            "description" : "Icon Theme",
+            "type": "dropdown",
+            "values": ["il-icon", "il-icon-line" ]
+        }
+    ]
+}

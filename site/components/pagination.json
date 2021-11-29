@@ -1,0 +1,26 @@
+{
+    "title": "Pagination",
+    "slug" : "pagination",
+    "description": "",
+    "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-pagination",
+    "attributes" : [
+        {
+            "name": "pages",
+            "description" : "total number of pages listed - integer only",
+            "type": "string",
+            "value": "5"
+        },
+        {
+            "name": "page",
+            "description" : "current page - integer only",
+            "type": "string",
+            "value": "3"
+        },
+        {
+            "name": "param",
+            "description" : "querystring parameter added to the URL (defaults to 'page')",
+            "type": "string",
+            "value": ""
+        }
+    ]
+}

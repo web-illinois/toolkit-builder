@@ -1,0 +1,32 @@
+{
+    "title": "Video Feature",
+    "slug" : "video-feature",
+    "description": "",
+    "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-video-feature",
+    "attributes" : [
+        {
+            "name": "align",
+            "description" : "Whether the video is on the left or right",
+            "type": "dropdown",
+            "values" : [ "left", "right" ]
+        },
+        {
+            "name": "background",
+            "description" : "Background of the text",
+            "type": "dropdown",
+            "values" : [ "", "white", "solid", "orange" ]
+        },
+        {
+            "name": "size",
+            "description" : "Size of the video",
+            "type": "dropdown",
+            "values" : [ "", "small" , "large" ]
+        },
+        {
+            "name": "src",
+            "description" : "URL of the video -- will allow for Youtube, Mediaspace/Kaltura, or Vimeo",
+            "type": "url",
+            "value": "https://mediaspace.illinois.edu/media/t/1_0o2ypqvp"
+        }
+    ]
+}

@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="dns-prefetch" href="{{ environment.prefetch }}">
     <link rel="icon" href="https://cdn.brand.illinois.edu/favicon.ico">
-    {{ environment.externalCode }}
+    {{ environment.externalCodePre }}
     <link rel="stylesheet" href="{{ environment.path }}/toolkit.css" media="all">
     <script src="{{ environment.path }}/toolkit.js"></script>
+    {{ environment.externalCodePost }}
     <script src="/scripts/component.js"></script>
     <link rel="stylesheet" href="/styles/component.css" media="all">
     <title>{{ title }} on {{ environment.name }} | U of I </title>
@@ -47,7 +48,7 @@
             <textarea id="template"></textarea>
         </div>
         <div class="children">
-            <h3 style="margin-top: 0;">Attributes -- change these values</h3>
+            <h3>Attributes -- change these values</h3>
             <input type="hidden" id="component-name" value="{{ componentName }}">
             <div id="options">
             {{ slug | buildAttributes: components }}

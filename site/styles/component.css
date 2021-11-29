@@ -29,10 +29,21 @@
     font-family: var(--il-source-sans);
 }
 
-#options input, #options select, #class-list input, #class-list select{
+#options input, #options select, #class-list input, #class-list select {
     margin-left: 10px;
-    width: 300px;
     font: 1rem var(--il-source-sans);
+}
+
+#options input, #class-list input {
+    width: 300px;
+}
+
+#options input.length {
+    width: 50px;
+}
+
+#options .checklink {
+    margin-left: 10px;
 }
 
 code#buildingCode {

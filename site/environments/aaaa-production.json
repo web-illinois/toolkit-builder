@@ -3,5 +3,6 @@
     "slug": "prod",
     "prefetch": "//cdn.toolkit.illinois.edu",
     "path": "//cdn.toolkit.illinois.edu/2",
-    "externalCode": ""
+    "externalCodePre": "",
+    "externalCodePost": ""
   }
