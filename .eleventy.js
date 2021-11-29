@@ -126,6 +126,25 @@ module.exports = function (eleventyConfig) {
     return returnValue;
   });
 
+  eleventyConfig.addFilter("buildPrecode", function (name, environments) {
+    let returnValue = '';
+    environments.forEach(environment => {
+      if (environment.name === name) {
+        returnValue = environment.externalCodePre.replace( /</gi, '&lt;').replace(/>/gi, '&gt;<br>');
+      }
+    });
+    return returnValue;
+  });
+
+  eleventyConfig.addFilter("buildPostcode", function (name, environments) {
+    let returnValue = '';
+    environments.forEach(environment => {
+      if (environment.name === name) {
+        returnValue = environment.externalCodePost.replace( /</gi, '&lt;').replace(/>/gi, '&gt;<br>');
+      }
+    });
+    return returnValue;
+  });
 
   return {
     dir: {

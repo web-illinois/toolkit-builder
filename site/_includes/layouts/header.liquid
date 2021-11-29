@@ -36,6 +36,19 @@
 {{ environment.name || buildHeader: environments }}
 </code>
 
+<p>This environment has the following code before the toolkit.</p>
+
+<code class="building">
+{{ environment.name || buildPrecode: environments }}
+</code>
+
+<p>This environment has the following code after the toolkit.</p>
+
+<code class="building">
+{{ environment.name || buildPostcode: environments }}
+</code>
+
+
 </div>
 
 </main>

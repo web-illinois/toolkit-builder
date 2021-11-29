@@ -46,7 +46,7 @@
     margin-left: 10px;
 }
 
-code#buildingCode {
+code#buildingCode, code.building {
     display: block;
     padding: 30px;
     background: var(--il-cloud);
