@@ -15,7 +15,3 @@ permalink: "{{ environment.slug }}/{{ slug }}/"
   <il-breadcrumbs-page href="/academics/graduate">Graduate programs</il-breadcrumbs-page>
   <il-breadcrumbs-page current>Degree programs</il-breadcrumbs-page>
 </div>
-
-## Technical Information
-
-You should only use the il-breadcrumbs-page tag inside this tag. 

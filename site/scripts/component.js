@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", function(event) {
     document.getElementById('template').innerHTML = document.getElementById('template-information').innerHTML;
+    if (document.getElementById('template-information').innerHTML == '') {
+        document.getElementById('template').disabled = true;
+        document.getElementById('template-title').innerHTML = 'This component does not support HTML';
+    }
     build();
 });
 

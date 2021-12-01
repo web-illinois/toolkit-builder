@@ -1,5 +1,6 @@
 {
-    "name": "Production",
+    "name": "Version 2.3",
+    "type": "production",
     "slug": "prod",
     "prefetch": "//cdn.toolkit.illinois.edu",
     "path": "//cdn.toolkit.illinois.edu/2",

@@ -1,7 +1,7 @@
 ---
 title: Web Toolkit Builder
 layout: layouts/page.liquid
-environment: production
+environment: development
 ---
 
 ## Components

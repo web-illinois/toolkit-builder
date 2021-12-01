@@ -213,7 +213,3 @@ permalink: "{{ environment.slug }}/{{ slug }}/"
         </il-nav-section>
     </il-nav>
 </div>
-
-## Technical Information
-
-Note that this uses the il-unit-wordmark, il-search, il-nav, and il-nav-section

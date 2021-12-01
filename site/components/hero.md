@@ -23,12 +23,3 @@ permalink: "{{ environment.slug }}/{{ slug }}/"
     </li>
 </ul>
 </div>
-
-
-## Suggested Use
-
-A main hero image at the top of the page with one or two calls to action. The image should be capable of being viewed in many different aspect ratios, and should be high quality. 
-
-## Accessibility Requirements
-
-Only have one of these, and this should have an h1 tag. 

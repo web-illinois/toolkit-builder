@@ -15,5 +15,3 @@ permalink: "{{ environment.slug }}/{{ slug }}/"
 ## Technical Information
 
 This automatically goes to the bottom of the page and disappears when the user is at the top of the page. 
-
-Any HTML inside this tag is not displayed. 

@@ -1,5 +1,6 @@
 {
     "name": "Latest Development",
+    "type": "development",
     "slug": "latest",
     "prefetch": "//dev.toolkit.illinois.edu",
     "path": "//dev.toolkit.illinois.edu/latest",

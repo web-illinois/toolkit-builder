@@ -1,5 +1,6 @@
 {
     "name": "Wordpress 5.7.4",
+    "type": "development",
     "slug": "wordpress574",
     "prefetch": "//dev.toolkit.illinois.edu",
     "path": "//dev.toolkit.illinois.edu/latest",
