@@ -32,7 +32,7 @@
 
     <h2>How it looks</h2>
 </div>
-
+<div id="builder-pre" class="{{ bodyClass }}"></div>
 <div id="builder" class="{{ bodyClass }}"></div>
 
 <div class="il-formatted headingarea text">
@@ -46,16 +46,24 @@
         <div class="children">
             <h3 id="template-title">Template -- enter raw HTML here</h3>
             <textarea id="template"></textarea>
+            <label class="template-option">Template Sample Variations: <select id="template-options" onchange="changeTemplate(this);"></select></label>
+            <h3>Custom Style Tag before text</h3>
+            <textarea id="pre">&lt;style&gt;
+&lt;/style&gt;</textarea>
         </div>
         <div class="children">
-            <h3>Attributes -- change these values</h3>
+            <h3>Attributes</h3>
             <input type="hidden" id="component-name" value="{{ componentName }}">
             <div id="options">
             {{ slug | buildAttributes: components }}
             </div>
-            <h3>Class options -- change these values</h3>
+            <h3>Class options</h3>
             <div id="class-list">
             {{ slug | buildClassList: components }}
+            </div>
+            <h3>Styles</h3>
+            <div id="style-list">
+            {{ slug | buildStyles: components }}
             </div>
         </div>
     </div>
