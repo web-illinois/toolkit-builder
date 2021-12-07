@@ -4,18 +4,25 @@
     "description": "",
     "environment": "development",
     "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-call-to-action",
-    "attributes" : [
+    "classes": [
         {
             "name": "alignment",
             "description" : "Alignment of the text",
             "type": "dropdown",
-            "values": ["left", "center", "right"]
+            "values" : [ "il-align-left", "il-align-center" ]
         },
         {
-            "name": "background",
-            "description" : "Background of the text",
+            "description" : "Theme",
             "type": "dropdown",
-            "values": [ "white", "blue", "orange", "orangegradient", "gradient" ]
+            "values": ["il-theme-gray", "il-theme-white", "il-theme-blue", "il-theme-blue-gradient"]
+        }
+    ],
+    "styles": [
+        {
+            "name": " --il-call-to-action-icon-size",
+            "description" : "Size of the icon, with the default being 7rem",
+            "type": "string",
+            "value": ""
         }
     ]
 }

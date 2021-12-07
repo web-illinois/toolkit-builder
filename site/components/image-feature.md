@@ -10,7 +10,7 @@ pagination:
     alias: environment
 permalink: "{{ environment.slug }}/{{ slug }}/"
 ---
-<div id="template-information">
+<div class="template-information" data-name="default">
 <h3>Student Life</h3>
 <p>Animal sciences students extend their learning and career networks beyond
 the classroom through internships, <a href="#">judging teams</a>, student organizations, undergraduate research

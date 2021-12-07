@@ -10,4 +10,4 @@ pagination:
     alias: environment
 permalink: "{{ environment.slug }}/{{ slug }}/"
 ---
-<div id="template-information"></div>
+<div class="template-information" data-name="default"></div>

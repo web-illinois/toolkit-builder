@@ -4,14 +4,6 @@
     "environment" : "development",
     "description": "",
     "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-statistic",
-    "attributes" : [
-        {
-            "name": "width",
-            "description" : "Width of the statistic. If not present, it will stretch to the full width",
-            "type": "length",
-            "value": "500px"
-        }
-    ],
     "classes": [
         {
             "name": "size",

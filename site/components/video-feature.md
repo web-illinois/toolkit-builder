@@ -10,7 +10,7 @@ pagination:
     alias: environment
 permalink: "{{ environment.slug }}/{{ slug }}/"
 ---
-<div id="template-information">
+<div class="template-information" data-name="default">
 <h3>Career Possibilities</h3>
 <p>Whether you see yourself working as a veterinarian or running the family farm, a degree from 
 Animal Sciences will provide you with a hands-on education that will help you identify and solve 

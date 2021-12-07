@@ -9,7 +9,7 @@ pagination:
     alias: environment
 permalink: "{{ environment.slug }}/{{ slug }}/"
 ---
-<div id="template-information">
+<div class="template-information" data-name="default">
   <div slot="contact" class="il-footer-contact uofi_address">
     <p><a href="/" id="link-1">Animal Science</a></p>
     <p>174 Bevier Hall, MC-000</p>

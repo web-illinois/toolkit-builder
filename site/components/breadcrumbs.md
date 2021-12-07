@@ -9,7 +9,7 @@ pagination:
     alias: environment
 permalink: "{{ environment.slug }}/{{ slug }}/"
 ---
-<div id="template-information">
+<div class="template-information" data-name="default">
   <il-breadcrumbs-page home href="/" />Home</il-breadcrumbs-page>
   <il-breadcrumbs-page href="/academics">Academics</il-breadcrumbs-page>
   <il-breadcrumbs-page href="/academics/graduate">Graduate programs</il-breadcrumbs-page>
