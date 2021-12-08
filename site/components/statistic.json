@@ -1,7 +1,7 @@
 {
     "title": "Statistic",
     "slug" : "statistic",
-    "environment" : "development",
+    "environment" : "production",
     "description": "",
     "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-statistic",
     "classes": [

@@ -2,7 +2,7 @@
     "title": "Call To Action",
     "slug" : "call-to-action",
     "description": "",
-    "environment": "development",
+    "environment": "production",
     "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-call-to-action",
     "classes": [
         {
