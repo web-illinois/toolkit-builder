@@ -1,0 +1,12 @@
+{
+    "title": "Formatted",
+    "slug" : "formatted",
+    "description": "",
+    "documentation" : "https://github.com/web-illinois/toolkit/wiki/Stylesheets",
+    "classes": [
+        {
+            "type": "fixed",
+            "value": "il-formatted"
+        }
+    ]
+}
