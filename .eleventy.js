@@ -27,6 +27,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("addDescription", ComponentFilters.buildDescription);
 
+  eleventyConfig.addFilter("addIconList", ComponentFilters.buildIconInformation);
+
   eleventyConfig.addFilter("buildAttributes", AttributeList.build);
 
   eleventyConfig.addFilter("buildClassList", ClassList.build);

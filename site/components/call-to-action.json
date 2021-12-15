@@ -19,8 +19,14 @@
     ],
     "styles": [
         {
-            "name": " --il-call-to-action-icon-size",
+            "name": "--il-call-to-action-icon-size",
             "description" : "Size of the icon, with the default being 7rem",
+            "type": "dropdown",
+            "values": ["5rem", "6rem", "8rem", "9rem", "10rem", "11rem"]
+        },
+        {
+            "name": "--il-call-to-action-width",
+            "description" : "Width of the call to action (default is auto, which means it fits the container)",
             "type": "string",
             "value": ""
         }

@@ -28,5 +28,25 @@
             "type": "dropdown",
             "values": ["white", "blue"]
         }
+    ],
+    "styles" : [
+        {
+            "name": "--il-clickable-card-margin",
+            "description" : "Margin",
+            "type": "string",
+            "value": ""
+        },
+        {
+            "name": "--il-clickable-card-image-filter",
+            "description" : "Hover/focus filter for the image (see https://developer.mozilla.org/en-US/docs/Web/CSS/filter)",
+            "type": "dropdown",
+            "values": [ "blur(5px)", "grayscale(80%)", "hue-rotate(90deg)", "contrast(200%)" ]
+        },
+        {
+            "name": "--il-clickable-card-post",
+            "description" : "Chevron that signifies it is a post. SVG",
+            "type": "dropdown",
+            "values": [ "url('')" ]
+        }
     ]
 }

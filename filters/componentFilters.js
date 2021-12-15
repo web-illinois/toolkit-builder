@@ -8,4 +8,12 @@ module.exports = class ComponentFilters {
         });
         return returnValue;
     }
+
+    static buildIconInformation(name, icons) {
+        let returnValue = '';
+        icons.forEach(icon => {
+            returnValue += '<div class="template-information" data-name="' + icon.ligatures[0] + '">' + icon.ligatures[0] + '</div>'
+        });
+        return returnValue;
+    }
 }

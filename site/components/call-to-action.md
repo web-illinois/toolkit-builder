@@ -11,13 +11,13 @@ pagination:
 permalink: "{{ environment.slug }}/{{ slug }}/"
 ---
 <div class="template-information" data-name="default">
+<span slot="icon" class="il-icon-line">faq</span>
 <h3>Get started today!</h3>
 <p>Enroll in a class after you are admitted as a non-degree student.</p>
 <p><a href="#" class="il-button">Registration overview</a><a href="#" class="il-button">Contact Us</a><a href="#" class="il-button">Accessing email/Compass</a></p>
 </div>
 
-<div class="template-information" data-name="with icon">
-<span slot="icon" class="il-icon-line">faq</span>
+<div class="template-information" data-name="no icon">
 <h3>Get started today!</h3>
 <p>Enroll in a class after you are admitted as a non-degree student.</p>
 <p><a href="#" class="il-button">Registration overview</a><a href="#" class="il-button">Contact Us</a><a href="#" class="il-button">Accessing email/Compass</a></p>

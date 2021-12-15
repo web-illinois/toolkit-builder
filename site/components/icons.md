@@ -1,18 +1,15 @@
 ---
 title: Icon
-layout: layouts/component.liquid
+layout: layouts/icons.liquid
 componentName: div
 slug: icon
+bodyClass: headingarea text il-formatted
 pagination:
     data: environments
     size: 1
     alias: environment
 permalink: "{{ environment.slug }}/{{ slug }}/"
 ---
-<div class="template-information" data-name="default">
-faq
-</div>
-
 ## Technical Information
 
-More text is at https://cdn.brand.illinois.edu/toolkit/2/examples/stylesheets/icons/line-ligatures/index.html
+More text is at https://cdn.toolkit.illinois.edu/2/examples/stylesheets/icons/line-ligatures/index.html
