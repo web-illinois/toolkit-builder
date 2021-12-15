@@ -9,9 +9,6 @@ pagination:
     alias: environment
 permalink: "{{ environment.slug }}/{{ slug }}/"
 ---
-<div class="template-information" data-name="default">
-</div>
-
 ## Technical Information
 
 This automatically goes to the bottom of the page and disappears when the user is at the top of the page. 

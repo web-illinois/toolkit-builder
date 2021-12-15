@@ -7,14 +7,14 @@
         {
             "name": "home",
             "description" : "A boolean value if this is the home page",
-            "type": "string",
-            "value": ""
+            "type": "dropdown",
+            "values": ["", "home"]
         },
         {
             "name": "current",
             "description" : "A boolean value if this is the current page",
-            "type": "string",
-            "value": ""
+            "type": "dropdown",
+            "values": ["", "current"]
         },
         {
             "name": "href",

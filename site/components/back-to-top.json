@@ -16,5 +16,19 @@
             "type": "string",
             "value": ""
         }
+    ],
+    "styles" : [
+        {
+            "name": "--il-back-to-top-foreground-color",
+            "description" : "Color of the back to top",
+            "type": "dropdown",
+            "values" : [ "white", "var(--il-blue)", "var(--il-orange)" ]
+        },
+        {
+            "name": "--il-back-to-top-background-color",
+            "description" : "Background color of the back to top",
+            "type": "dropdown",
+            "values" : [ "white", "var(--il-blue)", "var(--il-orange)" ]
+        }
     ]
 }

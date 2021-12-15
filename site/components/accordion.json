@@ -13,5 +13,73 @@
             "type": "dropdown",
             "values": ["il-details-solid", "il-details-bordered"]
         }
+    ],
+    "styles" : [
+        {
+            "name": "--il-details-content",
+            "description" : "Content of the detail component (defaults to a space, but can add any unicode character)",
+            "type": "dropdown",
+            "values" : [ "'\\002B'", "'\\25BC'", "'\\25BD'" ]
+        },
+        {
+            "name": "--il-details-contentopen",
+            "description" : "Content of the detail component when opened (defaults to a space, but can add any unicode character)",
+            "type": "dropdown",
+            "values" : [ "'\\2212'", "'\\25BC'", "'\\25BD'"  ]
+        },
+        {
+            "name": "--il-details-image",
+            "description" : "SVG image using url(''), defaults to the current caret, use url('') to make it blank",
+            "type": "dropdown",
+            "values" : [ "url('')" ]
+        },
+        {
+            "name": "--il-details-transform",
+            "description" : "CSS transform of the image/unicode (see https://developer.mozilla.org/en-US/docs/Web/CSS/transform)",
+            "type": "string",
+            "value" : ""
+        },
+        {
+            "name": "--il-details-transformopen",
+            "description" : "CSS transform of the image/unicode when it is open (see https://developer.mozilla.org/en-US/docs/Web/CSS/transform)",
+            "type": "string",
+            "value" : ""
+        },
+        {
+            "name": "--il-details-marginleft",
+            "description" : "Left hand margin of the details, adjustable if you use a larger caret",
+            "type": "string",
+            "value" : ""
+        },
+        {
+            "name": "--il-details-background",
+            "description" : "Background color of the details for the solid version",
+            "type": "string",
+            "value" : ""
+        },
+        {
+            "name": "--il-details-background-hover",
+            "description" : "Background hover/focus color of the details",
+            "type": "string",
+            "value" : ""
+        },
+        {
+            "name": "--il-details-color",
+            "description" : "Background text color of the details for the solid version",
+            "type": "string",
+            "value" : ""
+        },
+        {
+            "name": "--il-details-bordered-marginleft",
+            "description" : "Left hand bordered margin of the details, adjustable if you use a larger caret",
+            "type": "string",
+            "value" : ""
+        },
+        {
+            "name": "--il-details-bordered-maxwidth",
+            "description" : "Maximum width of the border for the bordered component, default to 900px",
+            "type": "string",
+            "value" : ""
+        }
     ]
 }

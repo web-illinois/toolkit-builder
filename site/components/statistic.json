@@ -20,15 +20,87 @@
     "styles" : [
         {
             "name": "--il-statistic-heading-color",
-            "description" : "Color of the statistic header",
+            "description" : "Color of the statistic header; some colors will be rejected based on the theme",
             "type": "dropdown",
             "values" : [ "var(--il-blue)", "var(--il-orange)", "var(--il-industrial-blue)", "var(--il-arches-blue-lighter-2)" ]
         },
         {
             "name": "--il-statistic-text-color",
-            "description" : "Color of the statistic text",
+            "description" : "Color of the statistic text; some colors will be rejected based on the theme",
             "type": "dropdown",
             "values" : [ "var(--il-blue)", "var(--il-orange)", "var(--il-industrial-blue)", "var(--il-arches-blue-lighter-2)" ]
+        },
+        {
+            "name": "--il-statistic-margin",
+            "description" : "Margin (default to .9375rem)",
+            "value": "",
+            "type": "string"
+        },
+        {
+            "name": "--il-statistic-font-size",
+            "description" : "Body font size",
+            "value": "",
+            "type": "string"
+        },
+        {
+            "name": "--il-statistic-line-height",
+            "description" : "Body line height",
+            "value": "",
+            "type": "string"
+        },
+        {
+            "name": "--il-statistic-stat-font-size",
+            "description" : "Statistic font size",
+            "value": "",
+            "type": "string"
+        },
+        {
+            "name": "--il-statistic-stat-line-height",
+            "description" : "Statistic line height",
+            "value": "",
+            "type": "string"
+        },
+        {
+            "name": "--il-statistic-stat-padding",
+            "description" : "Statistic padding",
+            "value": "",
+            "type": "string"
+        },
+        {
+            "name": "--il-statistic-source-font-size",
+            "description" : "Source font size",
+            "value": "",
+            "type": "string"
+        },
+        {
+            "name": "--il-statistic-source-line-height",
+            "description" : "Source line height",
+            "value": "",
+            "type": "string"
+        },
+        {
+            "name": "--il-statistic-padding",
+            "description" : "General padding (default to 30px 20px for all except extra large)",
+            "value": "",
+            "type": "string"
+        },
+        {
+            "name": "--il-statistic-width",
+            "description" : "Width of the statistic (defaults to 'auto')",
+            "value": "",
+            "type": "string"
+        },
+        {
+            "name": "--il-statistic-heading-margin",
+            "description" : "Margin around the stat",
+            "value": "",
+            "type": "string"
+        },
+        {
+            "name": "--il-statistic-source-margin",
+            "description" : "Margin around the source",
+            "value": "",
+            "type": "string"
         }
     ]    
 }

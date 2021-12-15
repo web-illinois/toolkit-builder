@@ -21,6 +21,11 @@
     flex: 1 0 0;
 }
 
+#template-options {
+    padding: 10px;
+    font: 1rem var(--il-source-sans);
+}
+
 #options label, #class-list label, #style-list label {
     display: block;
     margin-top: 10px;
@@ -40,6 +45,10 @@
 
 #options input.length {
     width: 50px;
+}
+
+#options input.single, #class-list input.single, #style-list input.single {
+    display: block;
 }
 
 #options .checklink {

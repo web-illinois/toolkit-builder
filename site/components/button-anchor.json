@@ -21,5 +21,43 @@
             "type": "dropdown",
             "values": ["il-white-blue", "il-white-orange", "il-blue", "il-orange"]
         }
+    ],
+    "styles" : [
+        {
+            "name": "--il-button-background-color",
+            "description" : "Background color",
+            "type": "dropdown",
+            "values" : [ "white", "black", "var(--il-blue)", "var(--il-orange)", "var(--il-industrial-blue)"]
+        },
+        {
+            "name": "--il-button-foreground-color",
+            "description" : "Text color",
+            "type": "dropdown",
+            "values" : [ "white", "black", "var(--il-blue)", "var(--il-orange)", "var(--il-industrial-blue)"]
+        },
+        {
+            "name": "--il-button-border-color",
+            "description" : "Border color",
+            "type": "dropdown",
+            "values" : [ "white", "black", "var(--il-blue)", "var(--il-orange)", "var(--il-industrial-blue)"]
+        },
+        {
+            "name": "--il-focused-button-background-color",
+            "description" : "Background color when focused / hovered",
+            "type": "dropdown",
+            "values" : [ "white", "black", "var(--il-blue)", "var(--il-orange)", "var(--il-industrial-blue)"]
+        },
+        {
+            "name": "--il-focused-button-foreground-color",
+            "description" : "Color when focused / hovered",
+            "type": "dropdown",
+            "values" : [ "white", "black", "var(--il-blue)", "var(--il-orange)", "var(--il-industrial-blue)"]
+        },
+        {
+            "name": "--il-focused-button-border-color",
+            "description" : "Border color when focused / hovered",
+            "type": "dropdown",
+            "values" : [ "white", "black", "var(--il-blue)", "var(--il-orange)", "var(--il-industrial-blue)"]
+        }
     ]
 }

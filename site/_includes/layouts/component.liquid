@@ -34,6 +34,7 @@
 </div>
 <div id="builder-pre" class="{{ bodyClass }}"></div>
 <div id="builder" class="{{ bodyClass }}"></div>
+<p class="il-formatted headingarea"><button class="il-button" onclick="build();">Update</button></p>
 
 <div class="il-formatted headingarea text">
 {{ content }}
@@ -46,12 +47,13 @@
         <div class="children">
             <h3 id="template-title">Template -- enter raw HTML here</h3>
             <textarea id="template"></textarea>
-            <label class="template-option">Template Sample Variations: <select id="template-options" onchange="changeTemplate(this);"></select></label>
             <h3>Custom Style Tag before text</h3>
             <textarea id="pre">&lt;style&gt;
 &lt;/style&gt;</textarea>
         </div>
         <div class="children">
+            <h3 id="template-header"><label for="template-options">Template Options</label></h3>
+            <select id="template-options" onchange="changeTemplate(this);"></select>
             <h3>Attributes</h3>
             <input type="hidden" id="component-name" value="{{ componentName }}">
             <div id="options">
@@ -67,18 +69,18 @@
             </div>
         </div>
     </div>
-<p><button class="il-button" onclick="build();">Update</button>
+<p><button class="il-button" onclick="build();">Update</button></p>
 
 </div>
 
 
-<div class="il-formatted headingarea">
+<div class="il-formatted headingarea text">
 <h2>How to add it to your page</h2>
 
 <p>Copy and paste this in your page</p>
 
 <code id="buildingCode"></code>
-
+<p id="buildingCode-warning">Note that this uses the custom style 'builder-custom'. You may need to change this if you are using multiple versions of this component with different styles.</p>
 </div>
 
 </main>

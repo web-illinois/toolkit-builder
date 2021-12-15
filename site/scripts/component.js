@@ -1,18 +1,20 @@
 document.addEventListener("DOMContentLoaded", function(event) {
     let templates = document.querySelectorAll('.template-information');
-    let templateOption = document.getElementsByClassName('template-option')[0];
+    let templateHeader = document.getElementById('template-header');
     let templateOptions = document.getElementById('template-options');
     if (templates.length == 0) {
         document.getElementById('template').disabled = true;
         document.getElementById('template-title').innerHTML = 'This component does not support HTML';
-        templateOption.style.display = 'none';
+        templateHeader.style.display = 'none';
+        templateOptions.style.display = 'none';
     } else {
         document.getElementById('template').innerHTML = templates[0].innerHTML;
         if (templates.length == 1) {
-            templateOption.style.display = 'none';
-        }
-        else {
-            templateOption.style.display = '';
+            templateHeader.style.display = 'none';
+            templateOptions.style.display = 'none';
+        } else {
+            templateHeader.style.display = '';
+            templateOptions.style.display = '';
             templates.forEach((element, index) => {
                 let opt = document.createElement('option');
                 opt.value = index;
@@ -45,11 +47,29 @@ function build() {
     } });
     let classList = document.querySelectorAll('#class-list input, #class-list select');
     classList.forEach(c => { if (c.value != '') builderObject.classList.add(c.value) });
-    let styleList = document.querySelectorAll('#style-list input');
-    styleList.forEach(s => { if (s.value != '') builderObject.style.cssText += s.id + ': ' + s.value + '; ' });
+
     builderObject.innerHTML = document.getElementById('template').value;
-    buildingCode.innerText = builderObject.outerHTML;
-    builder.append(builderObject);
+
+    let styleObject =  document.createElement('style');
+    let useCustomStyles = false;
+    let styleList = document.querySelectorAll('#style-list input');
+    styleObject.innerHTML = `${document.getElementById('component-name').value}.builder-custom { `;
+    styleList.forEach(s => { if (s.value != '') { useCustomStyles = true; styleObject.innerHTML += s.id + ': ' + s.value + ' !important; '; } });
+    styleObject.innerHTML += '}';
+    let warning = document.getElementById('buildingCode-warning');
+
+    if (useCustomStyles) {
+        builderObject.classList.add('builder-custom');
+        buildingCode.innerText = styleObject.outerHTML + '\n' + builderObject.outerHTML;
+        builder.append(styleObject);
+        builder.append(builderObject);
+        warning.style.display = '';
+    } else {
+        buildingCode.innerText = builderObject.outerHTML;
+        builder.append(builderObject);
+        warning.style.display = 'none';
+    }
+
     window.scrollTo(0, 0);
 }
 
