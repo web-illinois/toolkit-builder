@@ -2,9 +2,10 @@
 dist
 html
 node_modules
-package-lock.json
 var
 _site
 site/array/componentsPartial.txt
 site/array/environmentsPartial.txt
-site/_data
+site/_data/environments.json
+site/_data/components.json
+site/scripts/main.js

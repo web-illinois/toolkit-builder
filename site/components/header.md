@@ -213,3 +213,108 @@ permalink: "{{ environment.slug }}/{{ slug }}/"
         </il-nav-section>
     </il-nav>
 </div>
+
+<div class="template-information" data-name="with primary unit">
+    <div slot="wordmark">
+        <il-unit-wordmark>
+            <p class="il-primary-unit"><a href="/">College of Education </a></p>
+            <h1><a href="/">Council on Teacher Education</a></h1>
+        </il-unit-wordmark>
+    </div>
+    <il-search slot="search"></il-search>
+    <nav slot="links" class="il-links" aria-label="Top">
+        <ul>
+            <li><a id="link-1" href="#">Apply</a></li>
+            <li><a href="#">Donate</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <il-nav slot="navigation">
+        <il-nav-section>
+            <a href="#" slot="label">About</a>
+            <ul class="il-subnav">
+                <li>
+                    <a href="#">Calendar</a>
+                </li>
+                <li>
+                    <a href="#">Awards</a>
+                </li>
+                <li>
+                    <a href="#">Diversity</a>
+                </li>
+                <li>
+                    <a href="#">Contact Us</a>
+                </li>
+                <li>
+                    <a href="#">Visit</a>
+                </li>
+            </ul>
+        </il-nav-section>
+        <il-nav-link>
+            <a href="#">Accreditation</a>
+        </il-nav-link>
+        <il-nav-link>
+            <a href="#">Research and Outreach of a Long Button Name</a>
+        </il-nav-link>
+        <il-nav-section>
+                <a href="#" slot="label">Academics and Admissions of a Long Button Name</a>
+                <ul class="il-subnav">
+                    <li>
+                        <a href="#">Programs of Study</a>
+                    </li>
+                    <li>
+                        <a href="#">Future Students</a>
+                    </li>
+                    <li>
+                        <a href="#">Admissions</a>
+                    </li>
+                    <li>
+                        <a href="#">Student Life</a>
+                    </li>
+                    <li>
+                        <a href="#">Current Students</a>
+                    </li>
+                    <li>
+                        <a href="#">Study Abroad</a>
+                    </li>
+                    <li>
+                        <a href="#">Career Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Student Diversity and Inclusion and Broadening Participation</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="#">Staff</a>
+                    </li>
+                </ul>
+        </il-nav-section>
+    </il-nav>
+</div>
+<div class="template-information" data-name="no menu">
+    <div slot="wordmark">
+        <il-unit-wordmark>
+            <p class="il-primary-unit"><a href="/">College of Education</a></p>
+            <h1><a href="/">Impact Report 2021</a></h1>
+        </il-unit-wordmark>
+    </div>
+
+    <il-search slot="search"></il-search>
+
+    <nav slot="links" class="il-links" aria-label="Top">
+        <ul>
+            <li><a href="#">Apply</a></li>
+            <li><a href="#">Chat</a></li>
+            <li><a href="#">People</a></li>
+            <li><a href="#">Give</a></li>
+        </ul>
+    </nav>
+</div>
+
+## Technical Information
+
+Note that this is used in conjunction with the Navigation, Navigation Section, Unit Wordmark, and Search component.
+
+Often, a CMS will have tools that automate the navigation and can generate this automatically. Contact the team that is working with your CMS to see if this can be automated.

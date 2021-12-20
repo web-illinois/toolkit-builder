@@ -27,5 +27,5 @@ permalink: "{{ environment.slug }}/{{ slug }}/"
 
 ## Technical Notes
 
-Unlike most of the components, this is handled through straight javascript. Because of this, this only updates when the DOM loads, not when javascript changes the class information. 
+Unlike most of the components, this is handled through straight javascript. Because of this, this only updates when the DOM loads, not when javascript changes the class information. Because of this, the builder may not work as expected.
 

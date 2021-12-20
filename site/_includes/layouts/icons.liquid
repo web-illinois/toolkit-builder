@@ -1,16 +1,7 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="dns-prefetch" href="{{ environment.prefetch }}">
-    <link rel="icon" href="https://cdn.brand.illinois.edu/favicon.ico">
-    {{ environment.externalCodePre }}
-    <link rel="stylesheet" href="{{ environment.path }}/toolkit.css" media="all">
-    <script src="{{ environment.path }}/toolkit.js"></script>
-    {{ environment.externalCodePost }}
-    <script src="/scripts/component.js"></script>
-    <link rel="stylesheet" href="/styles/component.css" media="all">
+{% include head.liquid %}
     <title>{{ title }} on {{ environment.name }} | U of I </title>
 </head>
 <body style="margin: 0;">
@@ -66,7 +57,7 @@
             </div>
             <h3>Styles</h3>
             <div id="style-list">
-            {{ slug | buildStyles: components }}
+            {{ slug | buildStyles:  components, colors }}
             </div>
         </div>
     </div>
@@ -74,15 +65,7 @@
 
 </div>
 
-
-<div class="il-formatted headingarea text">
-<h2>How to add it to your page</h2>
-
-<p>Copy and paste this in your page</p>
-
-<code id="buildingCode"></code>
-<p id="buildingCode-warning">Note that this uses the custom style 'builder-custom'. You may need to change this if you are using multiple versions of this component with different styles.</p>
-</div>
+{% include buildingcode.liquid %}
 
 </main>
 </body>

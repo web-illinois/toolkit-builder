@@ -1,6 +1,7 @@
 module.exports = class Styles {
-    static build(name, components) {
+    static build(name, components, colors) {
         let returnValue = '';
+
         components.forEach(component => {
             if (component.slug === name) {
                 if (component.styles != null) {
@@ -11,6 +12,15 @@ module.exports = class Styles {
                             returnValue = returnValue + `<select id="${styleInfo.name}-options" onchange="document.getElementById('${styleInfo.name}').value = this.value">`;
                             returnValue = returnValue + `<option value="">Blank</option>`;
                             styleInfo.values.forEach(v => returnValue = returnValue + `<option value="${v}">${v}</option>`);
+                            returnValue = returnValue + "</select></label>";
+                        } else if (styleInfo.type == "colors") {
+                            returnValue = returnValue + `<label>${styleInfo.name} (<em>${styleInfo.description}</em>)<br>`;
+                            returnValue = returnValue + `<input name="${styleInfo.name}" id="${styleInfo.name}">`;
+                            returnValue = returnValue + `<select id="${styleInfo.name}-options" onchange="document.getElementById('${styleInfo.name}').value = this.value">`;
+                            returnValue = returnValue + `<option value="">Blank</option>`;
+                            returnValue = returnValue + `<option value="white">white</option>`;
+                            returnValue = returnValue + `<option value="black">black</option>`;
+                            colors.forEach(c => returnValue = returnValue + `<option value="var(--${c.name})">${c.name}</option>`);
                             returnValue = returnValue + "</select></label>";
                         } else if (styleInfo.type == "string") {
                             returnValue = returnValue + `<label>${styleInfo.name} (<em>${styleInfo.description}</em>)<input class="single" name="${styleInfo.name}" id="${styleInfo.name}" value="${styleInfo.value}"></label>`;

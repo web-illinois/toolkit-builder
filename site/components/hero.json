@@ -1,26 +1,112 @@
 {
     "title": "Hero Image",
-    "slug" : "hero-image",
+    "slug": "hero-image",
     "description": "",
-    "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-hero",
-    "attributes" : [
-        {
-            "name": "align",
-            "description" : "Align text in the image",
-            "type": "dropdown",
-            "values" : [ "top left", "top center", "top right", "center left", "center center", "center right", "bottom left", "bottom center", "bottom right" ]
-        },
+    "documentation": "https://github.com/web-illinois/toolkit/wiki/il-hero",
+    "attributes": [
         {
             "name": "background",
-            "description" : "URL of the image",
+            "description": "URL of the image",
             "type": "url",
             "value": "https://picsum.photos/1920/1280"
+        }
+    ],
+    "classes": [
+        {
+            "description": "Color Theme -- note that in a blue theme, the buttons are orange and vice versa",
+            "type": "dropdown",
+            "values": [
+                "",
+                "il-theme-orange",
+                "il-theme-blue"
+            ]
         },
         {
-            "name": "color",
-            "description" : "Theme color while the image is loading -- note that in a blue theme, the buttons are orange and vice versa",
+            "description": "Vertical Alignment",
             "type": "dropdown",
-            "values": ["blue", "orange"]
+            "values": [
+                "",
+                "il-align-top",
+                "il-align-center",
+                "il-align-bottom"
+            ]
+        },
+        {
+            "description": "Horizontal Alignment",
+            "type": "dropdown",
+            "values": [
+                "",
+                "il-align-left",
+                "il-align-center",
+                "il-align-right"
+            ]
+        }
+    ],
+    "styles": [
+        {
+            "name": "--il-hero-align-items",
+            "description" : "Alignment of items",
+            "values": [ "left", "center", "top" ],
+            "type": "dropdown"
+        },
+        {
+            "name": "--il-hero-background-color",
+            "description" : "Background color",
+            "type": "colors"
+        },
+        {
+            "name": "--il-hero-button-background-color",
+            "description" : "Button background color",
+            "type": "colors"
+        },
+        {
+            "name": "--il-hero-button-foreground-color",
+            "description" : "Button foreground color",
+            "type": "colors"
+        },
+        {
+            "name": "--il-hero-button-border-color",
+            "description" : "Button border color",
+            "type": "colors"
+        },
+        {
+            "name": "--il-hero-focused-button-background-color",
+            "description" : "Button background color when focused or hovered",
+            "type": "colors"
+        },
+        {
+            "name": "--il-hero-focused-button-foreground-color",
+            "description" : "Button foreground color when focused or hovered",
+            "type": "colors"
+        },
+        {
+            "name": "--il-hero-focused-button-border-color",
+            "description" : "Button border color when focused or hovered",
+            "type": "colors"
+        },
+        {
+            "name": "--il-hero-justify-content",
+            "description" : "Horizontal alignment of items in flexbox",
+            "values": [ "flex-start", "center", "flex-end" ],
+            "type": "dropdown"
+        },
+        {
+            "name": "--il-hero-text-align",
+            "description" : "Horizontal alignment of text",
+            "values": [ "left", "center", "right" ],
+            "type": "dropdown"
+        },
+        {
+            "name": "--il-hero-margin-left",
+            "description" : "Left margin",
+            "values": [ "auto", "0" ],
+            "type": "dropdown"
+        },
+        {
+            "name": "--il-hero-margin-right",
+            "description" : "Right margin",
+            "values": [ "auto", "0" ],
+            "type": "dropdown"
         }
     ]
 }

@@ -66,8 +66,7 @@
         {
             "name": "--il-details-color",
             "description" : "Background text color of the details for the solid version",
-            "type": "string",
-            "value" : ""
+            "type": "colors"
         },
         {
             "name": "--il-details-bordered-marginleft",

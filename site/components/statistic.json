@@ -1,7 +1,7 @@
 {
     "title": "Statistic",
     "slug" : "statistic",
-    "environment" : "production",
+    "environment" : "",
     "description": "",
     "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-statistic",
     "classes": [
@@ -21,14 +21,12 @@
         {
             "name": "--il-statistic-heading-color",
             "description" : "Color of the statistic header; some colors will be rejected based on the theme",
-            "type": "dropdown",
-            "values" : [ "var(--il-blue)", "var(--il-orange)", "var(--il-industrial-blue)", "var(--il-arches-blue-lighter-2)" ]
+            "type": "colors"
         },
         {
             "name": "--il-statistic-text-color",
             "description" : "Color of the statistic text; some colors will be rejected based on the theme",
-            "type": "dropdown",
-            "values" : [ "var(--il-blue)", "var(--il-orange)", "var(--il-industrial-blue)", "var(--il-arches-blue-lighter-2)" ]
+            "type": "colors"
         },
         {
             "name": "--il-statistic-margin",
