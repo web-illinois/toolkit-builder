@@ -23,6 +23,8 @@ module.exports = function (eleventyConfig) {
     allowedAttributes: []
   });
 
+  eleventyConfig.setUseGitIgnore(false);
+
   eleventyConfig.setLibrary("md", markdownIt);
 
   eleventyConfig.addFilter("addDescription", ComponentFilters.buildDescription);
