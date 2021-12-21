@@ -4,6 +4,7 @@ const TableOfContents = require("./filters/tableOfContents");
 const AttributeList = require("./filters/attributes");
 const ClassList = require("./filters/classList");
 const Styles = require("./filters/styles");
+const Colors = require("./filters/colorCheck");
 
 module.exports = function (eleventyConfig) {
 
@@ -44,6 +45,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("buildPrecode", EnvironmentFilters.buildPreCode);
 
   eleventyConfig.addFilter("buildPostcode", EnvironmentFilters.buildPostCode);
+
+  eleventyConfig.addFilter("addColors", Colors.build);
 
   return {
     dir: {

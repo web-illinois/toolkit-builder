@@ -1,0 +1,50 @@
+.flex {
+    display: flex;
+    padding: 20px;
+    column-gap: 20px;
+}
+
+.flex > div {
+    flex: 1;
+}
+
+.large {
+    font-size: 24px;
+}
+
+.bold {
+    font-size: 19px;
+    font-weight: 700
+}
+
+.normal {
+    font-size: 16px;
+}
+
+label {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#foreground, #background {
+    height: 400px;
+    overflow-y: scroll;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.il-formatted .runoptions h3 {
+    font-size: 1.125rem;
+}
+
+.il-formatted .swatch {
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    border: thin solid black;
+    margin-left: 3px;
+}
+
+.il-formatted h3:first-child {
+    margin-top: 1.4137931034em;
+}
