@@ -16,7 +16,7 @@
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-uglify": "^3.0.2",
-    "markdown-it": "^11.0.0",
+    "markdown-it": "^12.3.2",
     "markdown-it-attrs": "^3.0.3"
   }
 }
