@@ -3,6 +3,7 @@
     "slug" : "breadcrumbs",
     "description": "",
     "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-breadcrumbs",
+    "environment" : "",
     "attributes" : [
         {
             "name": "title",

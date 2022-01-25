@@ -3,6 +3,7 @@
     "slug" : "accordion",
     "description": "",
     "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-accordion",
+    "environment" : "",
     "classes" : [
         {
             "type": "fixed",

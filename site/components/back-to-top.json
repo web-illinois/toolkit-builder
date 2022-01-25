@@ -3,6 +3,7 @@
     "slug" : "back-to-top",
     "description": "",
     "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-back-to-top",
+    "environment" : "",
     "attributes" : [
         {
             "name": "target",

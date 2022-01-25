@@ -1,0 +1,9 @@
+{
+    "name": "New Components",
+    "type": "development",
+    "slug": "newcomp",
+    "prefetch": "//dev.toolkit.illinois.edu",
+    "path": "//dev.toolkit.illinois.edu/components/card",
+    "externalCodePre": "",
+    "externalCodePost": ""
+  }

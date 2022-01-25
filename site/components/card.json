@@ -1,0 +1,29 @@
+{
+    "title": "Card",
+    "slug" : "card",
+    "description": "",
+    "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-card",
+    "environment" : "development",
+    "attributes" : [
+        {
+            "name": "width",
+            "description" : "Length of the component. If left blank, it will span the entire width of the container",
+            "type": "length",
+            "value": "500px"
+        },
+        {
+            "name": "src",
+            "description" : "URL of the image",
+            "type": "url",
+            "value": "https://picsum.photos/1920/1280"
+        }
+    ],
+    "styles" : [
+        {
+            "name": "--il-clickable-card-margin",
+            "description" : "Margin",
+            "type": "string",
+            "value": ""
+        }
+    ]
+}

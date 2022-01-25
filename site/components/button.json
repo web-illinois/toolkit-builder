@@ -3,6 +3,7 @@
     "slug" : "button",
     "description": "",
     "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-button",
+    "environment" : "",
     "classes" : [
         {
             "type": "fixed",
