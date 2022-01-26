@@ -27,19 +27,19 @@
     "styles": [
         {
             "name": "--il-image-feature-with-overlay-left",
-            "description" : "Left border",
+            "description" : "Margin to the left for the overlay",
             "type": "dropdown",
             "values": ["10%", "15%", "20%", "25%", "30%", "35%", "40%", "45%", "50%", "55%", "60%", "65%", "70%", "75%"]
         },
         {
             "name": "--il-image-feature-with-overlay-top",
-            "description" : "Left border",
+            "description" : "Margin to the top for the overlay",
             "type": "dropdown",
             "values": ["10%", "15%", "20%", "25%", "30%", "35%", "40%", "45%", "50%", "55%", "60%", "65%", "70%", "75%"]
         },
         {
             "name": "--il-image-feature-with-overlay-width",
-            "description" : "Left border",
+            "description" : "Width of the overlay",
             "type": "dropdown",
             "values": ["10%", "15%", "20%", "25%", "30%", "35%", "40%", "45%", "50%", "55%", "60%", "65%", "70%", "75%"]
         },
@@ -55,7 +55,7 @@
         },
         {
             "name": "--il-image-feature-with-overlay-padding",
-            "description" : "Left border",
+            "description" : "Padding for the overlay",
             "type": "dropdown",
             "values": ["0", "1rem", "2rem", "3rem", "4rem", "5rem", "6rem", "7rem"]
         }
