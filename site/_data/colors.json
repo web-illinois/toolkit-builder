@@ -1,5 +1,13 @@
 [
   {
+    "name": "white",
+    "value": "#ffffff"
+  },
+  {
+    "name": "black",
+    "value": "#000000"
+  },
+  {
     "name": "il-orange",
     "value": "#ff552e"
   },
