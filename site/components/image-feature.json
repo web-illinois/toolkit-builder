@@ -28,5 +28,58 @@
             "type": "url",
             "value": "https://picsum.photos/1200/400"
         }
+    ],
+    "classes": [
+        {
+            "description": "Overlay Option",
+            "type": "dropdown",
+            "values": [
+                "",
+                "il-overlay"
+            ]
+        },
+        {
+            "description": "Theme",
+            "type": "dropdown",
+            "values": [
+                "",
+                "il-theme-orange",
+                "il-theme-blue",
+                "il-theme-white"
+            ]
+        },
+        {
+            "description": "Horizontal Alignment",
+            "type": "dropdown",
+            "values": [
+                "",
+                "il-align-left",
+                "il-align-right"
+            ]
+        }
+    ],
+    "styles": [
+        {
+            "name": "--il-image-feature-with-overlay-width",
+            "description" : "Width of the overlay",
+            "type": "dropdown",
+            "values": ["10%", "15%", "20%", "25%", "30%", "35%", "40%", "45%", "50%", "55%", "60%", "65%", "70%", "75%"]
+        },
+        {
+            "name": "--il-image-feature-with-overlay-background",
+            "description" : "Button background color",
+            "type": "colors"
+        },
+        {
+            "name": "--il-image-feature-with-overlay-background-solid",
+            "description" : "Button foreground color",
+            "type": "colors"
+        },
+        {
+            "name": "--il-image-feature-with-overlay-padding",
+            "description" : "Padding for the overlay",
+            "type": "dropdown",
+            "values": ["", "0", "1rem", "2rem", "3rem", "4rem", "5rem", "6rem", "7rem"]
+        }
     ]
 }

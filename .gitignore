@@ -9,3 +9,4 @@ site/array/environmentsPartial.txt
 site/_data/environments.json
 site/_data/components.json
 site/scripts/main.js
+site/scripts/main-preview.js

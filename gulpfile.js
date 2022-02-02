@@ -33,4 +33,12 @@ gulp.task('javascript', () => {
     .pipe(gulp.dest('./site/scripts'));
 });
 
-gulp.task("default", gulp.series(["javascript", "concat-components", "array-components", "concat-environments", "array-environments"]));
+gulp.task('javascript-preview', () => {
+  return gulp.src(['./site/scripts/clipboard.js', './site/scripts/preview.js'])
+    .pipe(concat('main-preview.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./site/scripts'));
+});
+
+
+gulp.task("default", gulp.series(["javascript", "javascript-preview", "concat-components", "array-components", "concat-environments", "array-environments"]));
