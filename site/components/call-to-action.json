@@ -4,6 +4,7 @@
     "description": "",
     "environment": "",
     "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-call-to-action",
+    "preview": true,
     "classes": [
         {
             "name": "alignment",

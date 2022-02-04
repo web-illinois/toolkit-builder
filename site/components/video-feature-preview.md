@@ -1,0 +1,16 @@
+---
+title: Video Feature
+layout: layouts/preview.liquid
+componentName: il-video-feature
+bodyClass: il-formatted
+slug: video-feature
+permalink: "preview/{{ slug }}/"
+---
+<div class="template-information" data-name="default">
+<h3>Career Possibilities</h3>
+<p>Whether you see yourself working as a veterinarian or running the family farm, a degree from 
+Animal Sciences will provide you with a hands-on education that will help you identify and solve 
+the challenges of the future. </p>
+<a href="#" class="il-button">Career Possibilities</a>
+<a href="#" class="il-button">Internships</a>
+</div>

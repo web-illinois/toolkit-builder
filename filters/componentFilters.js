@@ -9,6 +9,16 @@ module.exports = class ComponentFilters {
         return returnValue;
     }
 
+    static buildBuilder(name, components) {
+        let returnValue = '';
+        components.forEach(component => {
+            if (component.slug === name) {
+                returnValue = `<p><a href='/prod/${component.slug}/index.html'>Edit this component</a>.</p>`;
+            }
+        });
+        return returnValue;
+    }
+
     static buildIconInformation(name, icons) {
         let returnValue = '';
         icons.forEach(icon => {

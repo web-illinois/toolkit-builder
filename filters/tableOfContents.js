@@ -9,6 +9,9 @@ module.exports = class TableOfContents {
                 returnValue += "<th scope='col'>" + e.name + "</th>";
             }
         });
+        if (environmenttype == "production") {
+            returnValue += "<th scope='col'>Preview</th>";
+        }
 
         returnValue += `<tr><th scope='row'>Setup Information</th>`;
         returnValue += `<td><a href='https://github.com/web-illinois/toolkit/wiki/Recommended-HTML-Header'>Read Documentation</a></td>`;
@@ -28,6 +31,9 @@ module.exports = class TableOfContents {
                         returnValue += `<td><a href='/${e.slug}/${c.slug}/index.html'>Build</a></td>`;
                     }
                 });
+                if (environmenttype == "production" && c.preview != null && c.preview) {
+                    returnValue += `<td><a href='/preview/${c.slug}/index.html'>Preview</a></td>`;
+                }
                 returnValue += "</tr>";
             }
         });

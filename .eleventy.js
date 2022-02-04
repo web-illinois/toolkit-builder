@@ -5,6 +5,7 @@ const AttributeList = require("./filters/attributes");
 const ClassList = require("./filters/classList");
 const Styles = require("./filters/styles");
 const Colors = require("./filters/colorCheck");
+const Preview = require("./filters/preview");
 
 module.exports = function (eleventyConfig) {
 
@@ -30,6 +31,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("addDescription", ComponentFilters.buildDescription);
 
+  eleventyConfig.addFilter("addBuilder", ComponentFilters.buildBuilder);
+
   eleventyConfig.addFilter("addIconList", ComponentFilters.buildIconInformation);
 
   eleventyConfig.addFilter("buildAttributes", AttributeList.build);
@@ -47,6 +50,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("buildPostcode", EnvironmentFilters.buildPostCode);
 
   eleventyConfig.addFilter("addColors", Colors.build);
+
+  eleventyConfig.addFilter("preview", Preview.build);
 
   return {
     dir: {

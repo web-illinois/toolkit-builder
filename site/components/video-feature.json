@@ -3,6 +3,7 @@
     "slug" : "video-feature",
     "description": "",
     "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-video-feature",
+    "preview": true,
     "attributes" : [
         {
             "name": "align",

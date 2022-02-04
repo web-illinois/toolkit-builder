@@ -3,6 +3,7 @@
     "slug": "hero-image",
     "description": "",
     "documentation": "https://github.com/web-illinois/toolkit/wiki/il-hero",
+    "preview": true,
     "attributes": [
         {
             "name": "background",

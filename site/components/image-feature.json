@@ -3,6 +3,7 @@
     "slug" : "image-feature",
     "description": "The Image Feature component adds a picture on one side and text with a background on the other side.",
     "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-image-feature",
+    "preview": true,
     "attributes" : [
         {
             "name": "align",
