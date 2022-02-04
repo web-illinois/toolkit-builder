@@ -18,8 +18,6 @@ module.exports = class Styles {
                             returnValue = returnValue + `<input name="${styleInfo.name}" id="${styleInfo.name}">`;
                             returnValue = returnValue + `<select id="${styleInfo.name}-options" onchange="document.getElementById('${styleInfo.name}').value = this.value">`;
                             returnValue = returnValue + `<option value="">Blank</option>`;
-                            returnValue = returnValue + `<option value="white">white</option>`;
-                            returnValue = returnValue + `<option value="black">black</option>`;
                             colors.forEach(c => returnValue = returnValue + `<option value="var(--${c.name})">${c.name}</option>`);
                             returnValue = returnValue + "</select></label>";
                         } else if (styleInfo.type == "string") {

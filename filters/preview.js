@@ -26,7 +26,7 @@ module.exports = class ComponentFilters {
                         if (c.type == "dropdown") {
                             c.values.forEach((v, i2) => {
                                 if (v != '') {
-                                    returnValue = returnValue + `<div class='il-formatted'><h2>Attribute: ${c.name} is ${v}</h2></div>`;
+                                    returnValue = returnValue + `<div class='il-formatted header-info'><h2>Attribute: ${c.name} is ${v}</h2></div>`;
                                     returnValue = returnValue + `<${componentName} ${attributes} ${c.name}="${v}" class="${classes}"></${componentName}>`;
                                 }
                             });
@@ -39,7 +39,7 @@ module.exports = class ComponentFilters {
                         if (c.type == "dropdown") {
                             c.values.forEach((v, i2) => {
                                 if (v != '') {
-                                    returnValue = returnValue + `<div class='il-formatted'><h2>Class: ${v}</h2></div>`;
+                                    returnValue = returnValue + `<div class='il-formatted header-info'><h2>Class: ${v}</h2></div>`;
                                     returnValue = returnValue + `<${componentName} ${attributes} class="${classes}${v.trim()}"></${componentName}>`;
                                 }
                             });

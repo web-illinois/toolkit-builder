@@ -3,6 +3,7 @@ title: Breadcrumbs Page
 layout: layouts/component.liquid
 componentName: il-breadcrumbs-page
 slug: breadcrumbs-page
+bodyClass: headingarea text
 pagination:
     data: environments
     size: 1

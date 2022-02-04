@@ -3,6 +3,7 @@
     "slug" : "clickable-card",
     "description": "",
     "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-clickable-card",
+    "preview": true,
     "attributes" : [
         {
             "name": "width",

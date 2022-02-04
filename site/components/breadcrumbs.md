@@ -2,6 +2,7 @@
 title: Breadcrumbs
 layout: layouts/component.liquid
 componentName: il-breadcrumbs
+bodyClass: headingarea text
 slug: breadcrumbs
 pagination:
     data: environments

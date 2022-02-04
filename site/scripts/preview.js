@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     
     if (templates.length > 0) {
         for (let i = 0; i < samples.children.length; i++) {
-            if (samples.children[i].tagName != 'DIV') {
+            if (!samples.children[i].classList.contains('header-info')) {
                 samples.children[i].innerHTML = templates[0].innerHTML;
             }
         }
