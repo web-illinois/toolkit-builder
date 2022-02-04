@@ -3,6 +3,7 @@
     "slug" : "icon",
     "description": "",
     "documentation" : "https://github.com/web-illinois/toolkit/wiki",
+    "preview": true,
     "classes" : [
         {
             "description" : "Icon Theme",

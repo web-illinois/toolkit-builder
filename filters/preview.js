@@ -51,4 +51,47 @@ module.exports = class ComponentFilters {
         });
         return returnValue;
     }
+
+    static icons(name, componentName, components, icons) {
+        let returnValue = '';
+        let attributes = '';
+        let classes = '';
+        components.forEach(component => {
+            if (component.slug === name) {
+                if (component.attributes != null) {
+                    component.attributes.forEach((c, i) => {
+                        if (c.type == "url" || c.type == "string") {
+                            attributes = attributes + `${c.name}="${c.value}" `;
+                        } 
+                    });
+                }
+
+                if (component.classes != null) {
+                    component.classes.forEach((c, i) => {
+                        if (c.type == "fixed" || c.type == "string") {
+                            classes = classes + `${c.value} `;
+                        } 
+                    });
+                }
+                
+                if (component.classes != null) {
+                    component.classes.forEach((c, i) => {
+                        if (c.type == "dropdown") {
+                            c.values.forEach((v, i2) => {
+                                if (v != '') {
+                                    returnValue = returnValue + `<div class='il-formatted header-info'><h2>Class: ${v}</h2></div><div class='grid'>`;
+                                    icons.forEach((icon, i3) => {
+                                        returnValue = returnValue + `<div><div ${attributes} class="${classes}${v.trim()}">${icon.ligatures[0]}</div><div>${icon.ligatures[0]}</div></div>`;
+                                    });
+                                    returnValue = returnValue + `</div>`;
+                                }
+                            });
+                        } 
+                    });
+                }
+
+            }
+        });
+        return returnValue;
+    }
 }

@@ -53,6 +53,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("preview", Preview.build);
 
+  eleventyConfig.addFilter("previewIcons", Preview.icons);
+
   return {
     dir: {
       input: "site"
