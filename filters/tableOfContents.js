@@ -15,7 +15,10 @@ module.exports = class TableOfContents {
         });
 
         returnValue += `<tr><th scope='row'>Setup Information</th>`;
-        returnValue += `<td><a href='https://github.com/web-illinois/toolkit/wiki/Recommended-HTML-Header'>Read Documentation</a></td><td> -- </td>`;
+        returnValue += `<td><a href='https://github.com/web-illinois/toolkit/wiki/Recommended-HTML-Header'>Read Documentation</a></td>`;
+        if (environmenttype == "production") {
+            returnValue += '<td> -- </td>';
+        }
         environments.forEach(e => {
             if (environmenttype == e.type) {
                 returnValue += `<td><a href='/${e.slug}/index.html'>Get Header</a></td>`;
