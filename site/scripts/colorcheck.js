@@ -17,6 +17,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
         foreground.innerHTML = foreground.innerHTML + `<div><input type='checkbox' value='${colorList[colorIndex]}' id='fore-${colorItems[1]}'><label for='fore-${colorItems[1]}'>${colorItems[0]} (${colorItems[1]})<span class='swatch' role='presentation' style='background-color: ${colorItems[1]};'></span></label></div>`;
         background.innerHTML = background.innerHTML + `<div><input type='checkbox' value='${colorList[colorIndex]}' id='back-${colorItems[1]}'><label for='back-${colorItems[1]}'>${colorItems[0]}<span class='swatch' role='presentation' style='background-color: ${colorItems[1]};'></span></label></div>`;
     }
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('fore') != '' && urlParams.get('back') != '') {
+        urlParams.get('fore').split(',').forEach(element => {
+            document.getElementById('fore-#' + element).checked = true;
+        });
+        urlParams.get('back').split(',').forEach(element => {
+            document.getElementById('back-#' + element).checked = true;
+        });
+        checkColorsFull();
+    }
 });
 
 function checkColorsFull() {
@@ -39,6 +49,9 @@ function checkColorsFull() {
 function checkColors(backgroundList, foregroundList) {
     let colors = document.getElementById('colors');
     let displayOption = document.getElementById('displayOptions').value;
+    let foregroundLink = foregroundList.map(f => f.split(';')[1].replace('#', '')).join(',');
+    let backgroundLink = backgroundList.map(b => b.split(';')[1].replace('#', '')).join(',');
+    document.getElementById('link').innerHTML = `<a href='https://builder.toolkit.illinois.edu/colorcheck/index.html?fore=${foregroundLink}&back=${backgroundLink}'>https://builder.toolkit.illinois.edu/colorcheck/index.html?fore=${foregroundLink}&back=${backgroundLink}</a>`;
     colors.innerHTML = '';
     for (let backgroundIndex = 0; backgroundIndex < backgroundList.length; backgroundIndex++) {
         for (let foregroundIndex = 0; foregroundIndex < foregroundList.length; foregroundIndex++) {

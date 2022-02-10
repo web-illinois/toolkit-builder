@@ -53,15 +53,15 @@
             <div id="options">
             {{ slug | buildAttributes: components }}
             </div>
-            <h3>Class options</h3>
+            <h3>Classes</h3>
             <div id="class-list">
             {{ slug | buildClassList: components }}
             </div>
             <details style="margin-top: 40px;">
             <summary style="font-size: 1rem;">
-            <h3 style="margin-top: 0;">Styles</h3>
+            <h3 style="margin-top: 0;">Advanced Options</h3>
             </summary>
-            <p>These options are only to be used in advanced situations -- most of your needs should be available through the attributes and styles, and this breaks the intent of having a unified design. </p>
+            <p>These options are only to be used in advanced situations -- most of your needs should be met through the attributes and classes, and this breaks the intent of having a unified design. </p>
             <div id="style-list">
             {{ slug | buildStyles: components, colors }}
             </div>
