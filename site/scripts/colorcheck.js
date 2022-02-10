@@ -19,12 +19,27 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get('fore') != '' && urlParams.get('back') != '') {
-        urlParams.get('fore').split(',').forEach(element => {
-            document.getElementById('fore-#' + element).checked = true;
-        });
-        urlParams.get('back').split(',').forEach(element => {
-            document.getElementById('back-#' + element).checked = true;
-        });
+        if (urlParams.get('custom') == 'fore')
+        {
+            document.getElementById('customcolor').value = '#' + urlParams.get('fore');
+            urlParams.get('back').split(',').forEach(element => {
+                document.getElementById('back-#' + element).checked = true;
+            });
+            document.getElementById('runOptions').value = 'foreground';
+        } else if (urlParams.get('custom') == 'back') {
+            document.getElementById('customcolor').value = '#' + urlParams.get('back');
+            urlParams.get('fore').split(',').forEach(element => {
+                document.getElementById('fore-#' + element).checked = true;
+            });
+            document.getElementById('runOptions').value = 'background';
+        } else {
+            urlParams.get('fore').split(',').forEach(element => {
+                document.getElementById('fore-#' + element).checked = true;
+            });
+            urlParams.get('back').split(',').forEach(element => {
+                document.getElementById('back-#' + element).checked = true;
+            });
+        }
         checkColorsFull();
     }
 });
@@ -34,24 +49,24 @@ function checkColorsFull() {
     let customColor = [ '#' + hex + ';#' + hex ]
     let colorOption = document.getElementById('runOptions');
     if (colorOption.value == "all") {
-        checkColors(colorList, colorList);
+        checkColors(colorList, colorList, '');
     } else if (colorOption.value == "selected") {
         var backgroundList = Array.from(document.querySelectorAll('#background input:checked')).map(e => e.value);
         var foregroundList = Array.from(document.querySelectorAll('#foreground input:checked')).map(e => e.value);
-        checkColors(backgroundList, foregroundList);
+        checkColors(backgroundList, foregroundList, '');
     } else if (colorOption.value == "foreground") {
-        checkColors(colorList, customColor);
+        checkColors(colorList, customColor, '&custom=fore');
     } else if (colorOption.value == "background") {
-        checkColors(customColor, colorList);
+        checkColors(customColor, colorList, '&custom=back');
     }
 }
 
-function checkColors(backgroundList, foregroundList) {
+function checkColors(backgroundList, foregroundList, linkType) {
     let colors = document.getElementById('colors');
     let displayOption = document.getElementById('displayOptions').value;
     let foregroundLink = foregroundList.map(f => f.split(';')[1].replace('#', '')).join(',');
     let backgroundLink = backgroundList.map(b => b.split(';')[1].replace('#', '')).join(',');
-    document.getElementById('link').innerHTML = `<a href='https://builder.toolkit.illinois.edu/colorcheck/index.html?fore=${foregroundLink}&back=${backgroundLink}'>https://builder.toolkit.illinois.edu/colorcheck/index.html?fore=${foregroundLink}&back=${backgroundLink}</a>`;
+    document.getElementById('link').innerHTML = `<a href='https://builder.toolkit.illinois.edu/colorcheck/index.html?fore=${foregroundLink}&back=${backgroundLink}${linkType}'>https://builder.toolkit.illinois.edu/colorcheck/index.html?fore=${foregroundLink}&back=${backgroundLink}${linkType}</a>`;
     colors.innerHTML = '';
     for (let backgroundIndex = 0; backgroundIndex < backgroundList.length; backgroundIndex++) {
         for (let foregroundIndex = 0; foregroundIndex < foregroundList.length; foregroundIndex++) {
