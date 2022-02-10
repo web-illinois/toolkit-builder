@@ -21,8 +21,7 @@
 }
 
 .il-formatted.headingarea h2 {
-    padding-top: 1rem;
-    border-top: solid thin var(--il-blue);
+    padding-top: 2rem;
 }
 
 .headingarea.text {
@@ -33,6 +32,10 @@
 .headingarea .built {
     display: flex; 
     column-gap: 50px;
+}
+
+.headingarea .built .full-width {
+    flex-grow: 1;
 }
 
 .headingarea .built .children {

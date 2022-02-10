@@ -21,19 +21,22 @@
 
     {{ slug | addDescription: components }}
 
-    <h2>How it looks</h2>
+</div>
+<div class="il-formatted headingarea">
+<h2>Component Display</h2>
 </div>
 <div id="builder-pre" class="{{ bodyClass }}"></div>
 <div id="builder" class="{{ bodyClass }}"></div>
-<p class="il-formatted headingarea"><button class="il-button" onclick="build();">Update</button></p>
 
 <div class="il-formatted headingarea text">
 {{ content }}
 </div>
 
 <div class="il-formatted headingarea">
-    <h2>How it is built</h2>
-
+<div class="built">
+    <h2 class="full-width">Change Your Content and Options</h2>
+    <p><button class="il-button il-orange" onclick="build();">Rebuild Component With Options Below</button></p>
+</div>
     <div class="built">
         <div class="children">
             <h3 id="template-title">Template -- enter raw HTML here</h3>
@@ -54,13 +57,18 @@
             <div id="class-list">
             {{ slug | buildClassList: components }}
             </div>
-            <h3>Styles</h3>
+            <details style="margin-top: 40px;">
+            <summary style="font-size: 1rem;">
+            <h3 style="margin-top: 0;">Styles</h3>
+            </summary>
+            <p>These options are only to be used in advanced situations -- most of your needs should be available through the attributes and styles, and this breaks the intent of having a unified design. </p>
             <div id="style-list">
             {{ slug | buildStyles: components, colors }}
             </div>
+            </details>
         </div>
     </div>
-<p><button class="il-button" onclick="build();">Update</button></p>
+
 
 </div>
 
