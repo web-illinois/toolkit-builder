@@ -66,7 +66,7 @@ function checkColors(backgroundList, foregroundList, linkType) {
     let displayOption = document.getElementById('displayOptions').value;
     let foregroundLink = foregroundList.map(f => f.split(';')[1].replace('#', '')).join(',');
     let backgroundLink = backgroundList.map(b => b.split(';')[1].replace('#', '')).join(',');
-    document.getElementById('link').innerHTML = `<a href='https://builder.toolkit.illinois.edu/colorcheck/index.html?fore=${foregroundLink}&back=${backgroundLink}${linkType}'>https://builder.toolkit.illinois.edu/colorcheck/index.html?fore=${foregroundLink}&back=${backgroundLink}${linkType}</a>`;
+    document.getElementById('link').innerHTML = `<a href='https://builder.toolkit.illinois.edu/colorcheck/index.html?fore=${foregroundLink}&back=${backgroundLink}${linkType}#results-area'>https://builder.toolkit.illinois.edu/colorcheck/index.html?fore=${foregroundLink}&back=${backgroundLink}${linkType}#results-area</a>`;
     colors.innerHTML = '';
     for (let backgroundIndex = 0; backgroundIndex < backgroundList.length; backgroundIndex++) {
         for (let foregroundIndex = 0; foregroundIndex < foregroundList.length; foregroundIndex++) {

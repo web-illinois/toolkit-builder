@@ -4,7 +4,11 @@ layout: layouts/preview.liquid
 bodyClass: il-formatted
 componentName: il-image-feature
 slug: image-feature
-permalink: "preview/{{ slug }}/"
+pagination:
+    data: environments
+    size: 1
+    alias: environment
+permalink: "{{ environment.slug }}/{{ slug }}-preview/"
 ---
 <div class="template-information" data-name="default">
   <img slot="image" src="https://picsum.photos/1920/800">

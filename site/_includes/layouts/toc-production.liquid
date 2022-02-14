@@ -30,6 +30,8 @@
     <div class="il-formatted" style="padding: 20px 50px; max-width: var(--il-content-max-width); margin: auto;">
         {{ content }}
 
+        {{ title | buildProductionTableOfContents: components, environments }}
+
         <h3>Run into an issue?</h3>
         <p>Please create a Github issue so we can look into it.</p><a href="https://github.com/web-illinois/toolkit/issues/new" class="il-button">Report an issue</a>
     </div>

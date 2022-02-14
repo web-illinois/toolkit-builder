@@ -2,6 +2,8 @@
 <html dir="ltr" lang="en">
 <head>
 {% include head.liquid %}
+    <script src="/scripts/main.js"></script>
+    <link rel="stylesheet" href="/styles/component.css" media="all">
     <title>{{ title }} on {{ environment.name }} | U of I </title>
 </head>
 <body style="margin: 0;">
@@ -12,6 +14,7 @@
                 <h1><a href="/index.html">Component Builder Information</a></h1>
             </il-unit-wordmark>
         </div>
+        {% include menu.liquid %}
     </il-header>
 </header>
 <main>

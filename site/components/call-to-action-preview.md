@@ -4,7 +4,11 @@ layout: layouts/preview.liquid
 bodyClass: il-formatted
 componentName: il-call-to-action
 slug: call-to-action
-permalink: "preview/{{ slug }}/"
+pagination:
+    data: environments
+    size: 1
+    alias: environment
+permalink: "{{ environment.slug }}/{{ slug }}-preview/"
 ---
 <div class="template-information" data-name="default">
 <span slot="icon" class="il-icon-line">faq</span>

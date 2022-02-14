@@ -4,7 +4,11 @@ layout: layouts/preview.liquid
 componentName: div
 bodyClass: headingarea text il-formatted
 slug: accordion
-permalink: "preview/{{ slug }}/"
+pagination:
+    data: environments
+    size: 1
+    alias: environment
+permalink: "{{ environment.slug }}/{{ slug }}-preview/"
 ---
 <div class="template-information" data-name="default">
     <details open>

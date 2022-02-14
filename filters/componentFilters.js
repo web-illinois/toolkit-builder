@@ -13,7 +13,7 @@ module.exports = class ComponentFilters {
         let returnValue = '';
         components.forEach(component => {
             if (component.slug === name) {
-                returnValue = `<p><a href='/prod/${component.slug}/index.html'>Edit this component</a>.</p>`;
+                returnValue = `<p><a href='../${component.slug}/index.html'>Edit this component</a>.</p>`;
             }
         });
         return returnValue;

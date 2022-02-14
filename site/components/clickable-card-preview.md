@@ -4,7 +4,11 @@ layout: layouts/preview.liquid
 bodyClass: il-formatted
 componentName: il-clickable-card
 slug: clickable-card
-permalink: "preview/{{ slug }}/"
+pagination:
+    data: environments
+    size: 1
+    alias: environment
+permalink: "{{ environment.slug }}/{{ slug }}-preview/"
 ---
 <div class="template-information" data-name="default">
 <h3 slot="header">Student Life</h3>

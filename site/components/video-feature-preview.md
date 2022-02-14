@@ -4,7 +4,11 @@ layout: layouts/preview.liquid
 componentName: il-video-feature
 bodyClass: il-formatted
 slug: video-feature
-permalink: "preview/{{ slug }}/"
+pagination:
+    data: environments
+    size: 1
+    alias: environment
+permalink: "{{ environment.slug }}/{{ slug }}-preview/"
 ---
 <div class="template-information" data-name="default">
 <h3>Career Possibilities</h3>

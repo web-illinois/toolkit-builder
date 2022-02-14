@@ -42,6 +42,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("buildStyles", Styles.build);
 
   eleventyConfig.addFilter("buildTableOfContents", TableOfContents.build);
+  
+  eleventyConfig.addFilter("buildEnvironmentList", TableOfContents.buildEnvironmentList);
+
+  eleventyConfig.addFilter("buildProductionTableOfContents", TableOfContents.buildProduction);
 
   eleventyConfig.addFilter("buildHeader", EnvironmentFilters.buildHeader);
 

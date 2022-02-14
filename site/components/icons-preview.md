@@ -4,5 +4,9 @@ layout: layouts/preview-icons.liquid
 componentName: div
 slug: icon
 bodyClass: headingarea text il-formatted
-permalink: "preview/{{ slug }}/"
+pagination:
+    data: environments
+    size: 1
+    alias: environment
+permalink: "{{ environment.slug }}/{{ slug }}-preview/"
 ---

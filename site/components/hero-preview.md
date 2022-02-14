@@ -3,7 +3,11 @@ title: Hero Image
 layout: layouts/preview.liquid
 componentName: il-hero
 slug: hero-image
-permalink: "preview/{{ slug }}/"
+pagination:
+    data: environments
+    size: 1
+    alias: environment
+permalink: "{{ environment.slug }}/{{ slug }}-preview/"
 ---
 <div class="template-information" data-name="default">
 <h1>Innovating solutions every year</h1>
