@@ -26,3 +26,7 @@ projects with our faculty, as well as short- and long-term study abroad opportun
   <p>The College of LAS honors individuals and teams that have demonstrated service and sacrifice beyond expectations during the pandemic.</p>
   <p><a href="#" class="il-button">Celebrate the awardees</a></p>
 </div>
+
+## Technical Information
+
+Note that if you want to use the Overlay feature, you need to use the "overlay" template option and you cannot use the Attributes section. The overlay option only takes class information. The Attributes section is going to be depreciated, and we did not implement it for the new overlay option. 
