@@ -1,0 +1,9 @@
+{
+    "name": "Patch for Buttons",
+    "type": "development",
+    "slug": "patch-for-buttons",
+    "prefetch": "//dev.toolkit.illinois.edu",
+    "path": "//dev.toolkit.illinois.edu/jonker/patch-for-buttons",
+    "externalCodePre" : "",
+    "externalCodePost": ""
+  }
