@@ -80,3 +80,12 @@ function checkLink(id) {
     }
     return false;
 }
+
+function toggleDepreciated(e) {
+    let list = document.querySelectorAll('.depreciated'); 
+    if (e.checked) { 
+        list.forEach(el => el.style.display = 'block');
+    } else {
+        list.forEach(el => el.style.display = 'none');
+    }
+}

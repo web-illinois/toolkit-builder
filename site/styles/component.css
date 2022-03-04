@@ -12,7 +12,7 @@
     font-weight: bold;
 }
 
-.il-formatted h3:first-child {
+.il-formatted h3.component-heading {
     margin-top: 1.41379em;
 }
 
@@ -45,6 +45,10 @@
 #template-options {
     padding: 10px;
     font: 1rem var(--il-source-sans);
+}
+
+#options label.depreciated {
+    display: none;
 }
 
 #options label, #class-list label, #style-list label {

@@ -6,6 +6,12 @@
     "preview": true,
     "attributes" : [
         {
+            "name": "href",
+            "description" : "URL of where the clickable card goes to",
+            "type": "url",
+            "value": "https://www.example.com"
+        },
+        {
             "name": "width",
             "description" : "Length of the component. If left blank, it will span the entire width of the container",
             "type": "length",
@@ -13,21 +19,35 @@
         },
         {
             "name": "src",
-            "description" : "URL of the image",
+            "description" : "URL of the image (depreciated)",
             "type": "url",
-            "value": "https://picsum.photos/1920/1280"
+            "value": "",
+            "depreciated": true
         },
         {
-            "name": "href",
-            "description" : "URL of where the clickable card goes to",
-            "type": "url",
-            "value": "https://www.example.com"
+            "name": "alt",
+            "description" : "Alt text for the image (depreciated)",
+            "type": "text",
+            "value": "",
+            "depreciated": true
         },
         {
             "name": "background",
-            "description" : "Background of the text. Note that hovering or focusing will swap the color",
+            "description" : "Background of the text (depreciated). Note that hovering or focusing will swap the color",
             "type": "dropdown",
-            "values": ["white", "blue"]
+            "values": ["", "white", "blue"],
+            "depreciated": true
+        }
+    ],
+    "classes" : [
+        {
+            "description": "Theme",
+            "type": "dropdown",
+            "values": [
+                "",
+                "il-theme-blue",
+                "il-theme-white"
+            ]
         }
     ],
     "styles" : [

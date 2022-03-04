@@ -9,25 +9,29 @@
             "name": "align",
             "description" : "Align variables",
             "type": "dropdown",
-            "values" : [ "left", "right" ]
+            "values" : [ "", "left", "right" ],
+            "depreciated": true
         },
         {
             "name": "background",
             "description" : "Background of the text",
             "type": "dropdown",
-            "values" : [ "", "white", "solid", "orange" ]
+            "values" : [ "", "white", "solid", "orange" ],
+            "depreciated": true
         },
         {
             "name": "size",
             "description" : "Size of the picture",
             "type": "dropdown",
-            "values" : [ "", "small" , "large", "portrait" ]
+            "values" : [ "", "small" , "large", "portrait" ],
+            "depreciated": true
         },
         {
             "name": "src",
             "description" : "URL of the image",
             "type": "url",
-            "value": "https://picsum.photos/1200/400"
+            "value": "",
+            "depreciated": true
         }
     ],
     "classes": [

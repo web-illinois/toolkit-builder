@@ -11,6 +11,7 @@ pagination:
 permalink: "{{ environment.slug }}/{{ slug }}/"
 ---
 <div class="template-information" data-name="default">
+<img slot="image" src="https://picsum.photos/1920/800">
 <h3>Student Life</h3>
 <p>Animal sciences students extend their learning and career networks beyond
 the classroom through internships, <a href="#">judging teams</a>, student organizations, undergraduate research

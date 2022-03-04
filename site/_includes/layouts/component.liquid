@@ -42,21 +42,19 @@
 </div>
     <div class="built">
         <div class="children">
-            <h3 id="template-title">Template -- enter raw HTML here</h3>
+            <h3 id="template-title" class="component-heading">Template -- enter raw HTML here</h3>
             <textarea id="template"></textarea>
-            <h3>Custom Style Tag before text</h3>
-            <textarea id="pre">&lt;style&gt;
-&lt;/style&gt;</textarea>
         </div>
         <div class="children">
-            <h3 id="template-header"><label for="template-options">Template Options</label></h3>
+            <h3 id="template-header" class="component-heading"><label for="template-options">Template Options</label></h3>
             <select id="template-options" onchange="changeTemplate(this);"></select>
-            <h3>Attributes</h3>
+            <h3 class="component-heading">Attributes</h3>
             <input type="hidden" id="component-name" value="{{ componentName }}">
             <div id="options">
             {{ slug | buildAttributes: components }}
             </div>
-            <h3>Classes</h3>
+            <label>Show depreciated attributes <input type="checkbox" id="depreciated" onclick="toggleDepreciated(this);"></label>
+            <h3 class="component-heading">Classes</h3>
             <div id="class-list">
             {{ slug | buildClassList: components }}
             </div>
@@ -65,6 +63,9 @@
             <h3 style="margin-top: 0;">Advanced Options</h3>
             </summary>
             <p>These options are only to be used in advanced situations -- most of your needs should be met through the attributes and classes, and this breaks the intent of having a unified design. </p>
+            <h3>Custom Style Tag before text</h3>
+            <textarea id="pre">&lt;style&gt;
+&lt;/style&gt;</textarea>
             <div id="style-list">
             {{ slug | buildStyles: components, colors }}
             </div>
