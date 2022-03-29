@@ -54,7 +54,7 @@ function build() {
     let useCustomStyles = false;
     let styleList = document.querySelectorAll('#style-list input');
     styleObject.innerHTML = `${document.getElementById('component-name').value}.builder-custom { `;
-    styleList.forEach(s => { if (s.value != '') { useCustomStyles = true; styleObject.innerHTML += s.id + ': ' + s.value + ' !important; '; } });
+    styleList.forEach(s => { if (s.value != '') { useCustomStyles = true; styleObject.innerHTML += s.id + ': ' + s.value + '; '; } });
     styleObject.innerHTML += '}';
     let warning = document.getElementById('buildingCode-warning');
 
