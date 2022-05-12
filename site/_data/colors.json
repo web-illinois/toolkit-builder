@@ -68,22 +68,6 @@
     "value": "#bfc9d9"
   },
   {
-    "name": "il-alma-mater",
-    "value": "#1e3877"
-  },
-  {
-    "name": "il-alma-mater-1",
-    "value": "#4d69a0"
-  },
-  {
-    "name": "il-alma-mater-2",
-    "value": "#849bc1"
-  },
-  {
-    "name": "il-alma-mater-3",
-    "value": "#afc7db"
-  },
-  {
     "name": "il-industrial-blue",
     "value": "#1d58a7"
   },
@@ -186,78 +170,6 @@
   {
     "name": "il-gray-2",
     "value": "#707070"
-  },
-  {
-    "name": "il-heritage-orange",
-    "value": "#f5821e"
-  },
-  {
-    "name": "il-heritage-orange-1",
-    "value": "#e56e15"
-  },
-  {
-    "name": "il-heritage-orange-2",
-    "value": "#ce5e11"
-  },
-  {
-    "name": "il-heritage-orange-3",
-    "value": "#b74d04"
-  },
-  {
-    "name": "il-harvest",
-    "value": "#fcb24c"
-  },
-  {
-    "name": "il-harvest-darker-1",
-    "value": "#faa621"
-  },
-  {
-    "name": "il-harvest-darker-2",
-    "value": "#e48022"
-  },
-  {
-    "name": "il-harvest-lighter-1",
-    "value": "#ffc36e"
-  },
-  {
-    "name": "il-harvest-lighter-2",
-    "value": "#fed094"
-  },
-  {
-    "name": "il-harvest-lighter-3",
-    "value": "#ffdeb7"
-  },
-  {
-    "name": "il-harvest-lighter-4",
-    "value": "#ffefda"
-  },
-  {
-    "name": "il-patina",
-    "value": "#4b868f"
-  },
-  {
-    "name": "il-patina-darker-1",
-    "value": "#31717b"
-  },
-  {
-    "name": "il-patina-darker-2",
-    "value": "#075156"
-  },
-  {
-    "name": "il-patina-lighter-1",
-    "value": "#6e98a0"
-  },
-  {
-    "name": "il-patina-lighter-2",
-    "value": "#93b4b9"
-  },
-  {
-    "name": "il-patina-lighter-3",
-    "value": "#b6cccf"
-  },
-  {
-    "name": "il-patina-lighter-4",
-    "value": "#dae5e6"
   },
   {
     "name": "il-storm",
