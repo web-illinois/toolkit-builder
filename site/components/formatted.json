@@ -8,6 +8,14 @@
         {
             "type": "fixed",
             "value": "il-formatted"
+        },
+        {
+            "description": "Wordpress Content Fix for first child",
+            "type": "dropdown",
+            "values": [
+                "",
+                "il-wp-block-editor-content"
+            ]
         }
     ]
 }

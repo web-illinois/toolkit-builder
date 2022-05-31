@@ -86,39 +86,48 @@ permalink: "{{ environment.slug }}/{{ slug }}/"
   <p>Additional courses from other institutions will be considered if the outside course/s is/are substantially similar to UIUC courses or otherwise appropriate dietetic-related coursework, DPD director’s discretion on the approval of coursework in the appropriate circumstances will be exercised based on, but not limited to, university transfer guidelines, committee input and petitions.</p>
 </div>
 
-<div  class="template-information" data-name="WordPress example">
+<div class="template-information" data-name="WordPress example">
 <div class="uofi-default-block il-formatted">
 <p>If you’d like to see how it looks in action, here are some example pages using the Illinois Theme and WordPress blocks.</p>
-</div><div class="uofi-default-block il-formatted">
-
-</div><div class="uofi-default-block il-formatted">
+</div>
+<div class="uofi-default-block il-formatted">
 <p><strong>Editor choice:</strong> WordPress offers two different editors, known as “classic” and “Gutenberg”. Some of these features depend on using the Gutenberg editor; others will work with either editor. This will be indicated with “<strong>Gutenberg editor only</strong>” or “<strong>Either editor</strong>” annotations.</p>
-</div><div class="uofi-default-block il-formatted">
-
 </div><div class="uofi-default-block il-formatted">
 <p>This documentation primarily shows Gutenberg examples because of the theme-specific customization; we didn’t modify the classic editor’s interactions. </p>
 </div><div class="uofi-default-block il-formatted">
-
-</div><div class="uofi-default-block il-formatted">
 <h2 id="demos">Text and layout demos</h2>
-</div><div class="uofi-default-block il-formatted">
-
 </div><div class="uofi-default-block il-formatted">
 <ul><li>A <a href="https://wordpress.webtheme.illinois.edu/home/page-layouts/style-sampler/">style sampler</a> page that shows headlines, two varieties of quote blocks, and a table</li><li><a href="https://wordpress.webtheme.illinois.edu/home/page-layouts/alignment-and-column-sampler/">Alignment and column layout examples</a></li><li><a href="https://wordpress.webtheme.illinois.edu/home/page-layouts/image-gallery/">An image gallery</a></li><li><a href="https://wordpress.webtheme.illinois.edu/home/page-layouts/featured-image/" data-type="page" data-id="360">A “Featured Image” example</a> with a large (“hero”) image</li><li>A similar Featured Image example with <a href="https://wordpress.webtheme.illinois.edu/home/page-layouts/no-sidebar/" data-type="page" data-id="428">no sidebar</a></li></ul>
 </div><div class="uofi-default-block il-formatted">
-
-</div><div class="uofi-default-block il-formatted">
 <h2 id="casestudies">Case studies</h2>
-</div><div class="uofi-default-block il-formatted">
-
 </div><div class="uofi-default-block il-formatted">
 <ul><li><a href="https://wordpress.webtheme.illinois.edu/home/page-layouts/scientific-article/" data-type="page" data-id="71">A scientific article with many links</a></li><li><a href="https://wordpress.webtheme.illinois.edu/2020/08/19/news-article-example/">A news article example post</a> with a feature image and inset images</li><li><a href="https://wordpress.webtheme.illinois.edu/home/page-layouts/personal-profile-columns/" data-type="page" data-id="108">A personal profile page</a> with a large photo to the left of text using columns with a 30/70 split</li>
 <!--<li><a href="https://wordpress.webtheme.illinois.edu/home/page-layouts/personal-profile-media-and-text/" data-type="page" data-id="356">A similar profile page</a> using the "Media and Text" block instead of columns</li>-->
 </ul>
 </div><div class="uofi-default-block il-formatted">
-
-</div><div class="uofi-default-block il-formatted">
 <p></p>
 </div>
 </div>
 
+<div class="template-information" data-name="WordPress without extra il-formatted">
+<div class="uofi-default-block">
+<p>If you’d like to see how it looks in action, here are some example pages using the Illinois Theme and WordPress blocks.</p>
+</div>
+<div class="uofi-default-block">
+<p><strong>Editor choice:</strong> WordPress offers two different editors, known as “classic” and “Gutenberg”. Some of these features depend on using the Gutenberg editor; others will work with either editor. This will be indicated with “<strong>Gutenberg editor only</strong>” or “<strong>Either editor</strong>” annotations.</p>
+</div><div class="uofi-default-block">
+<p>This documentation primarily shows Gutenberg examples because of the theme-specific customization; we didn’t modify the classic editor’s interactions. </p>
+</div><div class="uofi-default-block">
+<h2 id="demos">Text and layout demos</h2>
+</div><div class="uofi-default-block">
+<ul><li>A <a href="https://wordpress.webtheme.illinois.edu/home/page-layouts/style-sampler/">style sampler</a> page that shows headlines, two varieties of quote blocks, and a table</li><li><a href="https://wordpress.webtheme.illinois.edu/home/page-layouts/alignment-and-column-sampler/">Alignment and column layout examples</a></li><li><a href="https://wordpress.webtheme.illinois.edu/home/page-layouts/image-gallery/">An image gallery</a></li><li><a href="https://wordpress.webtheme.illinois.edu/home/page-layouts/featured-image/" data-type="page" data-id="360">A “Featured Image” example</a> with a large (“hero”) image</li><li>A similar Featured Image example with <a href="https://wordpress.webtheme.illinois.edu/home/page-layouts/no-sidebar/" data-type="page" data-id="428">no sidebar</a></li></ul>
+</div><div class="uofi-default-block">
+<h2 id="casestudies">Case studies</h2>
+</div><div class="uofi-default-block">
+<ul><li><a href="https://wordpress.webtheme.illinois.edu/home/page-layouts/scientific-article/" data-type="page" data-id="71">A scientific article with many links</a></li><li><a href="https://wordpress.webtheme.illinois.edu/2020/08/19/news-article-example/">A news article example post</a> with a feature image and inset images</li><li><a href="https://wordpress.webtheme.illinois.edu/home/page-layouts/personal-profile-columns/" data-type="page" data-id="108">A personal profile page</a> with a large photo to the left of text using columns with a 30/70 split</li>
+<!--<li><a href="https://wordpress.webtheme.illinois.edu/home/page-layouts/personal-profile-media-and-text/" data-type="page" data-id="356">A similar profile page</a> using the "Media and Text" block instead of columns</li>-->
+</ul>
+</div><div class="uofi-default-block">
+<p></p>
+</div>
+</div>
