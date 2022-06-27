@@ -1,9 +1,0 @@
-{
-    "name": "Issue 325",
-    "type": "development",
-    "slug": "issue-325",
-    "prefetch": "//dev.toolkit.illinois.edu",
-    "path": "//dev.toolkit.illinois.edu/jonker/issue325",
-    "externalCodePre" : "",
-    "externalCodePost": ""
-  }
