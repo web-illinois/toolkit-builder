@@ -3,6 +3,7 @@
     "slug" : "card",
     "description": "",
     "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-card",
+    "preview": true,
     "environment" : "",
     "attributes" : [
     ],

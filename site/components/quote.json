@@ -1,0 +1,6 @@
+{
+    "title": "Quote",
+    "slug" : "quote",
+    "description": "The Quote component is an in-line quote with an optional byline.",
+    "documentation" : "https://github.com/web-illinois/toolkit/wiki/"
+}
