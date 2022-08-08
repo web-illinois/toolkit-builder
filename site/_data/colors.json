@@ -9,198 +9,70 @@
   },
   {
     "name": "il-orange",
-    "value": "#ff552e"
-  },
-  {
-    "name": "il-orange-darker-1",
-    "value": "#d43f27"
-  },
-  {
-    "name": "il-orange-darker-2",
-    "value": "#b83d26"
-  },
-  {
-    "name": "il-orange-lighter-1",
-    "value": "#ea725e"
-  },
-  {
-    "name": "il-orange-lighter-2",
-    "value": "#f09378"
-  },
-  {
-    "name": "il-orange-lighter-3",
-    "value": "#f4bca9"
-  },
-  {
-    "name": "il-orange-lighter-4",
-    "value": "#f9dfd2"
+    "value": "#ff5f05"
   },
   {
     "name": "il-altgeld",
     "value": "#dd3403"
   },
   {
+    "name": "il-altgeld-lighter-1",
+    "value": "#dd3403"
+  },
+  {
+    "name": "il-altgeld-lighter-2",
+    "value": "#f9dfd2"
+  },
+  {
+    "name": "il-altgeld-darker",
+    "value": "#b83d26"
+  },
+  {
     "name": "il-blue",
     "value": "#13294b"
   },
   {
-    "name": "il-blue-darker-1",
+    "name": "il-blue-darker",
     "value": "#000033"
   },
   {
-    "name": "il-blue-darker-2",
-    "value": "#0e0f20"
+    "name": "il-industrial",
+    "value": "#0071ce"
   },
   {
-    "name": "il-blue-lighter-1",
-    "value": "#3a4461"
-  },
-  {
-    "name": "il-blue-lighter-2",
-    "value": "#677592"
-  },
-  {
-    "name": "il-blue-lighter-3",
-    "value": "#929fb5"
-  },
-  {
-    "name": "il-blue-lighter-4",
-    "value": "#bfc9d9"
-  },
-  {
-    "name": "il-industrial-blue",
-    "value": "#1d58a7"
-  },
-  {
-    "name": "il-industrial-blue-darker-1",
+    "name": "il-industrial-darker",
     "value": "#2f568c"
   },
   {
-    "name": "il-industrial-blue-darker-2",
-    "value": "#1f3d7b"
+    "name": "il-industrial-lighter-1",
+    "value": "#3cb4e5"
   },
   {
-    "name": "il-industrial-blue-lighter-1",
-    "value": "#526fb3"
-  },
-  {
-    "name": "il-industrial-blue-lighter-2",
-    "value": "#759bd1"
-  },
-  {
-    "name": "il-industrial-blue-lighter-3",
-    "value": "#90aed5"
-  },
-  {
-    "name": "il-industrial-blue-lighter-4",
-    "value": "#cad9ef"
-  },
-  {
-    "name": "il-industrial-blue-1",
-    "value": "#5783bc"
-  },
-  {
-    "name": "il-industrial-blue-2",
-    "value": "#90aed5"
-  },
-  {
-    "name": "il-industrial-blue-3",
-    "value": "#cad9ef"
-  },
-  {
-    "name": "il-arches-blue",
-    "value": "#009fd4"
-  },
-  {
-    "name": "il-arches-blue-darker-1",
-    "value": "#1685ad"
-  },
-  {
-    "name": "il-arches-blue-darker-2",
-    "value": "#005677"
-  },
-  {
-    "name": "il-arches-blue-lighter-1",
-    "value": "#59addb"
-  },
-  {
-    "name": "il-arches-blue-lighter-2",
-    "value": "#7fc3e1"
-  },
-  {
-    "name": "il-arches-blue-lighter-3",
+    "name": "il-industrial-lighter-2",
     "value": "#a6d7eb"
   },
   {
-    "name": "il-arches-blue-lighter-4",
-    "value": "#d2ebf5"
-  },
-  {
-    "name": "il-arches-blue-1",
-    "value": "#7fc3e1"
-  },
-  {
-    "name": "il-arches-blue-2",
-    "value": "#a6d7eb"
-  },
-  {
-    "name": "il-arches-blue-3",
-    "value": "#d2ebf5"
-  },
-  {
-    "name": "il-cloud",
-    "value": "#f8fafc"
-  },
-  {
-    "name": "il-cloud-1",
-    "value": "#e8e9eb"
-  },
-  {
-    "name": "il-cloud-2",
-    "value": "#dddede"
-  },
-  {
-    "name": "il-cloud-3",
-    "value": "#d2d2d2"
-  },
-  {
-    "name": "il-gray-1",
-    "value": "#f4f4f4"
-  },
-  {
-    "name": "il-gray-2",
-    "value": "#707070"
+    "name": "il-industrial-lighter-3",
+    "value": "#d5eaf7"
   },
   {
     "name": "il-storm",
-    "value": "#9fa0a8"
-  },
-  {
-    "name": "il-storm-darker-1",
     "value": "#707372"
   },
   {
-    "name": "il-storm-darker-2",
-    "value": "#494846"
+    "name": "il-storm-darker",
+    "value": "#252525"
   },
   {
     "name": "il-storm-lighter-1",
-    "value": "#afafb6"
+    "value": "#9c9a9d"
   },
   {
     "name": "il-storm-lighter-2",
-    "value": "#c5c6ca"
+    "value": "#c8c6c7"
   },
   {
     "name": "il-storm-lighter-3",
-    "value": "#d8d9dc"
-  },
-  {
-    "name": "il-storm-lighter-4",
-    "value": "#ececed"
-  },
-  {
-    "name": "il-base-25",
-    "value": "#252525"
+    "value": "#f4f4f4"
   }
 ]
