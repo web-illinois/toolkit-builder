@@ -1,13 +1,5 @@
 [
   {
-    "name": "white",
-    "value": "#ffffff"
-  },
-  {
-    "name": "black",
-    "value": "#000000"
-  },
-  {
     "name": "il-orange",
     "value": "#ff5f05"
   },
@@ -74,5 +66,13 @@
   {
     "name": "il-storm-lighter-3",
     "value": "#f4f4f4"
+  },
+  {
+    "name": "il-white",
+    "value": "#ffffff"
+  },
+  {
+    "name": "il-black",
+    "value": "#000000"
   }
 ]
