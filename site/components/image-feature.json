@@ -54,7 +54,16 @@
             ]
         },
         {
-            "description": "Horizontal Alignment",
+            "description": "Float",
+            "type": "dropdown",
+            "values": [
+                "",
+                "il-float-left",
+                "il-float-right"
+            ]
+        },
+        {
+            "description": "Horizontal Alignment (depreciated, use il-float)",
             "type": "dropdown",
             "values": [
                 "",

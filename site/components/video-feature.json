@@ -29,5 +29,35 @@
             "type": "url",
             "value": "https://mediaspace.illinois.edu/media/t/1_0o2ypqvp"
         }
+    ],
+    "classes": [
+        {
+            "description": "Theme",
+            "type": "dropdown",
+            "values": [
+                "",
+                "il-theme-orange",
+                "il-theme-blue",
+                "il-theme-white"
+            ]
+        },
+        {
+            "description": "Float",
+            "type": "dropdown",
+            "values": [
+                "",
+                "il-float-left",
+                "il-float-right"
+            ]
+        },
+        {
+            "description": "Horizontal Alignment (depreciated, use il-float)",
+            "type": "dropdown",
+            "values": [
+                "",
+                "il-align-left",
+                "il-align-right"
+            ]
+        }
     ]
 }
