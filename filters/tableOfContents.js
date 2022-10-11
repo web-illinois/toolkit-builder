@@ -1,10 +1,10 @@
 module.exports = class TableOfContents {
 
     static buildEnvironmentList(title, environments) {
-        let returnValue = '<h2>Web Component Development Environment</h2> <ul>';
+        let returnValue = '<h2>Web Component Alternate Environments</h2> <ul>';
         environments.forEach(environment => {
             if (environment.type != 'production') {
-                returnValue += `<li><a href='/development/${environment.slug}/index.html'>${environment.name}</a></li>`;
+                returnValue += `<li><a href='/${environment.type}/${environment.slug}/index.html'>${environment.name}</a> (${environment.type})</li>`;
             }
         });
         returnValue += `</ul>`;

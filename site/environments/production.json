@@ -1,9 +1,9 @@
 {
-    "name": "Version 2.10",
+    "name": "Version 2.12",
     "type": "production",
     "slug": "prod",
     "prefetch": "//cdn.toolkit.illinois.edu",
-    "path": "//cdn.toolkit.illinois.edu/2.10",
+    "path": "//cdn.toolkit.illinois.edu/2.12",
     "externalCodePre": "",
     "externalCodePost": ""
   }
