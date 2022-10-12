@@ -1,9 +1,9 @@
 {
-    "name": "Base Toolkit - Version 2.8",
-    "type": "legacy",
-    "slug": "2-8",
-    "prefetch": "//cdn.toolkit.illinois.edu",
-    "path": "//cdn.toolkit.illinois.edu/2.8",
-    "externalCodePre": "",
-    "externalCodePost": ""
-  }
+  "name": "Base Toolkit - Version 2.8",
+  "type": "legacy",
+  "slug": "2-8",
+  "prefetch": "//cdn.toolkit.illinois.edu",
+  "path": "//cdn.toolkit.illinois.edu/2.8",
+  "externalCodePre": "",
+  "externalCodePost": ""
+}

@@ -1,9 +1,9 @@
 {
-    "name": "Latest Development",
-    "type": "development",
-    "slug": "latest",
-    "prefetch": "//dev.toolkit.illinois.edu",
-    "path": "//dev.toolkit.illinois.edu/latest",
-    "externalCodePre": "",
-    "externalCodePost": ""
-  }
+  "name": "Latest Development",
+  "type": "development",
+  "slug": "latest",
+  "prefetch": "//dev.toolkit.illinois.edu",
+  "path": "//dev.toolkit.illinois.edu/latest",
+  "externalCodePre": "",
+  "externalCodePost": ""
+}
