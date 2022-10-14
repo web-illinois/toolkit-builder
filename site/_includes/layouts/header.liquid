@@ -19,6 +19,7 @@
                 <h1><a href="/index.html">Component Builder Information</a></h1>
             </il-unit-wordmark>
         </div>
+        {% include menu.liquid %}
     </il-header>
 </header>
 <main>
@@ -27,7 +28,7 @@
     <h1>Header Information on {{ environment.name }}</h1>
 </div>
 
-<div class="il-formatted headingarea">
+<div class="il-formatted headingarea text">
 <h2>How to add it to your page</h2>
 
 <p>Copy and paste this in your &lt;head&gt; tag in your HTML page.</p>
@@ -36,6 +37,8 @@
 {{ environment.name || buildHeader: environments }}
 </code>
 
+<div class="environment-{{ environment.type }}">
+<h2>Development and legacy options</h2>
 <p>This environment has the following code before the toolkit.</p>
 
 <code class="building">
@@ -47,7 +50,28 @@
 <code class="building">
 {{ environment.name || buildPostcode: environments }}
 </code>
+</div>
 
+<h2>Other header tags</h2>
+
+<p>Note that we do not support these, but they may be useful to build out your website.</p>
+<p>Before using these, please refer to the documentation maintained by the supporting area.</p>
+
+<h3>Skip-to Link</h3>
+<p><a href="https://accessibleit.disability.illinois.edu/tools/skipto/">Information about this at the Accessible IT site</a></p>
+<code class="building">
+&lt;!-- SkipTo link --&gt; <br/>
+&lt;link rel="dns-prefetch" href="//cdn.disability.illinois.edu"&gt; <br/>
+&lt;script src="https://cdn.disability.illinois.edu/skipto.min.js"&gt;&lt;/script&gt; <br/>
+&lt;script&gt;var SkipToConfig = { 'settings': { 'skipTo': { displayOption: 'popup', colorTheme: 'illinois' } } };&lt;/script&gt;
+</code>
+
+<h3>Campus GDPR</h3>
+<p><a href="https://www.vpaa.uillinois.edu/cms/One.aspx?portalId=420456&pageId=1050467">Information about the GDPR code</a></p>
+<code class="building">
+&lt;script src="//onetrust.techservices.illinois.edu/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="26be7d61-2017-4ea7-8a8b-8f1704889763"&gt;&lt;/script&gt; <br/>
+&lt;script type="text/javascript"&gt;function OptanonWrapper() { }&lt;/script&gt;
+</code>
 
 </div>
 

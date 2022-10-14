@@ -118,3 +118,14 @@ textarea#template, textarea#pre {
     border: thin solid var(--il-cloud-2);
     text-align: center;
 }
+
+.headingarea .environment-production {
+    display: none;
+}
+
+.headingarea .environment-development, .headingarea .environment-legacy {
+    border-top: thin solid var(--il-blue);
+    margin-top: 40px;
+    border-bottom: thin solid var(--il-blue);
+    margin-bottom: 40px;
+}

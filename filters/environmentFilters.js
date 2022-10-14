@@ -3,7 +3,11 @@ module.exports = class EnvironmentFilters {
     let returnValue = '';
     environments.forEach(environment => {
       if (environment.name === name) {
-        returnValue = environment.externalCodePost.replace(/</gi, '&lt;').replace(/>/gi, '&gt;<br>');
+        if (environment.externalCodePost === null || environment.externalCodePost === '') {
+          returnValue = '<em>no code has been added</em>';
+        } else {
+          returnValue = environment.externalCodePost.replace(/</gi, '&lt;').replace(/>/gi, '&gt;<br>');
+        }
       }
     });
     return returnValue;
@@ -13,7 +17,11 @@ module.exports = class EnvironmentFilters {
     let returnValue = '';
     environments.forEach(environment => {
       if (environment.name === name) {
-        returnValue = environment.externalCodePre.replace(/</gi, '&lt;').replace(/>/gi, '&gt;<br>');
+        if (environment.externalCodePre === null || environment.externalCodePre === '') {
+          returnValue = '<em>no code has been added</em>';
+        } else {
+          returnValue = environment.externalCodePre.replace(/</gi, '&lt;').replace(/>/gi, '&gt;<br>');
+        }
       }
     });
     return returnValue;
