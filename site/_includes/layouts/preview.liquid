@@ -28,7 +28,7 @@
 
 </div>
 
-<div id="samples" class="{{ bodyClass }}">
+<div id="samples" class="{{ bodyClass }} {{ slug | addClassInfo: components }}">
 {{ slug | preview: componentName, components }}
 </div>
 
