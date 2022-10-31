@@ -22,3 +22,5 @@ permalink: "{{ environment.slug }}/{{ slug }}/"
 
 The clickable card is going to eventually be merged into the card component. At this point, it will be depreciated. 
 
+For readability, this is inside a container that is restricted to 500px. This component will expand to fill the container it is in, and is usually placed in a flex or grid container. 
+

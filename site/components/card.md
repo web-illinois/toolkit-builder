@@ -36,5 +36,7 @@ projects with our faculty, as well as short- and long-term study abroad opportun
 <p class="il-buttons"><a href="#" class="il-button">Learn More</a><a href="#" class="il-button">Contact Us</a></p>
 </div>
 
+## Technical Information
 
+For readability, this is inside a container that is restricted to 500px. This component will expand to fill the container it is in, and is usually placed in a flex or grid container. 
 

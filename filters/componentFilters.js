@@ -26,4 +26,14 @@ module.exports = class ComponentFilters {
         });
         return returnValue;
     }
+
+    static buildClassInfo(name, components) {
+        let returnValue = '';
+        components.forEach(component => {
+            if (component.slug === name && component.className != null) {
+                returnValue = component.className;
+            }
+        });
+        return returnValue;
+    }
 }

@@ -5,6 +5,7 @@
     "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-card",
     "preview": true,
     "environment" : "",
+    "className" : "width-500",
     "attributes" : [
     ],
     "classes" : [

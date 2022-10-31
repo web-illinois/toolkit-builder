@@ -4,6 +4,7 @@
     "description": "",
     "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-clickable-card",
     "preview": true,
+    "className" : "width-500",
     "attributes" : [
         {
             "name": "href",

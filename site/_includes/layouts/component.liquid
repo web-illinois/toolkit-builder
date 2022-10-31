@@ -29,7 +29,7 @@
 <h2>Component Display</h2>
 </div>
 <div id="builder-pre" class="{{ bodyClass }}"></div>
-<div id="builder" class="{{ bodyClass }}"></div>
+<div id="builder" class="{{ bodyClass }} {{ slug | addClassInfo: components }}"></div>
 
 <div class="il-formatted headingarea text">
 {{ content }}
