@@ -1,0 +1,13 @@
+{
+    "title": "Profile Card (Directory)",
+    "slug" : "profile-card",
+    "description": "",
+    "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-profile-card",
+    "environment" : "",
+    "preview": true,
+    "className" : "width-500",
+    "classes" : [
+    ],
+    "styles" : [
+   ]
+}

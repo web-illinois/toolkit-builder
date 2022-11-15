@@ -1,0 +1,12 @@
+{
+    "title": "Profile (Directory)",
+    "slug" : "profile",
+    "description": "",
+    "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-profile",
+    "environment" : "",
+    "preview": true,
+    "classes" : [
+    ],
+    "styles" : [
+   ]
+}
