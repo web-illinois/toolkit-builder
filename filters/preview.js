@@ -7,7 +7,7 @@ module.exports = class ComponentFilters {
             if (component.slug === name) {
                 if (component.attributes != null) {
                     component.attributes.forEach((c, i) => {
-                        if (c.type == "url" || c.type == "string") {
+                        if (c.depreciated != null && !c.depreciated && (c.type == "url" || c.type == "string")) {
                             attributes = attributes + `${c.name}="${c.value}" `;
                         } 
                     });
@@ -23,7 +23,7 @@ module.exports = class ComponentFilters {
                 
                 if (component.attributes != null) {
                     component.attributes.forEach((c, i) => {
-                        if (c.type == "dropdown") {
+                        if (c.depreciated != null && !c.depreciated && c.type == "dropdown") {
                             c.values.forEach((v, i2) => {
                                 if (v != '') {
                                     returnValue = returnValue + `<div class='il-formatted header-info'><h2>Attribute: ${c.name} is ${v}</h2></div>`;
