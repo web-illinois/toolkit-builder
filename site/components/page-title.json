@@ -8,6 +8,7 @@
         {
             "description": "Color Theme (for the overlay and text color)",
             "type": "dropdown",
+            "highlighted": true,
             "values": [
                 "",
                 "il-theme-orange",

@@ -28,6 +28,7 @@
 <div class="il-formatted headingarea">
 <h2>Component Display</h2>
 </div>
+
 <div id="builder-pre" class="{{ bodyClass }}"></div>
 <div id="builder" class="{{ bodyClass }} {{ slug | addClassInfo: components }}"></div>
 
@@ -48,16 +49,20 @@
         <div class="children">
             <h3 id="template-header" class="component-heading"><label for="template-options">Template Options</label></h3>
             <select id="template-options" onchange="changeTemplate(this);"></select>
+            <h3 class="component-heading">Important Classes</h3>
+            <div id="class-list">
+            {{ slug | buildClassListHighlighted: components }}
+            </div>
+            <h3 class="component-heading">Classes</h3>
+            <div id="class-list">
+            {{ slug | buildClassList: components }}
+            </div>
             <h3 class="component-heading">Attributes</h3>
             <input type="hidden" id="component-name" value="{{ componentName }}">
             <div id="options">
             {{ slug | buildAttributes: components }}
             </div>
             <label>Show depreciated attributes <input type="checkbox" id="depreciated" onclick="toggleDepreciated(this);"></label>
-            <h3 class="component-heading">Classes</h3>
-            <div id="class-list">
-            {{ slug | buildClassList: components }}
-            </div>
             <details style="margin-top: 40px;">
             <summary style="font-size: 1rem;">
             <h3 style="margin-top: 0;">Advanced Options</h3>

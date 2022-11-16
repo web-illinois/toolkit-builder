@@ -21,11 +21,7 @@
 
 <div class="il-formatted headingarea text">
     <h1>{{ title }}</h1>
-
-    {{ slug | addDescription: components }}
-
     {{ slug | addBuilder: components }}
-
 </div>
 
 <div id="samples" class="{{ bodyClass }} {{ slug | addClassInfo: components }}">

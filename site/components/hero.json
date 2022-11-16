@@ -17,6 +17,7 @@
         {
             "description": "Color Theme -- note that in a blue theme, the buttons are orange and vice versa",
             "type": "dropdown",
+            "highlighted": true,
             "values": [
                 "",
                 "il-theme-orange",

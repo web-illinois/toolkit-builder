@@ -10,8 +10,9 @@
     ],
     "classes" : [
         {
-            "description": "Theme",
+            "description": "Color Theme",
             "type": "dropdown",
+            "highlighted": true,
             "values": [
                 "",
                 "il-theme-blue",

@@ -39,6 +39,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("buildAttributes", AttributeList.build);
 
+  eleventyConfig.addFilter("buildClassListHighlighted", ClassList.buildHighlighted);
+  
   eleventyConfig.addFilter("buildClassList", ClassList.build);
 
   eleventyConfig.addFilter("buildStyles", Styles.build);

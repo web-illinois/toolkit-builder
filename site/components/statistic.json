@@ -8,15 +8,16 @@
     "className" : "width-500",
     "classes": [
         {
+            "description" : "Color Theme",
+            "type": "dropdown",
+            "highlighted": true,
+            "values": ["il-theme-gray", "il-theme-white", "il-theme-blue", "il-theme-blue-gradient"]
+        },
+        {
             "name": "size",
             "description" : "Size of the statistic",
             "type": "dropdown",
             "values" : [ "il-size-small", "il-size-medium", "il-size-large", "il-size-xlarge" ]
-        },
-        {
-            "description" : "Theme",
-            "type": "dropdown",
-            "values": ["il-theme-gray", "il-theme-white", "il-theme-blue", "il-theme-blue-gradient"]
         }
     ],
     "styles" : [

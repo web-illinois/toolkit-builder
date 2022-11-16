@@ -36,21 +36,22 @@
     ],
     "classes": [
         {
-            "description": "Overlay Option",
+            "description": "Color Theme",
             "type": "dropdown",
-            "values": [
-                "",
-                "il-overlay"
-            ]
-        },
-        {
-            "description": "Theme",
-            "type": "dropdown",
+            "highlighted": true,
             "values": [
                 "",
                 "il-theme-orange",
                 "il-theme-blue",
                 "il-theme-white"
+            ]
+        },
+        {
+            "description": "Overlay Option",
+            "type": "dropdown",
+            "values": [
+                "",
+                "il-overlay"
             ]
         },
         {

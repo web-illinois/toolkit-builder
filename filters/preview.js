@@ -34,19 +34,34 @@ module.exports = class ComponentFilters {
                     });
                 }
 
+                let constantClass = false;
                 if (component.classes != null) {
                     component.classes.forEach((c, i) => {
                         if (c.type == "dropdown") {
-                            c.values.forEach((v, i2) => {
-                                if (v != '') {
-                                    returnValue = returnValue + `<div class='il-formatted header-info'><h2>Class: ${v}</h2></div>`;
-                                    returnValue = returnValue + `<${componentName} ${attributes} class="${classes}${v.trim()}"></${componentName}>`;
-                                }
-                            });
+                            if (!constantClass) {
+                                constantClass = c.values;
+                                c.values.forEach((v, i2) => {
+                                    if (v != '') {
+                                        returnValue = returnValue + `<div class='il-formatted header-info'><h2>Class: ${v}</h2></div>`;
+                                        returnValue = returnValue + `<${componentName} ${attributes} class="${classes}${v.trim()}"></${componentName}>`;
+                                    } else {
+                                        returnValue = returnValue + `<div class='il-formatted header-info'><h2>No class information</h2></div>`;
+                                        returnValue = returnValue + `<${componentName} ${attributes} class="${classes}"></${componentName}>`;
+                                    }
+                                });
+                            } else {
+                                constantClass.forEach((cclass, iclass) => {
+                                    c.values.forEach((v, i2) => {
+                                        if (v != '') {
+                                            returnValue = returnValue + `<div class='il-formatted header-info'><h2>Class: ${cclass} ${v}</h2></div>`;
+                                            returnValue = returnValue + `<${componentName} ${attributes} class="${classes} ${v.trim()} ${cclass.trim()}"></${componentName}>`;
+                                        }
+                                    });
+                                });
+                            }
                         } 
                     });
                 }
-
             }
         });
         return returnValue;
