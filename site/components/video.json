@@ -2,7 +2,7 @@
     "title": "Video",
     "slug" : "video",
     "description": "",
-    "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-video",
+    "documentation" : "",
     "preview": false,
     "className" : "width-800",
     "attributes" : [

@@ -2,7 +2,7 @@
     "title": "Clickable Card",
     "slug" : "clickable-card",
     "description": "",
-    "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-clickable-card",
+    "documentation" : "https://help.toolkit.illinois.edu/component/clickable-card/",
     "preview": true,
     "className" : "width-500",
     "attributes" : [

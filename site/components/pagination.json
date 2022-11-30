@@ -2,7 +2,7 @@
     "title": "Pagination",
     "slug" : "pagination",
     "description": "",
-    "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-pagination",
+    "documentation" : "https://help.toolkit.illinois.edu/component/pagination/",
     "attributes" : [
         {
             "name": "pages",
