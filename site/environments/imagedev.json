@@ -1,9 +1,0 @@
-{
-  "name": "Image Feature Branch",
-  "type": "development",
-  "slug": "imagedev",
-  "prefetch": "//dev.toolkit.illinois.edu",
-  "path": "//dev.toolkit.illinois.edu/jonker/ImageFeatureThemes",
-  "externalCodePre": "",
-  "externalCodePost": ""
-}

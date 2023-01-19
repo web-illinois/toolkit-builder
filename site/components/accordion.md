@@ -1,7 +1,7 @@
 ---
 title: Accordion
 layout: layouts/component.liquid
-componentName: div
+componentName: il-accordion
 bodyClass: headingarea text il-formatted
 slug: accordion
 pagination:
@@ -11,21 +11,21 @@ pagination:
 permalink: "{{ environment.slug }}/{{ slug }}/"
 ---
 <div class="template-information" data-name="default">
-    <details open>
-        <summary>
-            (( First item title -- this individual item starts open ))
-        </summary>
-        <p> (( First item information )) </p>
-    </details>
-    <details>
-        <summary>
-            (( Second item title -- this item and other items will start closed unless you add 'open' to the details tag ))
-        </summary>
-        <p> (( Second item information )) </p>
-    </details>
+    <il-accordion-panel>
+        <h3 slot="header">Test information</h3>
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+    </il-accordion-panel>
+    <il-accordion-panel>
+        <h3 slot="header">Test information #2</h3>
+        <p>First paragraph #2</p>
+        <p>Second paragraph</p>
+    </il-accordion-panel>
+    <il-accordion-panel>
+        <h3 slot="header">Test information #3</h3>
+        <p>First paragraph #3</p>
+        <p>Second paragraph</p>
+    </il-accordion-panel>
 </div>
 
-## Technical Notes
-
-Unlike most of the components, this is handled through straight javascript. Because of this, this only updates when the DOM loads, not when javascript changes the class information. Because of this, the builder may not work as expected.
 

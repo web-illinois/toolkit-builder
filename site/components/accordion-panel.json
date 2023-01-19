@@ -1,18 +1,10 @@
 {
-    "title": "Accordion",
-    "slug" : "accordion",
+    "title": "Accordion Panel",
+    "slug" : "accordion-panel",
     "description": "",
     "documentation" : "https://help.toolkit.illinois.edu/component/accordion/",
     "environment" : "development",
     "preview": true,
-    "attributes" : [
-        {
-            "name": "single",
-            "description" : "Only one panel open at a time",
-            "type": "dropdown",
-            "values" : [ "", "true" ]
-        }
-    ],
     "classes" : [
         {
             "description" : "Theme",
@@ -21,5 +13,5 @@
         }
     ],
     "styles" : [
-    ]
+   ]
 }
