@@ -1,0 +1,35 @@
+{
+    "title": "Introduction",
+    "slug" : "introduction",
+    "type": "development",
+    "description": "The Introduction component is for introduction text, with a title. ",
+    "documentation" : "https://help.toolkit.illinois.edu/component/il-introduction/",
+    "preview": true,
+    "attributes" : [
+    ],
+    "classes": [
+        {
+            "description": "Color Theme",
+            "type": "dropdown",
+            "highlighted": true,
+            "values": [
+                "",
+                "il-theme-blue",
+                "il-theme-white",
+                "il-theme-gray"
+            ]
+        },
+        {
+            "description": "Alignment",
+            "type": "dropdown",
+            "highlighted": true,
+            "values": [
+                "",
+                "il-align-center"
+            ]
+
+        }
+    ],
+    "styles": [
+    ]
+}

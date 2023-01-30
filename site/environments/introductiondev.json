@@ -1,9 +1,0 @@
-{
-  "name": "Introduction Branch",
-  "type": "development",
-  "slug": "introduction",
-  "prefetch": "http://dev.toolkit.illinois.edu",
-  "path": "//dev.toolkit.illinois.edu/jonker/introduction",
-  "externalCodePre": "",
-  "externalCodePost": ""
-}
