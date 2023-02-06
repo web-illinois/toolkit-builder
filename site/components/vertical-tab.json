@@ -1,0 +1,25 @@
+{
+    "title": "Vertical Tab",
+    "slug" : "vertical-tab",
+    "type": "development",
+    "description": "The Vertical Tab shows a list of tabs to the left with text to the right. It uses the il-vertical-tab-pabel with a header slot to create different tabs.",
+    "documentation" : "https://help.toolkit.illinois.edu/component/il-vertical-tab/",
+    "preview": true,
+    "attributes" : [
+    ],
+    "classes": [
+        {
+            "description": "Color Theme",
+            "type": "dropdown",
+            "highlighted": true,
+            "values": [
+                "",
+                "il-theme-blue",
+                "il-theme-white",
+                "il-theme-gray"
+            ]
+        }
+    ],
+    "styles": [
+    ]
+}
