@@ -1,9 +1,9 @@
 {
-  "name": "2.15 Beta Branch",
+  "name": "Base Toolkit - 2.15 Beta Branch",
   "type": "development",
   "slug": "2-15-beta",
-  "prefetch": "https://cdn.toolkit.illinois.edu",
-  "path": "https://cdn.toolkit.illinois.edu/2.15.0-beta2",
+  "prefetch": "//cdn.toolkit.illinois.edu",
+  "path": "//cdn.toolkit.illinois.edu/2.15.0-beta2",
   "externalCodePre": "",
   "externalCodePost": ""
 }
