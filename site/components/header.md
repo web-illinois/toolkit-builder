@@ -294,7 +294,27 @@ permalink: "{{ environment.slug }}/{{ slug }}/"
     </il-nav>
 </div>
 
-<div class="template-information" data-name="flyout unit">
+<div class="template-information" data-name="no menu">
+    <div slot="wordmark">
+        <il-unit-wordmark>
+            <p class="il-primary-unit"><a href="/">College of Education</a></p>
+            <h1><a href="/">Impact Report 2021</a></h1>
+        </il-unit-wordmark>
+    </div>
+
+    <il-search slot="search"></il-search>
+
+    <nav slot="links" class="il-links" aria-label="Top">
+        <ul>
+            <li><a href="#">Apply</a></li>
+            <li><a href="#">Chat</a></li>
+            <li><a href="#">People</a></li>
+            <li><a href="#">Give</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="template-information" data-name="flyout (2.15 beta only)">
     <div slot="wordmark">
         <il-unit-wordmark>
             <p class="il-primary-unit"><a href="/">College of Education </a></p>
@@ -380,26 +400,6 @@ permalink: "{{ environment.slug }}/{{ slug }}/"
                 </ul>
         </il-nav-section>
     </il-nav>
-</div>
-
-<div class="template-information" data-name="no menu">
-    <div slot="wordmark">
-        <il-unit-wordmark>
-            <p class="il-primary-unit"><a href="/">College of Education</a></p>
-            <h1><a href="/">Impact Report 2021</a></h1>
-        </il-unit-wordmark>
-    </div>
-
-    <il-search slot="search"></il-search>
-
-    <nav slot="links" class="il-links" aria-label="Top">
-        <ul>
-            <li><a href="#">Apply</a></li>
-            <li><a href="#">Chat</a></li>
-            <li><a href="#">People</a></li>
-            <li><a href="#">Give</a></li>
-        </ul>
-    </nav>
 </div>
 
 ## Technical Information

@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 function changeTemplate(e) {
     let templates = document.querySelectorAll('.template-information');
     document.getElementById('template').innerHTML = templates[e.value].innerHTML;
+    build();
 }
 
 function build() {
@@ -71,6 +72,20 @@ function build() {
     }
 
     window.scrollTo(0, 0);
+}
+
+function buildNewWindow() {
+    build();
+    let builder = document.getElementById('builder');
+    let htmlText = builder.outerHTML;
+    builder.innerHTML = '';
+    let headerText = '';
+    document.head.querySelectorAll('head script, head link').forEach((item) => {
+        headerText = headerText + item.outerHTML;
+    });
+    let w = window.open('');
+    w.document.writeln('<html><head><title>Preview</title>' + headerText + '</head><body style="margin: 0; padding: 0;">' + htmlText + '</body></html>');
+    w.opener.location.reload();
 }
 
 function checkLink(id) {

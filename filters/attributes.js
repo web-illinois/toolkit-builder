@@ -1,11 +1,15 @@
 module.exports = class Attributes {
     static build(name, components) {
         let returnValue = '';
+        let depreciatedValue = '';
         components.forEach(component => {
             if (component.slug === name) {
                 if (component.attributes != null) {
                     component.attributes.forEach(attribute => {
                         let depreciationCheck = attribute.depreciated ? "depreciated" : "";
+                        if (attribute.depreciated) {
+                            depreciatedValue = '<label>Show depreciated attributes <input style="width: 20px" type="checkbox" id="depreciated" onclick="toggleDepreciated(this);"></label>';
+                        }
                         if (attribute.type == "dropdown") {
                             returnValue = returnValue + `<label class=${depreciationCheck}>${attribute.name} (<em>${attribute.description}</em>)<select name="${attribute.name}" id="${attribute.name}">`;
                             attribute.values.forEach(v => returnValue = returnValue + `<option value="${v}">${v}</option>`);
@@ -23,11 +27,13 @@ module.exports = class Attributes {
                             returnValue = returnValue + `<input type="hidden" name="${attribute.name}" id="${attribute.name}" value="${attribute.value}">`;
                         }
                     });
-                } else {
-                    returnValue = "<p>N/A</p>";
-                }
+                } 
             }
         });
+        returnValue = depreciatedValue + returnValue;
+        if (returnValue == '') {
+            returnValue = "<p>N/A</p>";
+         }
         return returnValue;
     }
 }

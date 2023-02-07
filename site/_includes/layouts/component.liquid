@@ -29,8 +29,12 @@
 <h2>Component Display</h2>
 </div>
 
+<div class="builder-line"></div>
+
 <div id="builder-pre" class="{{ bodyClass }}"></div>
 <div id="builder" class="{{ bodyClass }} {{ slug | addClassInfo: components }}"></div>
+
+<div class="builder-line"></div>
 
 <div class="il-formatted headingarea text">
 {{ content }}
@@ -39,12 +43,12 @@
 <div class="il-formatted headingarea">
 <div class="built">
     <h2 class="full-width">Change Your Content and Options</h2>
-    <p><button class="il-button il-orange" onclick="build();">Rebuild Component With Options Below</button></p>
 </div>
     <div class="built">
         <div class="children">
             <h3 id="template-title" class="component-heading">Template -- enter raw HTML here</h3>
             <textarea id="template"></textarea>
+            <p><button class="il-button il-orange" onclick="build();">Rebuild Component With Selected Options</button></p>
         </div>
         <div class="children">
             <h3 id="template-header" class="component-heading"><label for="template-options">Template Options</label></h3>
@@ -62,7 +66,6 @@
             <div id="options">
             {{ slug | buildAttributes: components }}
             </div>
-            <label>Show depreciated attributes <input type="checkbox" id="depreciated" onclick="toggleDepreciated(this);"></label>
             <details style="margin-top: 40px;">
             <summary style="font-size: 1rem;">
             <h3 style="margin-top: 0;">Advanced Options</h3>
