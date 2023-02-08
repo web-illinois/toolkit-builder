@@ -24,6 +24,10 @@
 
     {{ slug | addDescription: components }}
 
+<div class="il-formatted headingarea text">
+{{ content }}
+</div>
+
 </div>
 <div class="il-formatted headingarea">
 <h2>Component Display</h2>
@@ -35,10 +39,6 @@
 <div id="builder" class="{{ bodyClass }} {{ slug | addClassInfo: components }}"></div>
 
 <div class="builder-line"></div>
-
-<div class="il-formatted headingarea text">
-{{ content }}
-</div>
 
 <div class="il-formatted headingarea">
 <div class="built">

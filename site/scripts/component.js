@@ -70,8 +70,6 @@ function build() {
         builder.append(builderObject);
         warning.style.display = 'none';
     }
-
-    window.scrollTo(0, 0);
 }
 
 function buildNewWindow() {

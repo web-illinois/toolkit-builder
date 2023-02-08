@@ -20,13 +20,10 @@
     padding: 0 50px;
 }
 
-.il-formatted.headingarea h2 {
-    padding-top: 2rem;
-}
-
 .headingarea.text {
     max-width: var(--il-content-max-width);
     margin: 40px auto;
+    padding: 0;
 }
 
 .headingarea .built {

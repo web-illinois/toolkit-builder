@@ -23,5 +23,23 @@ permalink: "{{ environment.slug }}/{{ slug }}/"
 <p><a href="#" class="il-button">Registration overview</a><a href="#" class="il-button">Contact Us</a><a href="#" class="il-button">Accessing email/Compass</a></p>
 </div>
 
+## Description 
+The Illinois components call to action gives a colored background with areas for text, buttons, and an optional icon. You can choose alternate Illinois brand colors and change icons. (If you want to use an image instead of an icon, look at Image Feature instead.) 
 
+## Customizations and notes 
+### Changing icons and icon styles
+There are two visual weights of icons available:
+* il-icon presents a solid icon against whichever background color you have chosen.
+* il-icon-line presents an icon outline.
 
+Changing icons:
+* The keyword inside the `<span></span>` tag indicates which icon will be displayed.
+* The list of icons and their keywords are shown in the Component Builder’s Icon Preview page.
+
+### Changing colors and alignments 
+The Call to Action Component Builder offers several color patterns and two text alignments. You can choose from several options based on campus color selections which have been vetted for accessibility.
+
+## About this component 
+* *Type:* Custom Element 
+* *Introduced in:* v2.3.0; 9/29/2021 
+* *Deprecated?:* No 
