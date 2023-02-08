@@ -1,9 +1,0 @@
-{
-  "name": "Accordion Branch",
-  "type": "development",
-  "slug": "accordion",
-  "prefetch": "http://dev.toolkit.illinois.edu",
-  "path": "//dev.toolkit.illinois.edu/jonker/accordion",
-  "externalCodePre": "",
-  "externalCodePost": ""
-}

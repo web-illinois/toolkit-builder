@@ -34,10 +34,10 @@ module.exports = class EnvironmentFilters {
         returnValue = `
             &lt;meta charset="UTF-8"&gt;<br>
             &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;<br>
-            &lt;link rel="dns-prefetch" href="https:${environment.prefetch}"&gt;<br>
+            &lt;link rel="dns-prefetch" href="${environment.prefetch}"&gt;<br>
             &lt;link rel="icon" href="https://cdn.brand.illinois.edu/favicon.ico"&gt;<br>
-            &lt;link rel="stylesheet" href="https:${environment.path}/toolkit.css" media="all"&gt;<br>
-            &lt;script src="https:${environment.path}/toolkit.js"&gt;&lt;/script&gt;
+            &lt;link rel="stylesheet" href="${environment.path}/toolkit.css" media="all"&gt;<br>
+            &lt;script src="${environment.path}/toolkit.js"&gt;&lt;/script&gt;
             `;
       }
     });

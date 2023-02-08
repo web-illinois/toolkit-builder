@@ -76,14 +76,15 @@ function buildNewWindow() {
     build();
     let builder = document.getElementById('builder');
     let htmlText = builder.outerHTML;
-    builder.innerHTML = '';
     let headerText = '';
     document.head.querySelectorAll('head script, head link').forEach((item) => {
         headerText = headerText + item.outerHTML;
     });
-    let w = window.open('');
-    w.document.writeln('<html><head><title>Preview</title>' + headerText + '</head><body style="margin: 0; padding: 0;">' + htmlText + '</body></html>');
-    w.opener.location.reload();
+    const winHtml = '<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8" /><title>Preview</title>' + headerText + '</head><body style="margin: 0; padding: 0;">' + htmlText + '</body></html>';
+    const winUrl = URL.createObjectURL(
+        new Blob([winHtml], { type: "text/html" })
+    );
+    let w = window.open(winUrl, 'preview');
 }
 
 function checkLink(id) {
