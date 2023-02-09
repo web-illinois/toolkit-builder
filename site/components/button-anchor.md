@@ -1,6 +1,6 @@
 ---
 title: Button (Anchor Link)
-layout: layouts/component.liquid
+layout: layouts/component-add.liquid
 componentName: a
 bodyClass: headingarea text
 slug: button-anchor

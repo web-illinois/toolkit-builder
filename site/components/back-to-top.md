@@ -1,6 +1,6 @@
 ---
 title: Back to Top
-layout: layouts/component.liquid
+layout: layouts/component-add.liquid
 componentName: il-back-to-top
 slug: back-to-top
 pagination:

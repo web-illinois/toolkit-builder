@@ -1,6 +1,6 @@
 ---
 title: Call To Action
-layout: layouts/component.liquid
+layout: layouts/component-add.liquid
 bodyClass: il-formatted
 componentName: il-call-to-action
 slug: call-to-action
