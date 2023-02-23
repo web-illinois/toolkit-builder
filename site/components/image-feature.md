@@ -1,6 +1,6 @@
 ---
 title: Image Feature
-layout: layouts/component.liquid
+layout: layouts/component-add.liquid
 bodyClass: il-formatted
 componentName: il-image-feature
 slug: image-feature
@@ -10,6 +10,39 @@ pagination:
     alias: environment
 permalink: "{{ environment.slug }}/{{ slug }}/"
 ---
+## Technical Information
+
+Note that if you want to use the Overlay feature, you need to use the "overlay" template option and you cannot use the Attributes section. The overlay option only takes class information. The Attributes section is going to be depreciated, and we did not implement it for the new overlay option. 
+
+## Description 
+ The Image Feature component adds a picture on one side and text with a background on the other side. You can designate which side holds the picture and which of the themed color choices is behind the text. Image Features can be helpful for putting a spotlight on popular topics, news items, and other “featured” items.
+
+## Customization and Notes
+
+### Theme colors and alignment
+By default, the il-blue-gradient theme is used. In the regular mode, this produces a blue gradient. In the overlay, it produces a solid dark blue. The text will be white. In the regular mode, il-blue theme provides a solid blue background instead of the blue gradient.
+
+The il-orange theme also produces a solid orange in both regular mode and overlay mode. The text will be white in some places and black in others because white text on orange backgrounds is often not high enough contrast for accessibility needs.
+
+The il-white theme and il-gray theme produces a white background with dark blue text.
+
+The float meaning changes based upon your mode.
+* In regular mode, il-float-left places the image on the left and the text on the right.
+* In overlay mode, il-float-left places the text inset on the left and most of the image on the right. 
+align=”left” is the default behavior. 
+
+### Overlay options
+By default, the text is presented side by side with the image.
+
+The il-overlay class places the text on top of the image, which will stretch to fit the available space.
+
+The overlay options provide some advanced CSS-based options which don’t apply to regular mode, including the ability to control the overlay width, opacity, and padding. 
+
+## About this component 
+* *Type:* Custom Element 
+* *Introduced in:* v2.3.0; 9/29/2021 
+* *Deprecated?:* No 
+
 <div class="template-information" data-name="default">
 <img slot="image" src="https://picsum.photos/1920/800">
 <h3>Student Life</h3>
@@ -28,6 +61,3 @@ projects with our faculty, as well as short- and long-term study abroad opportun
 <p><a href="#" class="il-button">Celebrate the awardees</a></p>
 </div>
 
-## Technical Information
-
-Note that if you want to use the Overlay feature, you need to use the "overlay" template option and you cannot use the Attributes section. The overlay option only takes class information. The Attributes section is going to be depreciated, and we did not implement it for the new overlay option. 
