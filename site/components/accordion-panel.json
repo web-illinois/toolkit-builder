@@ -6,11 +6,8 @@
     "documentation" : "https://help.toolkit.illinois.edu/component/accordion/",
     "environment" : "development",
     "preview": true,
+    "className" : "il-formatted",
     "classes" : [
-        {
-            "type": "fixed",
-            "value": "il-formatted"
-        },
         {
             "description" : "Theme",
             "type": "dropdown",
