@@ -1,11 +1,16 @@
 {
     "title": "Accordion Panel",
     "slug" : "accordion-panel",
+    "fullname": "il-accordion-panel",
     "description": "",
     "documentation" : "https://help.toolkit.illinois.edu/component/accordion/",
     "environment" : "development",
     "preview": true,
     "classes" : [
+        {
+            "type": "fixed",
+            "value": "il-formatted"
+        },
         {
             "description" : "Theme",
             "type": "dropdown",

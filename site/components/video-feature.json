@@ -1,9 +1,11 @@
 {
     "title": "Video Feature",
     "slug" : "video-feature",
+    "fullname": "il-video-feature",
     "description": "",
     "documentation" : "https://help.toolkit.illinois.edu/component/video-feature/",
     "preview": true,
+    "sample": "<h3>Career Possibilities</h3> <p>Whether you see yourself working as a veterinarian or running the family farm, a degree from  Animal Sciences will provide you with a hands-on education that will help you identify and solve  the challenges of the future. </p> <a href=\"#\" class=\"il-button\">Career Possibilities</a> <a href=\"#\" class=\"il-button\">Internships</a>",
     "attributes" : [
         {
             "name": "align",
@@ -27,10 +29,16 @@
             "name": "src",
             "description" : "URL of the video -- will allow for Youtube, Mediaspace/Kaltura, or Vimeo",
             "type": "url",
+            "depreciated": false,
             "value": "https://mediaspace.illinois.edu/media/t/1_0o2ypqvp"
         }
     ],
     "classes": [
+        {
+            "description": "Formatting",
+            "type": "fixed",
+            "value": "il-formatted"
+        },
         {
             "description": "Color Theme",
             "type": "dropdown",

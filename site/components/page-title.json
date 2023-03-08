@@ -1,9 +1,11 @@
 {
     "title": "Page Title",
     "slug": "page-title",
+    "fullname": "il-page-title",
     "description": "",
     "documentation": "https://help.toolkit.illinois.edu/component/page-title/",
     "preview": true,
+    "sample": "<img slot=\"background\" src=\"https://picsum.photos/1200/300\" alt=\"\"><h1>Page Title</h1>",
     "classes": [
         {
             "description": "Color Theme (for the overlay and text color)",

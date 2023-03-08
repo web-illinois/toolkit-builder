@@ -1,13 +1,20 @@
 {
     "title": "Vertical Tab",
     "slug" : "vertical-tab",
+    "fullname": "il-vertical-tab",
     "type": "development",
     "description": "The Vertical Tab shows a list of tabs to the left with text to the right. It uses the il-vertical-tab-pabel with a header slot to create different tabs.",
     "documentation" : "https://help.toolkit.illinois.edu/component/il-vertical-tab/",
     "preview": true,
+    "sample": "<h3>Career Possibilities</h3> <p>Whether you see yourself working as a veterinarian or running the family farm, a degree from  Animal Sciences will provide you with a hands-on education that will help you identify and solve  the challenges of the future. </p> <a href=\"#\" class=\"il-button\">Career Possibilities</a> <a href=\"#\" class=\"il-button\">Internships</a>",
     "attributes" : [
     ],
     "classes": [
+        {
+            "description": "Formatting",
+            "type": "fixed",
+            "value": "il-formatted"
+        },
         {
             "description": "Color Theme",
             "type": "dropdown",

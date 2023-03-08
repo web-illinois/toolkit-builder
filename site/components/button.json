@@ -1,10 +1,12 @@
 {
     "title": "Button",
     "slug" : "button",
+    "fullname": "il-button",
     "description": "",
     "documentation" : "https://help.toolkit.illinois.edu/component/button/",
     "environment" : "",
     "preview": true,
+    "sample": "View our College",
     "classes" : [
         {
             "type": "fixed",

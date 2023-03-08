@@ -141,9 +141,18 @@ textarea#template, textarea#pre {
 .width-500 {
     width: 500px;
     max-width: 500px;
+    margin: auto;
 }
 
 .width-800 {
     width: 800px;
     max-width: 800px;
+    margin: auto;
+}
+
+.fixed-background-color {
+    background-color: var(--il-background-color);
+    max-width: var(--il-content-max-width);
+    margin: auto;
+    padding: 50px;
 }

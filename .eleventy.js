@@ -6,6 +6,7 @@ const ClassList = require("./filters/classList");
 const Styles = require("./filters/styles");
 const Colors = require("./filters/colorCheck");
 const Preview = require("./filters/preview");
+const Theme = require("./filters/theme");
 
 module.exports = function (eleventyConfig) {
 
@@ -62,6 +63,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("preview", Preview.build);
 
   eleventyConfig.addFilter("previewIcons", Preview.icons);
+
+  eleventyConfig.addFilter("theme", Theme.build);
 
   return {
     dir: {

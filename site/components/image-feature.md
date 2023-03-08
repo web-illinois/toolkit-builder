@@ -22,6 +22,8 @@ Note that if you want to use the Overlay feature, you need to use the "overlay" 
 ### Theme colors and alignment
 By default, the il-blue-gradient theme is used. In the regular mode, this produces a blue gradient. In the overlay, it produces a solid dark blue. The text will be white. In the regular mode, il-blue theme provides a solid blue background instead of the blue gradient.
 
+Note that if you don't specify a theme, you should specify a theme on the buttons. 
+
 The il-orange theme and il-orange-gradient themes produces a solid orange in both regular mode and overlay mode. The text will be white in some places and black in others because white text on orange backgrounds is often not high enough contrast for accessibility needs.
 
 The il-white theme and il-gray theme produces a white background or gray background with dark blue text.
