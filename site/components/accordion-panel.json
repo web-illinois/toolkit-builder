@@ -4,7 +4,7 @@
     "fullname": "il-accordion-panel",
     "description": "",
     "documentation" : "https://help.toolkit.illinois.edu/component/accordion/",
-    "environment" : "development",
+    "environment" : "",
     "preview": true,
     "className" : "il-formatted",
     "classes" : [
