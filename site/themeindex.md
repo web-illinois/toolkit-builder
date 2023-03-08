@@ -3,7 +3,7 @@ title: Themes
 layout: layouts/page.liquid
 permalink: "themes/"
 ---
-# Theme Infomration
+# Theme Information
 
 The web components have a concept of color themes, or ways to style components to meet branding standards. This is a list of all themes and components that can be managed through the theme option. Providing a theme is optional. If you do not specify a theme, then one will be provided for you based on the component. 
 
