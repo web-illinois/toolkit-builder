@@ -1,0 +1,9 @@
+{
+  "name": "Localhost",
+  "type": "development",
+  "slug": "localhost",
+  "prefetch": "http://localhost:8080",
+  "path": "http://localhost:8080",
+  "externalCodePre": "",
+  "externalCodePost": ""
+}

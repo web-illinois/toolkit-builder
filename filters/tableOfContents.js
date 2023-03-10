@@ -4,7 +4,7 @@ module.exports = class TableOfContents {
         let returnValue = '<h2>Web Component Alternate Environment List</h2> <table><caption class="il-invisible">Environment Information</caption>';
         returnValue += "<tr><th scope='col'>Name</th><th scope='col'>Type</th><th scope='col'>Environment Details</th>";
         environments.forEach(environment => {
-            if (environment.type != 'production') {
+            if (environment.type != 'production' && environment.slug != 'localhost') {
                 returnValue += `<tr><td><a href='/${environment.type}/${environment.slug}/index.html'>${environment.name}</a></td>`;
                 returnValue += `<td>${environment.type}</td>`;
                 returnValue += `<td><a href='/${environment.slug}/index.html'>View environment details</a></td></tr>`;
