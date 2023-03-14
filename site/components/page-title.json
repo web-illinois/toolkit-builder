@@ -2,9 +2,9 @@
     "title": "Page Title",
     "slug": "page-title",
     "fullname": "il-page-title",
-    "description": "",
     "documentation": "https://help.toolkit.illinois.edu/component/page-title/",
-    "preview": true,
+    "environment" : "",
+    "status": "Custom Element; v2.6.0; 2/8/2022",
     "sample": "<img slot=\"background\" src=\"https://picsum.photos/1200/300\" alt=\"\"><h1>Page Title</h1>",
     "classes": [
         {

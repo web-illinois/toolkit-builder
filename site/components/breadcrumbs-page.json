@@ -1,23 +1,27 @@
 {
     "title": "Breadcrumbs Page",
     "slug" : "breadcrumbs-page",
+    "fullname": "il-breadcrumbs-page",
     "description": "",
-    "documentation" : "https://help.toolkit.illinois.edu/component/breadcrumbs/",
+    "status": "Custom Element; v2.3.0; 9/29/2021",
     "environment" : "",
     "attributes" : [
         {
+            "depreciated": false,
             "name": "home",
             "description" : "A boolean value if this is the home page",
             "type": "dropdown",
             "values": ["", "home"]
         },
         {
+            "depreciated": false,
             "name": "current",
             "description" : "A boolean value if this is the current page",
             "type": "dropdown",
             "values": ["", "current"]
         },
         {
+            "depreciated": false,
             "name": "href",
             "description" : "The link to the page this refers to",
             "type": "string",

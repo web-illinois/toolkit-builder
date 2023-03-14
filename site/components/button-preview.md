@@ -10,6 +10,3 @@ pagination:
     alias: environment
 permalink: "{{ environment.slug }}/{{ slug }}-preview/"
 ---
-<div class="template-information" data-name="default">
-View our College
-</div>

@@ -1,6 +1,6 @@
 ---
 title: Statistic
-layout: layouts/component.liquid
+layout: layouts/component-add.liquid
 componentName: il-statistic
 slug: statistic
 pagination:
@@ -21,3 +21,7 @@ permalink: "{{ environment.slug }}/{{ slug }}/"
 ## Technical Information
 
 For readability, this is inside a container that is restricted to 500px. This component will expand to fill the container it is in, and is usually placed in a flex or grid container. 
+
+## Notes and Usage
+
+This can be used inside the il-formatted class to ensure the HTML inside the component is formatted correctly.

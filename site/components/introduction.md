@@ -1,6 +1,6 @@
 ---
 title: Introduction
-layout: layouts/component.liquid
+layout: layouts/component-add.liquid
 bodyClass: il-formatted
 componentName: il-introduction
 slug: introduction
@@ -17,3 +17,8 @@ permalink: "{{ environment.slug }}/{{ slug }}/"
 <p><a href="#" class="il-button">Apply</a><a href="#" class="il-button">Request Information</a></p>
 </div>
 
+## Description
+The Introduction Web Component is a large introduction block that is used to start out a larger block of text. 
+
+## Technical Information
+You should not attempt to reformat this, although you can add underline and links in this component. Do not include header tags in this component. 

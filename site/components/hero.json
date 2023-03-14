@@ -2,9 +2,8 @@
     "title": "Hero Image",
     "slug": "hero-image",
     "fullname": "il-hero",
-    "description": "",
-    "documentation": "https://help.toolkit.illinois.edu/component/hero-image/",
-    "preview": true,
+    "environment" : "",
+    "status": "Custom Element; v2.0.0; 7/12/2021",
     "sample": "<img src=\"https://picsum.photos/1920/1280\" alt=\"\" slot=\"background\"><h1>Innovating solutions every year</h1> <ul> <li> <a href=\"#\">Link 1</a> </li> <li> <a href=\"#\">Link 2</a> </li> <li> <a href=\"#\">Link 3</a> </li> </ul>",
     "attributes": [
         {

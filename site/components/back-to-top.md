@@ -20,8 +20,3 @@ The Illinois components back-to-top allows you to provide a simple way to skip e
 * The tag should be placed at the very end of the page, even after the footer content. 
 * By default, the tag will scroll the page up to the top of the page.  
 * If you wish to jump to the top of the content body rather than the top of the page, you can use the content body ID as the target and alter the alt text from “back to top” to “go to content” (or something similar). 
-
-## About this component 
-* *Type:* Custom Element 
-* *Introduced in:* v2.3.0; 9/29/2021 
-* *Deprecated?:* No 

@@ -2,13 +2,12 @@
     "title": "Button (anchor)",
     "slug" : "button-anchor",
     "fullname": "il-button",
-    "description": "",
-    "documentation" : "https://help.toolkit.illinois.edu/component/button/",
     "environment" : "",
-    "preview": true,
+    "status": "CSS classes; v2.3.0; 9/29/2021",
     "sample": "View our College",
     "attributes" : [
         {
+            "depreciated": false,
             "name": "href",
             "description" : "URL of where the link goes to",
             "type": "url",

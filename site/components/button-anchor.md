@@ -17,7 +17,13 @@ View our College
 ## Description 
 The Illinois theme class il-button provides standardized styles for button elements. 
 
-## About this component 
-* *Type:* CSS classes 
-* *Introduced in:* v2.3.0; 9/29/2021 
-* *Deprecated?:* No
+### Accessibility
+This should be used only to go to a new page, and should not be used to trigger an in-page action. 
+
+### CSS options 
+
+Color values available: 
+* il-white-blue – White button, blue border and text
+* il-white-orange – White button, orange border and text
+* il-blue – Blue button, white text
+* Il-orange – Orange button, white text

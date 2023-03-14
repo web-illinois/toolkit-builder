@@ -2,9 +2,9 @@
     "title": "Image Feature",
     "slug" : "image-feature",
     "fullname": "il-image-feature",
-    "description": "The Image Feature component adds a picture on one side and text with a background on the other side.",
     "documentation" : "https://help.toolkit.illinois.edu/component/image-feature/",
-    "preview": true,
+    "environment" : "",
+    "status": "Custom Element; v2.0.0; 7/12/2021",
     "className" : "il-formatted",
     "sample": "<img slot=\"image\" src=\"https://picsum.photos/1920/800\"><h3>LAS Impact Award: Recognizing inspiring efforts during COVID-19</h3><p>The College of LAS honors individuals and teams that have demonstrated service and sacrifice beyond expectations during the pandemic.</p><p><a href=\"#\" class=\"il-button\">Celebrate the awardees</a></p>",
     "attributes" : [

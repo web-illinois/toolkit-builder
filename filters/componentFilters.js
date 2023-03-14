@@ -3,7 +3,7 @@ module.exports = class ComponentFilters {
         let returnValue = '';
         components.forEach(component => {
             if (component.slug === name) {
-                returnValue = `<p>${component.description} <a href='../${component.slug}-preview/index.html'>Preview this component</a> or <a href='${component.documentation}'>read the full documentation about this component</a>.</p>`;
+                returnValue = `<p><a href='../${component.slug}-preview/index.html'><br>Preview this component</a> (${component.status})</p>`;
             }
         });
         return returnValue;
@@ -13,7 +13,7 @@ module.exports = class ComponentFilters {
         let returnValue = '';
         components.forEach(component => {
             if (component.slug === name) {
-                returnValue = `<p>${component.description} <a href='../${component.slug}/index.html'>Edit this component</a> or <a href='${component.documentation}'>read the full documentation about this component</a>.</p>`;
+                returnValue = `<p><a href='../${component.slug}/index.html'><br>Edit this component</a> (${component.status})</p>`;
             }
         });
         return returnValue;

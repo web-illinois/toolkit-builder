@@ -1,6 +1,7 @@
 ---
 title: Helpful Links
 layout: layouts/page.liquid
+permalink: "helpful-links/"
 ---
 # Helpful Links
 

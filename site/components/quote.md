@@ -1,6 +1,6 @@
 ---
 title: Quote
-layout: layouts/component.liquid
+layout: layouts/component-add.liquid
 bodyClass: il-formatted
 componentName: il-quote
 slug: quote
@@ -30,6 +30,10 @@ There never is a happy ending because nothing ever ends.
 <p slot="attributed">Peter S. Beagle, The Last Unicorn</p>
 </div>
 
-## Technical Information
+## Description
+The Quote Web Component is a pull quote. 
 
+## Technical Information
 Remember to not include quote marks (") in your quote. These will be added automatically. 
+
+It will stretch and center to the container, so you may want to restrict the container width. 

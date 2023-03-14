@@ -1,11 +1,12 @@
 {
     "title": "Breadcrumbs",
     "slug" : "breadcrumbs",
-    "description": "",
-    "documentation" : "https://help.toolkit.illinois.edu/component/breadcrumbs/",
+    "fullname": "il-breadcrumbs",
+    "status": "Custom Element; v2.3.0; 9/29/2021",
     "environment" : "",
     "attributes" : [
         {
+            "depreciated": false,
             "name": "title",
             "description" : "The heading for the breadcrumbs section, provided for accessibility purposes, defaults to 'You are here'",
             "type": "string",

@@ -1,6 +1,6 @@
 ---
 title: Header
-layout: layouts/component.liquid
+layout: layouts/component-add.liquid
 componentName: il-header
 slug: header
 pagination:
@@ -12,7 +12,7 @@ permalink: "{{ environment.slug }}/{{ slug }}/"
 <div class="template-information" data-name="default">
     <div slot="wordmark">
         <il-unit-wordmark>
-            <h1>College of Agricultural, Consumer & Environmental Sciences</h1>
+            <h1>College of Zen Surrealism</h1>
         </il-unit-wordmark>
     </div>
     <il-search slot="search"></il-search>
@@ -214,6 +214,14 @@ permalink: "{{ environment.slug }}/{{ slug }}/"
     </il-nav>
 </div>
 
+<div class="template-information" data-name="minimum viable header">
+  <div slot="wordmark">
+    <il-unit-wordmark>
+      <h1>Your site's title</h1>
+    </il-unit-wordmark>
+  </div>
+</div>
+
 <div class="template-information" data-name="with primary unit">
     <div slot="wordmark">
         <il-unit-wordmark>
@@ -404,6 +412,26 @@ permalink: "{{ environment.slug }}/{{ slug }}/"
 
 ## Technical Information
 
-Note that this is used in conjunction with the Navigation, Navigation Section, Unit Wordmark, and Search component.
+Note that this is used in conjunction with the Navigation, Navigation Section, Unit Wordmark, and Search component. This is meant to all work in conjunction with each other, so you may choose to add and remove pieces as needed. 
 
 Often, a CMS will have tools that automate the navigation and can generate this automatically. Contact the team that is working with your CMS to see if this can be automated.
+
+## Description
+
+The Illinois Components Header defines an area at the top of the page which should contain (at a minimum) the site’s title. Navigation, search, and specialty links can also be included in the il-header component.
+
+## Customizations and notes
+
+### Adding search and navigation
+
+* You can add a basic Search element with `<il-search slot="search"></il-search>`. See the Search page for additional search customizations.
+* How to build navigation with either single-level or unfolding menu options is described in the Menu Navigation page.
+
+### Specialty links 
+
+* The “Apply / Donate / Contact” links at the top right of the screen shot above are links that this particular site has decided to handle separately from the rest of the menu system but still provide on every page of the site. “Log in” might be another specialty link to consider for this area.
+
+### Adding the unit wordmark
+
+* The element `<il-unit-wordmark>` must be contained in a container (usually a div) identified with slot=”wordmark”.
+* `<il-unit-wordmark>` should contain an `<h1>` enclosing the site’s title.

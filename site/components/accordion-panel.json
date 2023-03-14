@@ -2,10 +2,9 @@
     "title": "Accordion Panel",
     "slug" : "accordion-panel",
     "fullname": "il-accordion-panel",
-    "description": "",
-    "documentation" : "https://help.toolkit.illinois.edu/component/accordion/",
     "environment" : "",
-    "preview": true,
+    "status": "Custom Element; v2.15.0; 3/3/2023",
+    "sample": "<h3 slot=\"header\">Test information</h3><p>First paragraph</p><p>Second paragraph</p>",
     "className" : "il-formatted",
     "classes" : [
         {

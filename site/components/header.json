@@ -1,6 +1,7 @@
 {
     "title": "Header",
     "slug" : "header",
-    "description": "",
-    "documentation" : "https://help.toolkit.illinois.edu/component/header/"
+    "fullname": "il-header",
+    "environment" : "",
+    "status": "Custom Element; v1.1.0; 4/26/2021"
 }

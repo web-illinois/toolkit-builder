@@ -1,6 +1,6 @@
 ---
 title: Profile (Directory)
-layout: layouts/component.liquid
+layout: layouts/component-add.liquid
 componentName: il-profile
 bodyClass: headingarea text
 slug: profile
@@ -12,7 +12,7 @@ permalink: "{{ environment.slug }}/{{ slug }}/"
 ---
 <div class="template-information" data-name="default">
    <section slot="primary">
-        <h1>Sheeba Rani Arnold Anteraper</h1>
+        <h1>Zaphod Beeblebrox</h1>
         <p>Director of Clinical Imaging Research Stephens Family Clinical Research Institute Carle Foundation Hospital</p>
         <p class="il-contact-department">Very Very Very Long Department Name</p>
     </section>
@@ -59,6 +59,12 @@ permalink: "{{ environment.slug }}/{{ slug }}/"
     </section>
 </div>
 
+## Description
+
+This is a profile detail section specifically tailored to a faculty, staff member, or student. It is basically a section with specific styling. 
+
 ## Technical Notes
 
-Currently, this does not work well if in an il-formatted section
+This is meant to take the full width of the page. Each section is meant to be optional except for the sidebar and the title. 
+
+The person's name should be the `<h1>` tag. 

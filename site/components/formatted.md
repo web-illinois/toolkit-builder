@@ -1,6 +1,6 @@
 ---
 title: Formatted
-layout: layouts/component.liquid
+layout: layouts/component-add.liquid
 componentName: div
 bodyClass: headingarea text
 slug: formatted
@@ -131,3 +131,9 @@ permalink: "{{ environment.slug }}/{{ slug }}/"
 <p></p>
 </div>
 </div>
+
+## Description
+
+This sets all children of this item as formatted in Illinois colors and fonts. This includes headings, paragraphs, anchors, tables, ordered lists, unordered lists, and definitions.
+
+Note that header and footer information should not be included in the "il-formatted" class. Other components may or may not be added to the il-formatted class.

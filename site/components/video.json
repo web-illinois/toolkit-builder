@@ -1,18 +1,19 @@
 {
     "title": "Video",
     "slug" : "video",
-    "description": "",
-    "documentation" : "",
-    "preview": false,
     "className" : "width-800",
+    "sample": "",
+    "status": "Custom Element; v2.3.0; 9/29/2021",
     "attributes" : [
         {
+            "depreciated": false,
             "name": "src",
             "description" : "URL of the video -- will allow for Youtube or Mediaspace/Kaltura",
             "type": "url",
             "value": "https://mediaspace.illinois.edu/media/t/1_0o2ypqvp"
         },
         {
+            "depreciated": false,
             "name": "title",
             "description" : "Title of the video used for accessibility",
             "type": "string",

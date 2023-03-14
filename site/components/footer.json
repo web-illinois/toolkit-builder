@@ -1,6 +1,7 @@
 {
     "title": "Footer",
     "slug" : "footer",
-    "description": "",
-    "documentation" : "https://help.toolkit.illinois.edu/component/footer/"
+    "fullname": "il-footer",
+    "environment" : "",
+    "status": "Custom Element; v1.1.0; 4/26/2021"
 }

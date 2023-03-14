@@ -1,9 +1,9 @@
 {
     "title": "Icons",
     "slug" : "icon",
-    "description": "",
-    "documentation" : "https://github.com/web-illinois/toolkit/wiki",
-    "preview": true,
+    "fullname": "il-icon",
+    "status": "CSS Classes; v2.3.0; 9/29/2021",
+    "sample": "",
     "classes" : [
         {
             "description" : "Icon Theme",

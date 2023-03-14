@@ -5,6 +5,8 @@ module.exports = class ComponentFilters {
         let classes = '';
         components.forEach(component => {
             if (component.slug === name) {
+                let componentSampleText = component.sample;
+
                 if (component.attributes != null) {
                     component.attributes.forEach((c, i) => {
                         if (c.depreciated != null && !c.depreciated && (c.type == "url" || c.type == "string")) {
@@ -27,7 +29,7 @@ module.exports = class ComponentFilters {
                             c.values.forEach((v, i2) => {
                                 if (v != '') {
                                     returnValue = returnValue + `<div class='il-formatted header-info'><h2>Attribute: ${c.name} is ${v}</h2></div>`;
-                                    returnValue = returnValue + `<${componentName} ${attributes} ${c.name}="${v}" class="${classes}"></${componentName}>`;
+                                    returnValue = returnValue + `<${componentName} ${attributes} ${c.name}="${v}" class="${classes}">${componentSampleText}</${componentName}>`;
                                 }
                             });
                         } 
@@ -43,10 +45,10 @@ module.exports = class ComponentFilters {
                                 c.values.forEach((v, i2) => {
                                     if (v != '') {
                                         returnValue = returnValue + `<div class='il-formatted header-info'><h2>Class: ${v}</h2></div>`;
-                                        returnValue = returnValue + `<${componentName} ${attributes} class="${classes}${v.trim()}"></${componentName}>`;
+                                        returnValue = returnValue + `<${componentName} ${attributes} class="${classes}${v.trim()}">${componentSampleText}</${componentName}>`;
                                     } else {
                                         returnValue = returnValue + `<div class='il-formatted header-info'><h2>No class information</h2></div>`;
-                                        returnValue = returnValue + `<${componentName} ${attributes} class="${classes}"></${componentName}>`;
+                                        returnValue = returnValue + `<${componentName} ${attributes} class="${classes}">${componentSampleText}</${componentName}>`;
                                     }
                                 });
                             } else {
@@ -54,13 +56,17 @@ module.exports = class ComponentFilters {
                                     c.values.forEach((v, i2) => {
                                         if (v != '') {
                                             returnValue = returnValue + `<div class='il-formatted header-info'><h2>Class: ${cclass} ${v}</h2></div>`;
-                                            returnValue = returnValue + `<${componentName} ${attributes} class="${classes} ${v.trim()} ${cclass.trim()}"></${componentName}>`;
+                                            returnValue = returnValue + `<${componentName} ${attributes} class="${classes} ${v.trim()} ${cclass.trim()}">${componentSampleText}</${componentName}>`;
                                         }
                                     });
                                 });
                             }
                         } 
                     });
+                }
+                if (returnValue == '') {
+                    returnValue = returnValue + `<div class='il-formatted header-info'><h2>Default Information</h2></div>`;
+                    returnValue = returnValue + `<${componentName} ${attributes} class="${classes}">${componentSampleText}</${componentName}>`;
                 }
             }
         });

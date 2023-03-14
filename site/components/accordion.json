@@ -2,13 +2,12 @@
     "title": "Accordion",
     "slug" : "accordion",
     "fullname": "il-accordion",
-    "description": "",
-    "documentation" : "https://help.toolkit.illinois.edu/component/accordion/",
     "environment" : "",
-    "preview": true,
+    "status": "Custom Element; v2.15.0; 3/3/2023",
     "sample": "<il-accordion-panel><h3 slot=\"header\">Test information</h3><p>First paragraph</p><p>Second paragraph</p></il-accordion-panel><il-accordion-panel><h3 slot=\"header\">Test information #2</h3><p>First paragraph #2</p>    <p>Second paragraph</p></il-accordion-panel><il-accordion-panel>    <h3 slot=\"header\">Test information #3</h3>    <p>First paragraph #3</p>    <p>Second paragraph</p></il-accordion-panel>",
     "attributes" : [
         {
+            "depreciated": false,
             "name": "single",
             "description" : "Only one panel open at a time",
             "type": "dropdown",

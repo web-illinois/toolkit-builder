@@ -2,19 +2,20 @@
     "title": "Clickable Card",
     "slug" : "clickable-card",
     "fullname": "il-clickable-card",
-    "description": "",
-    "documentation" : "https://help.toolkit.illinois.edu/component/clickable-card/",
-    "preview": true,
+    "environment" : "",
+    "status": "Custom Element; v2.3.0; 9/29/2021",
     "className" : "width-500",
     "sample": "<h3 slot=\"header\">Student Life</h3>    <p>Animal sciences students extend their learning and career networks beyond    the classroom through internships, judging teams, student organizations, undergraduate research    projects with our faculty, as well as short- and long-term study abroad opportunities all over the world. </p>",
     "attributes" : [
         {
+            "depreciated": false,
             "name": "href",
             "description" : "URL of where the clickable card goes to",
             "type": "url",
             "value": "https://www.example.com"
         },
         {
+            "depreciated": true,
             "name": "width",
             "description" : "Length of the component. If left blank, it will span the entire width of the container",
             "type": "length",

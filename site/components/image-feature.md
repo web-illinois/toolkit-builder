@@ -40,10 +40,6 @@ The il-overlay class places the text on top of the image, which will stretch to 
 
 The overlay options provide some advanced CSS-based options which don’t apply to regular mode, including the ability to control the overlay width, opacity, and padding. 
 
-## About this component 
-* *Type:* Custom Element 
-* *Introduced in:* v2.3.0; 9/29/2021 
-* *Deprecated?:* No 
 
 <div class="template-information" data-name="default">
 <img slot="image" src="https://picsum.photos/1920/800">

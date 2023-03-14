@@ -38,8 +38,3 @@ Changing icons:
 
 ### Changing colors and alignments 
 The Call to Action Component Builder offers several color patterns and two text alignments. You can choose from several options based on campus color selections which have been vetted for accessibility.
-
-## About this component 
-* *Type:* Custom Element 
-* *Introduced in:* v2.3.0; 9/29/2021 
-* *Deprecated?:* No 

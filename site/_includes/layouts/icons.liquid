@@ -24,15 +24,20 @@
 
     {{ slug | addDescription: components }}
 
+<div class="il-formatted headingarea text">
+<details>
+<summary>Guidelines using the component</summary>
+{{ content }}
+</details>
+</div>
+
     <h2>How it looks</h2>
 </div>
 <div id="builder-pre" class="{{ bodyClass }}"></div>
 <div id="builder" class="{{ bodyClass }}"></div>
-<p class="il-formatted headingarea"><button class="il-button" onclick="build();">Update</button></p>
 
 <div class="il-formatted headingarea text">
 {{ slug | addIconList: icons }}
-{{ content }}
 </div>
 
 <div class="il-formatted headingarea">

@@ -1,17 +1,20 @@
 {
     "title": "Back to Top",
     "slug" : "back-to-top",
+    "fullname": "il-back-to-top",
     "description": "",
-    "documentation" : "https://help.toolkit.illinois.edu/component/back-to-top/",
     "environment" : "",
+    "status": "Custom Element; v2.3.0; 9/29/2021",
     "attributes" : [
         {
+            "depreciated": false,
             "name": "target",
             "description" : "The ID of the element which represents the top of the page. If provided, the page will scroll to this element.",
             "type": "string",
             "value": ""
         },
         {
+            "depreciated": false,
             "name": "alt",
             "description" : "The accessible text label of the button, defaults to 'Back to top'",
             "type": "string",

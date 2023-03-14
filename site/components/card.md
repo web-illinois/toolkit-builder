@@ -1,6 +1,6 @@
 ---
 title: Card
-layout: layouts/component.liquid
+layout: layouts/component-add.liquid
 bodyClass: il-formatted
 componentName: il-card
 slug: card
@@ -40,3 +40,10 @@ projects with our faculty, as well as short- and long-term study abroad opportun
 
 For readability, this is inside a container that is restricted to 500px. This component will expand to fill the container it is in, and is usually placed in a flex or grid container. 
 
+## Description
+
+The Illinois Components Card gives a box containing an image and a freeform area for text, links, and buttons. The image will be on top, and the text underneath. 
+
+If you want to use an icon instead of an image, you may want to consider Call to Action instead. If you want side by side image and text placement, look at Image Feature. If you want a card that acts as a link, consider the Clickable Card (however, do not mix the Clickable Card and Card in the same section).
+
+The image is optional. 

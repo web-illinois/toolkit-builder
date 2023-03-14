@@ -6,7 +6,7 @@ module.exports = class ThemeFilters {
             let classes = '';
             let themeClassName = '';
 
-            if (component.preview && component.fullname && component.sample) {
+            if (component.fullname && component.sample) {
                 if (component.attributes != null) {
                     component.attributes.forEach((c, i) => {
                         if (c.depreciated != null && !c.depreciated && (c.type == "url" || c.type == "string")) {
@@ -14,8 +14,6 @@ module.exports = class ThemeFilters {
                         } 
                     });
                 }
-
-                console.log('component ' + component.fullname + ' with attributes ' + attributes);
 
                 if (component.classes != null) {
                     component.classes.forEach((c, i) => {

@@ -1,11 +1,10 @@
 {
     "title": "Profile Card (Directory)",
     "slug" : "profile-card",
-    "sample": "il-profile-card",
-    "description": "",
-    "documentation" : "https://github.com/web-illinois/toolkit/wiki/il-profile-card",
+    "fullname": "il-profile-card",
     "environment" : "",
-    "preview": true,
+    "status": "Custom Element; v2.14.0; 11/15/2022",
+    "sample": "<img src=\"https://picsum.photos/4608/3072\" alt=\"\">  <h2><a href=\"#\">Zaphod Beeblebrox</a></h2>  <p>Director of Clinical Imaging Research Stephens Family Clinical Research Institute Carle Foundation Hospital</p>  <p class=\"il-contact-department\">Very Very Very Long Department Name</p>  <p class=\"il-contact-phone\"><a href=\"#\">000-000-0000</a></p>  <p class=\"il-contact-email\"><a href=\"#\">WWWWWWWWWW@illinois.edu</a></p>",
     "className" : "width-500",
     "classes" : [
     ],
