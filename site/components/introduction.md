@@ -18,7 +18,7 @@ permalink: "{{ environment.slug }}/{{ slug }}/"
 </div>
 
 ## Description
-The Introduction Web Component is a large introduction block that is used to start out a larger block of text. 
+The Introduction Web Component is a large introduction block that is used to start out a larger block of text. It is meant to be distinct from a header. 
 
 ## Technical Information
-You should not attempt to reformat this, although you can add underline and links in this component. Do not include header tags in this component. 
+You should not attempt to reformat this, although you can add bold and links in this component. Do not include paragraph or header tags in this component. Do not include underlines, as this can be confused as a link.

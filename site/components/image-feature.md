@@ -19,6 +19,10 @@ Note that if you want to use the Overlay feature, you need to use the "overlay" 
 
 ## Customization and Notes
 
+### Image Position
+
+By default, the image will cover the entire area, and it will center the image vertically and horizontally (so if the image is 800px and it's scaled so its width is 600px, it will cut off the left 100px and right 100px of the image). If you want to change this behavior, add [the object-position style](https://developer.mozilla.org/en-US/docs/Web/CSS/object-position) to the image. It accepts percentages, pixels, or top/left/right/bottom. An example of this is in the "set image flush top-left" example.  
+
 ### Theme colors and alignment
 By default, the il-blue-gradient theme is used. In the regular mode, this produces a blue gradient. In the overlay, it produces a solid dark blue. The text will be white. In the regular mode, il-blue theme provides a solid blue background instead of the blue gradient.
 
@@ -59,3 +63,13 @@ projects with our faculty, as well as short- and long-term study abroad opportun
 <p><a href="#" class="il-button">Celebrate the awardees</a></p>
 </div>
 
+<div class="template-information" data-name="set image flush top-left">
+<img slot="image" src="https://picsum.photos/1920/800" style="object-position: top left;">
+<h3>Student Life</h3>
+<p>Animal sciences students extend their learning and career networks beyond
+the classroom through internships, <a href="#">judging teams</a>, student organizations, undergraduate research
+projects with our faculty, as well as short- and long-term study abroad opportunities all over the world. </p>
+
+<a href="#" class="il-button">Subscribe</a>
+<a href="#" class="il-button">Find a departmental advisor</a>
+</div>

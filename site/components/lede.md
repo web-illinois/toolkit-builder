@@ -14,12 +14,8 @@ permalink: "{{ environment.slug }}/{{ slug }}/"
 Sodium is an essential micronutrient, but the amount we need is small. Three slices of bread or one teaspoon of table salt will do it, and chances are your daily sodium intake is far greater.
 </div>
 
-<div class="template-information" data-name="small">
-Classes start today
-</div>
-
 ## Description
 The Lede Web Component is a large text block that is used to highlight certain text. 
 
 ## Technical Information
-You should not attempt to reformat this, although you can add underline and links in this component. Do not include paragraph or header tags in this component. 
+You should not attempt to reformat this, although you can add bold and links in this component. Do not include paragraph or header tags in this component. Do not include underlines, as this can be confused as a link.

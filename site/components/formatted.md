@@ -137,3 +137,9 @@ permalink: "{{ environment.slug }}/{{ slug }}/"
 This sets all children of this item as formatted in Illinois colors and fonts. This includes headings, paragraphs, anchors, tables, ordered lists, unordered lists, and definitions.
 
 Note that header and footer information should not be included in the "il-formatted" class. Other components may or may not be added to the il-formatted class.
+
+### Themes and background color
+
+If you add a theme color to il-formatted, this will control everything **except** the background color. The builder gets around this by creating a separate class called fixed-background-color that changes the background color to the standard background color. The CSS for this is
+
+```` background-color: var(--il-background-color); ````

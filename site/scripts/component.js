@@ -39,7 +39,7 @@ function build() {
     builderPre.innerHTML = document.getElementById('pre').value;
     let buildingCode = document.getElementById('buildingCode');
     let builderObject = document.createElement(document.getElementById('component-name').value);
-    let attributes = document.querySelectorAll('#options input:not(.length), #options select:not(.unit)');
+    let attributes = document.querySelectorAll('#options input:not(.length):not(#depreciated), #options select:not(.unit)');
     attributes.forEach(a => { if (a.value != '') builderObject.setAttribute(a.id, a.value) });
     let attributesLength = document.querySelectorAll('#options input.length');
     attributesLength.forEach(a => { if (a.value != '') { 
