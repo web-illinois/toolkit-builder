@@ -40,5 +40,9 @@ gulp.task('javascript-preview', () => {
     .pipe(gulp.dest('./site/scripts'));
 });
 
+gulp.task('json-copy', () => {
+  return gulp.src(['./site/_data/*.json'])
+    .pipe(gulp.dest('./site/data'));
+});
 
-gulp.task("default", gulp.series(["javascript", "javascript-preview", "concat-components", "array-components", "concat-environments", "array-environments"]));
+gulp.task("default", gulp.series(["javascript", "javascript-preview", "concat-components", "array-components", "concat-environments", "array-environments", "json-copy"]));
