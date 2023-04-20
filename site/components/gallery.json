@@ -1,0 +1,54 @@
+{
+    "title": "Gallery",
+    "slug" : "gallery",
+    "fullname": "il-gallery",
+    "documentation" : "https://help.toolkit.illinois.edu/component/gallery/",
+    "environment" : "",
+    "status": "Custom Element; v2.16.0; 4/20/2023",
+    "className" : "il-formatted",
+    "sample": "<il-gallery-item href=\"#\"> <img alt=\"\" src=\"https://picsum.photos/600/600\" /> <p slot=\"title\">Title</p> <p slot=\"caption\">Subtitle</p></il-gallery-item><il-gallery-item href=\"#\"> <img alt=\"\" src=\"https://picsum.photos/600/800\"> <p slot=\"title\">Title</p> <p slot=\"caption\">Subtitle</p></il-gallery-item><il-gallery-item href=\"#\"> <img alt=\"\" src=\"https://picsum.photos/800/600\"> <p slot=\"title\">Title</p> <p slot=\"caption\">Subtitle</p></il-gallery-item><il-gallery-item href=\"#\"> <img alt=\"\" src=\"https://picsum.photos/800/800\"> <p slot=\"title\">Title</p> <p slot=\"caption\">Subtitle</p></il-gallery-item><il-gallery-item href=\"#\"> <img alt=\"\" src=\"https://picsum.photos/400/400\"> <p slot=\"title\">Title</p> <p slot=\"caption\">Subtitle</p></il-gallery-item><il-gallery-item href=\"#\"> <img alt=\"\" src=\"https://picsum.photos/600/800\"> <p slot=\"title\">Title</p> <p slot=\"caption\">Subtitle</p></il-gallery-item><il-gallery-item href=\"#\"> <img alt=\"\" src=\"https://picsum.photos/800/600\"> <p slot=\"title\">Title</p> <p slot=\"caption\">Subtitle</p></il-gallery-item><il-gallery-item href=\"#\"> <img alt=\"\" src=\"https://picsum.photos/600/600\"> <p slot=\"title\">Title</p> <p slot=\"caption\">Subtitle</p></il-gallery-item><il-gallery-item href=\"#\"> <img alt=\"\" src=\"https://picsum.photos/800/600\"> <p slot=\"title\">Title</p> <p slot=\"caption\">Subtitle</p></il-gallery-item>",
+    "attributes" : [
+    ],
+    "classes": [
+        {
+            "description": "Size",
+            "type": "dropdown",
+            "highlighted": true,
+            "values": [
+                "",
+                "il-size-xsmall",
+                "il-size-small",
+                "il-size-large"
+            ]
+        }
+    ],
+    "styles": [
+        {
+            "name": "--il-gallery-width",
+            "description" : "Width of the overlay",
+            "type": "dropdown",
+            "values": ["10%", "15%", "20%", "25%", "30%", "35%", "40%", "45%", "50%", "55%", "60%", "65%", "70%", "75%"]
+        },
+        {
+            "name": "--il-gallery-height",
+            "description" : "Padding for the overlay",
+            "type": "dropdown",
+            "values": ["", "0", "1rem", "2rem", "3rem", "4rem", "5rem", "6rem", "7rem"]
+        },
+        {
+            "name": "--il-gallery-background",
+            "description" : "Background color",
+            "type": "colors"
+        },
+        {
+            "name": "--il-gallery-background-focus",
+            "description" : "Background color when focused",
+            "type": "colors"
+        },
+        {
+            "name": "--il-gallery-text-focus",
+            "description" : "Text color when focused",
+            "type": "colors"
+        }
+    ]
+}

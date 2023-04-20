@@ -60,6 +60,22 @@
             ]
         },
         {
+            "description": "Margin Option",
+            "type": "dropdown",
+            "values": [
+                "",
+                "il-fixed-width"
+            ]
+        },
+        {
+            "description": "Static image (List Collection) option",
+            "type": "dropdown",
+            "values": [
+                "",
+                "il-picture-no-fill"
+            ]
+        },
+        {
             "description": "Horizontal Alignment and Float",
             "type": "dropdown",
             "values": [

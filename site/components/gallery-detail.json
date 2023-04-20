@@ -1,0 +1,34 @@
+{
+    "title": "Gallery Detail",
+    "slug" : "gallery-detail",
+    "fullname": "il-gallery-detail",
+    "documentation" : "https://help.toolkit.illinois.edu/component/gallery-detail/",
+    "environment" : "",
+    "status": "Custom Element; v2.16.0; 4/20/2023",
+    "className" : "il-formatted",
+    "sample": "<img slot=\"image\" src=\"https://picsum.photos/1920/800\"><h3>LAS Impact Award: Recognizing inspiring efforts during COVID-19</h3><p>The College of LAS honors individuals and teams that have demonstrated service and sacrifice beyond expectations during the pandemic.</p><p><a href=\"#\" class=\"il-button\">Celebrate the awardees</a></p>",
+    "attributes" : [
+        {
+            "name": "home",
+            "description" : "URL of the gallery",
+            "type": "url",
+            "value": ""
+        },
+        {
+            "name": "previous",
+            "description" : "URL of the previous item in the list",
+            "type": "url",
+            "value": ""
+        },
+        {
+            "name": "next",
+            "description" : "URL of the next item in the list",
+            "type": "url",
+            "value": ""
+        }
+    ],
+    "classes": [
+    ],
+    "styles": [
+    ]
+}
