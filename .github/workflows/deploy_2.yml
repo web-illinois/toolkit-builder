@@ -1,0 +1,26 @@
+name: builder_version2
+on:
+  workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Get Version
+      id: get_version
+      uses: battila7/get-version-action@v2
+
+    - run: npm install
+    - run: npm rebuild
+    - run: npm run-script build-full
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: 'AKIAXNR47MADGK2A4HEW'
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_FOR_AKIAXNR47MADGK2A4HEW }}
+        aws-region: us-east-2
+
+    - name: Deploy examples to S3 bucket 
+      run: aws s3 sync ./_site/ s3://builder2.toolkit.illinois.edu/content --delete --acl bucket-owner-full-control
+    - name: Invalidate Cloudfront cache for 
+      run: aws cloudfront create-invalidation --distribution-id	E15SV48NKMOQKH --paths "/*"
