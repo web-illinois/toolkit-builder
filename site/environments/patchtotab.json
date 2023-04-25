@@ -1,9 +1,0 @@
-{
-  "name": "Patch to Verical Tab",
-  "type": "development",
-  "slug": "patchtab",
-  "prefetch": "https://dev.toolkit.illinois.edu",
-  "path": "https://dev.toolkit.illinois.edu/jonker/PatchToVerticalTab",
-  "externalCodePre": "",
-  "externalCodePost": ""
-}

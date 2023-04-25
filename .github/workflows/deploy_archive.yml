@@ -1,6 +1,7 @@
-name: builder_version2
+name: deploy_archive
 on:
-  workflow_dispatch
+  push:
+    branches: [ 'release_archive/v2' ]
 jobs:
   build:
     runs-on: ubuntu-latest
