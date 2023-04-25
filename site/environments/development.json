@@ -1,9 +1,0 @@
-{
-  "name": "Latest Development",
-  "type": "development",
-  "slug": "latest",
-  "prefetch": "https://dev.toolkit.illinois.edu",
-  "path": "https://dev.toolkit.illinois.edu/latest",
-  "externalCodePre": "",
-  "externalCodePost": ""
-}
