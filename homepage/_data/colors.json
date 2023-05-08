@@ -1,0 +1,74 @@
+[
+  {
+    "name": "il-orange",
+    "value": "#ff5f05"
+  },
+  {
+    "name": "il-altgeld",
+    "value": "#c84113"
+  },
+  {
+    "name": "il-blue",
+    "value": "#13294b"
+  },
+  {
+    "name": "il-blue-darker",
+    "value": "#000033"
+  },
+  {
+    "name": "il-industrial",
+    "value": "#0071ce"
+  },
+  {
+    "name": "il-industrial-darker",
+    "value": "#2f568c"
+  },
+  {
+    "name": "il-industrial-lighter-1",
+    "value": "#3cb4e5"
+  },
+  {
+    "name": "il-industrial-lighter-2",
+    "value": "#a6d7eb"
+  },
+  {
+    "name": "il-industrial-lighter-3",
+    "value": "#d5eaf7"
+  },
+  {
+    "name": "il-storm",
+    "value": "#707372"
+  },
+  {
+    "name": "il-storm-darker",
+    "value": "#252525"
+  },
+  {
+    "name": "il-storm-lighter-1",
+    "value": "#9c9a9d"
+  },
+  {
+    "name": "il-storm-lighter-2",
+    "value": "#c8c6c7"
+  },
+  {
+    "name": "il-storm-lighter-3",
+    "value": "#f4f4f4"
+  },
+  {
+    "name": "il-grey-1",
+    "value": "#f4f4f4"
+  },
+  {
+    "name": "il-grey-2",
+    "value": "#707070"
+  },
+  {
+    "name": "il-white",
+    "value": "#ffffff"
+  },
+  {
+    "name": "il-black",
+    "value": "#000000"
+  }
+]

@@ -15,13 +15,13 @@ gulp.task('array-components', () => {
 });
 
 gulp.task('concat-environments', () => {
-  return gulp.src('./site/environments/*.json')
+  return gulp.src('./homepage/environments/*.json')
     .pipe(concat('environmentsPartial.txt', {newLine: ','}))
-    .pipe(gulp.dest('./site/array'));
+    .pipe(gulp.dest('./homepage/array'));
 });
 
 gulp.task('array-environments', () => {
-  return gulp.src(['./site/array/start.txt', './site/array/environmentsPartial.txt', './site/array/end.txt'])
+  return gulp.src(['./homepage/array/start.txt', './homepage/array/environmentsPartial.txt', './homepage/array/end.txt'])
     .pipe(concat('environments.json'))
     .pipe(gulp.dest('./site/_data'));
 });
@@ -45,4 +45,16 @@ gulp.task('json-copy', () => {
     .pipe(gulp.dest('./site/data'));
 });
 
-gulp.task("default", gulp.series(["javascript", "javascript-preview", "concat-components", "array-components", "concat-environments", "array-environments", "json-copy"]));
+
+gulp.task('json-copy-homepage', () => {
+  return gulp.src(['./homepage/_data/*.json'])
+    .pipe(gulp.dest('./homepage/data'));
+});
+
+gulp.task("site", gulp.series(["javascript", "javascript-preview", 
+"concat-components", "array-components", "json-copy"]));
+
+gulp.task("homepage", gulp.series(["concat-environments", 
+"array-environments", "json-copy-homepage"]));
+
+gulp.task("default", gulp.series(["site", "homepage"]));

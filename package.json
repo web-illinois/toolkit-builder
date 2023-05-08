@@ -8,7 +8,9 @@
   "scripts": {
     "gulp": "gulp",
     "build-html": "eleventy",
-    "build-full": "gulp && eleventy"
+    "build-environment": "gulp site && eleventy",
+    "build-homepage": "gulp homepage && eleventy --config=.eleventy-homepage.js",
+    "build-full": "gulp && eleventy && eleventy --config=.eleventy-homepage.js"
   },
   "dependencies": {},
   "devDependencies": {

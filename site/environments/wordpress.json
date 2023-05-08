@@ -1,9 +1,0 @@
-{
-  "name": "Wordpress 5.7.4",
-  "type": "development",
-  "slug": "wordpress574",
-  "prefetch": "https://dev.toolkit.illinois.edu",
-  "path": "https://dev.toolkit.illinois.edu/latest",
-  "externalCodePre": "<link rel='stylesheet' id='wp-block-library-css'  href='https://wordpress.webtheme.illinois.edu/wp-includes/css/dist/block-library/style.min.css?ver=5.7.4' media='all' /><link rel='stylesheet' id='block-styles-css'  href='https://wordpress.webtheme.illinois.edu/wp-content/themes/uofi-2020-2-1-beta/block-styles.css?ver=5.7.4' media='all' />",
-  "externalCodePost": "<link rel='stylesheet' id='bootstrapcss-css'  crossorigin=\"anonymous\" integrity=\"sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z\" href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' media='all' /><link rel='stylesheet' id='main-css-css'  href='https://wordpress.webtheme.illinois.edu/wp-content/themes/uofi-2020-2-1-beta/style.css?ver=211025-164705' media='all' />"
-}

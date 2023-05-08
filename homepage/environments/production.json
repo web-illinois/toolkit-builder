@@ -1,0 +1,12 @@
+{
+    "name": "Production, no CMS",
+    "description": "Start here if you are not using a CMS",
+    "order": 1,
+    "environments": [
+      {
+        "name": "Latest branch",
+        "notes": "",
+        "slug": "prod"
+      }
+    ]
+  }

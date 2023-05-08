@@ -3,11 +3,13 @@ dist
 html
 node_modules
 var
+_homepage
+homepage/data
+homepage/array/environmentsPartial.txt
+homepage/_data/environments.json
 _site
 site/data
 site/array/componentsPartial.txt
-site/array/environmentsPartial.txt
-site/_data/environments.json
 site/_data/components.json
 site/scripts/main.js
 site/scripts/main-preview.js

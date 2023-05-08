@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="dns-prefetch" href="//cdn.brand.illinois.edu">
+    <link rel="icon" href="https://cdn.brand.illinois.edu/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.brand.illinois.edu/toolkit/2/toolkit.css" media="all">
+    <script src="https://cdn.brand.illinois.edu/toolkit/2/toolkit.js"></script>
+    <link rel="stylesheet" href="/styles/colorcheck.css" media="all">
+    <script src="/scripts/colorcheck.js"></script>
+    <script>{{ title | addColors: colors }}</script>
+    <title>{{ title }}</title>
+</head>
+<body style="margin: 0;">
+    {% include menu.liquid %}
+    <main>
+        <div class="il-formatted" style="padding: 20px 50px; max-width: var(--il-content-max-width); margin: auto;">
+        {{ content }}
+        <h2>Test Run Options</h2>
+        <div class='flex runoptions'>
+            <div>
+                <h3>Foreground</h3>
+                <div id='foreground'></div>
+                <button class='il-button' id='checkallfore'>Select All</button>
+                <button class='il-button' id='checknonefore'>De-select All</button>
+            </div>
+            <div>
+                <h3>Background</h3>
+                <div id='background'></div>
+                <button class='il-button' id='checkallback'>Select All</button>
+                <button class='il-button' id='checknoneback'>De-select All</button>
+            </div>
+            <div>
+                <h3>Test Options</h3>
+                <p>
+                    <label for="runOptions">Run Options: </label><select id="runOptions">
+                        <option value="all">Test all colors</option>
+                        <option value="selected" selected>Test selected colors</option>
+                        <option value="foreground">Test custom foreground</option>
+                        <option value="background">Test custom background</option>
+                    </select>
+                </p>
+                <p><label for='customcolor'>Custom Color Hex Value: </label><input type='text' id='customcolor' style="width: 80px;" value="#FFFFFF"></p>
+                <p>
+                    <label for="displayOptions">Display Options: </label><select id="displayOptions">
+                        <option value="all">Show all tests</option>
+                        <option value="pass" selected>Show all passing tests</option>
+                        <option value="full">Show only passing tests for all sizes</option>
+                    </select>
+                </p>
+                <p>
+                    Sample Text (optional, may include HTML tags, but color checker will ignore them)<br>
+                    <textarea id='sampletext' style="width: 100%; height: 160px;"></textarea>
+                </p>
+                <button class='il-button il-orange' id='btnTestColor'>Run Test</button>
+            </div>
+        </div>
+        <p>
+        <h2 id='results-area'>Test Results</h2>
+        <div id='colors'></div>
+        <h2>Link to current results</h2>
+        <div id='link'></div>
+    </main>
+</body>
+</html>
+
+

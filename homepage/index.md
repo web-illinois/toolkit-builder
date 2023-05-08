@@ -1,10 +1,8 @@
 ---
 title: Web Toolkit Builder
-layout: layouts/toc-production.liquid
+layout: layouts/page.liquid
 ---
 # Components
-
-**Note that this is the old version.** For the main site, you will need to go https://builder.toolkit.illinois.edu. 
 
 The toolkit is a way to easily build components that have been designed by the WIGG Design group. It may not meet all of your needs, so don't feel like you are constrained to use just these options or force you content to these components. Using these components is not a matter of being compliant with the web theme, it's being compliant with the brand standards. As we update the web components, you can easily get the benefits of these updates without having to hand-code a lot of changes yourself. 
 

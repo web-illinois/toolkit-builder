@@ -1,9 +1,0 @@
-{
-  "name": "Base Toolkit - Version 2.11",
-  "type": "legacy",
-  "slug": "2-11",
-  "prefetch": "https://cdn.toolkit.illinois.edu",
-  "path": "https://cdn.toolkit.illinois.edu/2.11",
-  "externalCodePre": "",
-  "externalCodePost": ""
-}
