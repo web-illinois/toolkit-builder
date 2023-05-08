@@ -38,3 +38,5 @@ Changing icons:
 
 ### Changing colors and alignments 
 The Call to Action Component Builder offers several color patterns and two text alignments. You can choose from several options based on campus color selections which have been vetted for accessibility.
+
+It is highly recommended from the design team that you do not include icons along with centered text (il-center). 
