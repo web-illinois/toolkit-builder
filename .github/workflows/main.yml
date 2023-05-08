@@ -1,7 +1,7 @@
 name: deploy_release
 on:
   push:
-    branches: [ 'release/**' ]
+    branches: [ 'main' ]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,9 +21,7 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_FOR_AKIAXNR47MADGK2A4HEW }}
         aws-region: us-east-2
 
-    - name: Deploy homepage to S3 bucket that links to versions
-      run: aws s3 sync ./homepage/ s3://builder.toolkit.illinois.edu/content --delete --acl bucket-owner-full-control
-    - name: Deploy current version to S3 bucket 
-      run: aws s3 sync ./_site/ s3://builder3.toolkit.illinois.edu/content --delete --acl bucket-owner-full-control
+    - name: Deploy examples to S3 bucket 
+      run: aws s3 sync ./_site/ s3://builder.toolkit.illinois.edu/content --delete --acl bucket-owner-full-control
     - name: Invalidate Cloudfront cache for 
       run: aws cloudfront create-invalidation --distribution-id	E15SV48NKMOQKH --paths "/*"
