@@ -12,7 +12,8 @@ permalink: "{{ environment.slug }}/{{ slug }}/"
 <div class="template-information" data-name="default">
     <div slot="wordmark">
         <il-unit-wordmark>
-            <h1>College of Zen Surrealism</h1>
+            <p class="il-primary-unit"><a href="/">College of Weird and Unusual Science and Engineering</a></p>
+            <h1>Department of Zen Surrealism</h1>
         </il-unit-wordmark>
     </div>
     <il-search slot="search"></il-search>
@@ -222,11 +223,10 @@ permalink: "{{ environment.slug }}/{{ slug }}/"
   </div>
 </div>
 
-<div class="template-information" data-name="with primary unit">
+<div class="template-information" data-name="without primary unit">
     <div slot="wordmark">
         <il-unit-wordmark>
-            <p class="il-primary-unit"><a href="/">College of Education </a></p>
-            <h1><a href="/">Council on Teacher Education</a></h1>
+            <h1><a href="/">Council on Zen Surrealism</a></h1>
         </il-unit-wordmark>
     </div>
     <il-search slot="search"></il-search>

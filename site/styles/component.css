@@ -127,11 +127,18 @@ textarea#template, textarea#pre {
     margin-bottom: 40px;
 }
 
-.builder-line {
+.builder-line{
     width: 100%;
     height: 10px;
     background: #afa;
-    margin: 10px 0;
+}
+
+.builder-line.top {
+    margin: 10px 0 0 0;
+}
+
+.builder-line.bottom {
+    margin: 0 0 10px 0;
 }
 
 #builder {
