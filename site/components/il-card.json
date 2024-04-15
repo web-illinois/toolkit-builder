@@ -1,0 +1,8 @@
+{
+    "name": "il-card",
+    "title": "Card Item",
+    "type": "Custom Element",
+    "version": "v3.0",
+    "description": "Old notes about the card items",
+    "usePreview": false
+}

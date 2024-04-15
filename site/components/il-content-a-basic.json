@@ -1,0 +1,111 @@
+{
+    "name": "il-content",
+    "title": "Content Area, Basic",
+    "tagName": "il-content",
+    "type": "Custom Element",
+    "version": "v3.0",
+    "description": "Basic content area with formatting",
+    "usePreview": true,
+    "samples": [
+        {
+            "name": "default",
+            "text": "<h1>Test</h1><h2>Test heading 2</h2><p>Paragraph</p><p>Paragraph <a href='https://www.example.org'>with internal link</a> inside</p><h2>Test heading 2b</h2><h3>Test heading 3</h3><p>Paragraph</p><p>Paragraph</p>",
+            "defaultParentElement": "",
+            "defaultParentElementStyle": "",
+            "defaultAttributeText": ""
+        }
+    ],
+    "themes" : [
+        "il-theme-orange",
+        "il-theme-blue",
+        "il-theme-white",
+        "il-theme-blue-gradient",
+        "il-theme-gray"
+    ],
+    "classes": [
+        {
+            "description": "Size",
+            "type": "dropdown",
+            "values": [
+                "",
+                "il-size-small",
+                "il-size-large"
+            ]
+        },
+        {
+            "description": "Margin Option",
+            "type": "dropdown",
+            "values": [
+                "",
+                "il-fixed-width"
+            ]
+        }
+    ],
+    "cssVariables": [
+        {
+            "name": "--il-content--color",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-content--heading--color",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-content--font-weight",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-content--font-size",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-content--line-height",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-content--font-family",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-content-heading-base-size",
+            "description" : "also is the h6 size",
+            "type": "text"
+        },
+        {
+            "name": "--il-content-heading-ratio",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-content-h5-size",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-content-h4-size",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-content-h3-size",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-content-h2-size",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-content-h1-size",
+            "description" : "",
+            "type": "text"
+        }
+    ]
+}

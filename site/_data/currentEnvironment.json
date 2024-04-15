@@ -1,0 +1,13 @@
+{
+    "name": "Alpha Test version 2",
+    "version": "v3.0.0-alpha.2",
+    "componentVersion": "v3.0.0-alpha.2",
+    "flagNewComponents": true,
+    "date": "",
+    "notes": "Alpha version",
+    "slug": "alpha-2",
+    "prefetch": "https://cdn.toolkit.illinois.edu",
+    "path": "https://cdn.toolkit.illinois.edu/3.0.0-alpha.2",
+    "externalCodePre": "",
+    "externalCodePost": ""
+}

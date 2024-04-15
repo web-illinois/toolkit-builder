@@ -1,0 +1,137 @@
+{
+    "name": "il-feature-overlay",
+    "title": "Feature, Overlay",
+    "tagName": "il-feature",
+    "type": "Custom Element",
+    "version": "v2.3",
+    "description": "Feature that has an image in the background",
+    "usePreview": true,
+    "samples": [
+        {
+            "name": "default",
+            "text": "<img slot=\"image\" src=\"https://picsum.photos/1920/800\">\r\n<il-content><h3>LAS Impact Award: Recognizing inspiring efforts during COVID-19</h3><p>The College of LAS honors individuals and teams that have demonstrated service and sacrifice beyond expectations during the pandemic.</p><p><a href=\"#\" class=\"il-button\">Celebrate the awardees</a></p></il-content>",
+            "defaultParentElement": "",
+            "defaultParentElementStyle": "",
+            "defaultAttributeText": ""
+        },
+        {
+            "name": "small size",
+            "text": "<img slot=\"image\" src=\"https://picsum.photos/1920/800\">\r\n<il-content><h3>LAS Impact Award: Recognizing inspiring efforts during COVID-19</h3><p>The College of LAS honors individuals and teams that have demonstrated service and sacrifice beyond expectations during the pandemic.</p><p><a href=\"#\" class=\"il-button\">Celebrate the awardees</a></p></il-content>",
+            "defaultParentElement": "div",
+            "defaultParentElementStyle": "width: 400px;",
+            "defaultAttributeText": ""
+        },
+        {
+            "name": "using card",
+            "text": "<img slot=\"image\" src=\"https://picsum.photos/1920/800\">\r\n<il-content class='il-card'><h3>LAS Impact Award: Recognizing inspiring efforts during COVID-19</h3><p>The College of LAS honors individuals and teams that have demonstrated service and sacrifice beyond expectations during the pandemic.</p><p><a href=\"#\" class=\"il-button\">Celebrate the awardees</a></p></il-content>",
+            "defaultParentElement": "",
+            "defaultParentElementStyle": "",
+            "defaultAttributeText": ""
+        },
+        {
+            "name": "data top",
+            "text": "<img slot=\"image\" src=\"https://picsum.photos/1920/800\" style=\"object-position: top left;\">\r\n<il-content><h3>Student Life</h3><p>Animal sciences students extend their learning and career networks beyond the classroom through internships, <a href=\"#\">judging teams</a>, student organizations, undergraduate research projects with our faculty, as well as short- and long-term study abroad opportunities all over the world. </p> <a href=\"#\" class=\"il-button\">Subscribe</a><a href=\"#\" class=\"il-button\">Find a departmental advisor</a></il-content>",
+            "defaultParentElement": "",
+            "defaultParentElementStyle": "",
+            "defaultAttributeText": ""
+        }
+    ],
+    "themes" : [
+        "il-theme-orange",
+        "il-theme-blue",
+        "il-theme-white",
+        "il-theme-gray"
+    ],
+    "classes": [
+        {
+            "description": "Overlay Option",
+            "type": "fixed",
+            "value": "il-image-background"
+        },
+        {
+            "description": "Margin Option",
+            "type": "dropdown",
+            "values": [
+                "",
+                "il-fixed-width"
+            ]
+        },
+        {
+            "description": "Horizontal Alignment and Float",
+            "type": "dropdown",
+            "values": [
+                "",
+                "il-float-left",
+                "il-float-center",
+                "il-float-right"
+            ]
+        }
+    ],
+    "cssVariables": [
+        {
+            "name": "--il-image-feature--display",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-image-feature--background",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-image-feature--min-height",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-image-feature--max-width",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-image-feature--main--max-width",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-image-feature--main--flex-grow",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-image-feature--flex-direction",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-image-feature--image--position",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-image-feature--image--display",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-image-feature--image--width",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-image-feature--content--padding",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-image-feature--content--margin",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-image-feature--container--border",
+            "description" : "",
+            "type": "text"
+        }
+   ]
+}

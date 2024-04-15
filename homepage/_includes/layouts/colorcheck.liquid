@@ -13,7 +13,8 @@
     <title>{{ title }}</title>
 </head>
 <body style="margin: 0;">
-    {% include menu.liquid %}
+    {% include header.liquid %}
+    
     <main>
         <div class="il-formatted" style="padding: 20px 50px; max-width: var(--il-content-max-width); margin: auto;">
         {{ content }}
@@ -56,11 +57,12 @@
                 <button class='il-button il-orange' id='btnTestColor'>Run Test</button>
             </div>
         </div>
-        <p>
         <h2 id='results-area'>Test Results</h2>
         <div id='colors'></div>
         <h2>Link to current results</h2>
         <div id='link'></div>
+        {% include footer.liquid %}
+    </div>
     </main>
 </body>
 </html>

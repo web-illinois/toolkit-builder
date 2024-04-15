@@ -1,0 +1,128 @@
+{
+    "name": "il-content-card",
+    "title": "Content Area, Card",
+    "tagName": "il-content",
+    "type": "Custom Element",
+    "version": "v3.0",
+    "description": "Card item that equalizes the heading information",
+    "usePreview": true,
+    "samples": [
+        {
+            "name": "default",
+            "text": "<h3>Student Life</h3><p>Animal sciences students extend their learning and career networks beyond the classroom through internships, <a href='#'>judging teams</a>, student organizations, undergraduate research projects with our faculty, as well as short- and long-term study abroad opportunities all over the world. </p> <div class='il-card-bottom'><a class='il-button' href='https://www.example.org'>Subscribe</a><a class='il-button' href='https://www.example.com'>Find a departmental advisor</a></div>",
+            "defaultParentElement": "div",
+            "defaultParentElementStyle": "width: 500px; margin: auto;",
+            "defaultAttributeText": ""
+        },
+        {
+            "name": "icon",
+            "text": "<il-icon>faq</il-icon><h3>Student Life</h3><p>Animal sciences students extend their learning and career networks beyond the classroom through internships, <a href='#'>judging teams</a>, student organizations, undergraduate research projects with our faculty, as well as short- and long-term study abroad opportunities all over the world. </p> <div class='il-card-bottom'><a class='il-button' href='https://www.example.org'>Subscribe</a><a class='il-button' href='https://www.example.com'>Find a departmental advisor</a></div>",
+            "defaultParentElement": "div",
+            "defaultParentElementStyle": "width: 500px; margin: auto;",
+            "defaultAttributeText": ""
+        },
+        {
+            "name": "centered header",
+            "text": "<h3 style='text-align: center;'>Student Life</h3><p>Animal sciences students extend their learning and career networks beyond the classroom through internships, <a href='#'>judging teams</a>, student organizations, undergraduate research projects with our faculty, as well as short- and long-term study abroad opportunities all over the world. </p> <div class='il-card-bottom'><a class='il-button' href='https://www.example.org'>Subscribe</a><a class='il-button' href='https://www.example.com'>Find a departmental advisor</a></div>",
+            "defaultParentElement": "div",
+            "defaultParentElementStyle": "width: 500px; margin: auto;",
+            "defaultAttributeText": ""
+        },
+        {
+            "name": "no margin set in parent",
+            "text": "<h3>Student Life</h3><p>Animal sciences students extend their learning and career networks beyond the classroom through internships, <a href='#'>judging teams</a>, student organizations, undergraduate research projects with our faculty, as well as short- and long-term study abroad opportunities all over the world. </p> <div class='il-card-bottom'><a class='il-button' href='https://www.example.org'>Subscribe</a><a class='il-button' href='https://www.example.com'>Find a departmental advisor</a></div>",
+            "defaultParentElement": "",
+            "defaultParentElementStyle": "",
+            "defaultAttributeText": ""
+        }
+    ],
+    "themes" : [
+        "il-theme-orange",
+        "il-theme-blue",
+        "il-theme-white",
+        "il-theme-blue-gradient",
+        "il-theme-gray"
+    ],
+    "classes": [
+        {
+            "type": "fixed",
+            "value": "il-card"
+        },
+        {
+            "description": "Size",
+            "type": "dropdown",
+            "values": [
+                "",
+                "il-size-small",
+                "il-size-large"
+            ]
+        }
+    ],
+    "cssVariables": [
+        {
+            "name": "--il-content--color",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-content--heading--color",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-content--font-weight",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-content--font-size",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-content--line-height",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-content--font-family",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-content-heading-base-size",
+            "description" : "also is the h6 size",
+            "type": "text"
+        },
+        {
+            "name": "--il-content-heading-ratio",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-content-h5-size",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-content-h4-size",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-content-h3-size",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-content-h2-size",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-content-h1-size",
+            "description" : "",
+            "type": "text"
+        }
+    ]
+}

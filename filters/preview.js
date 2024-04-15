@@ -1,73 +1,65 @@
 module.exports = class ComponentFilters {
-    static build(name, componentName, components) {
+    static build(name, components) {
         let returnValue = '';
-        let attributes = '';
-        let classes = '';
+        let fixedAttributes = '';
+        let fixedClasses = '';
+        let id = 1;
+
         components.forEach(component => {
-            if (component.slug === name) {
-                let componentSampleText = component.sample;
+            if (component.name === name && component.usePreview) {
+                component.classes.forEach(c => {
+                    if (c.type == 'fixed') {
+                        fixedClasses += c.value + ' ';
+                    }
+                });
 
-                if (component.attributes != null) {
-                    component.attributes.forEach((c, i) => {
-                        if (c.depreciated != null && !c.depreciated && (c.type == "url" || c.type == "string")) {
-                            attributes = attributes + `${c.name}="${c.value}" `;
-                        } 
-                    });
-                }
-
-                if (component.classes != null) {
-                    component.classes.forEach((c, i) => {
-                        if (c.type == "fixed" || c.type == "string") {
-                            classes = classes + `${c.value} `;
-                        } 
-                    });
-                }
-                
-                if (component.attributes != null) {
-                    component.attributes.forEach((c, i) => {
-                        if (c.depreciated != null && !c.depreciated && c.type == "dropdown") {
-                            c.values.forEach((v, i2) => {
-                                if (v != '') {
-                                    returnValue = returnValue + `<div class='il-formatted header-info'><h2>Attribute: ${c.name} is ${v}</h2></div>`;
-                                    returnValue = returnValue + `<${componentName} ${attributes} ${c.name}="${v}" class="${classes}">${componentSampleText}</${componentName}>`;
-                                }
-                            });
-                        } 
-                    });
-                }
-
-                let constantClass = false;
-                if (component.classes != null) {
-                    component.classes.forEach((c, i) => {
-                        if (c.type == "dropdown") {
-                            if (!constantClass) {
-                                constantClass = c.values;
-                                c.values.forEach((v, i2) => {
+                component.samples.forEach(sample => {
+                    if (sample.usePreview) {
+                        returnValue += `<il-content><div class="builder-frame-sample"><h2 class="builder-frame">Sample: ${sample.name}</h2></div></il-content>`;
+                        returnValue += `<il-content><h3 class="builder-frame">Default</h3></il-content>`;
+                        let outerTag = '';
+                        let outerTagEnd = '';
+                        if (sample.defaultParentElement != '') {
+                            outerTag = `<${sample.defaultParentElement} style='${sample.defaultParentElementStyle}'>`;
+                            outerTagEnd = `</${sample.defaultParentElement}>`;
+                        }
+                        let tag = `<${component.tagName} ${fixedAttributes} ${ComponentFilters.fixId(sample.defaultAttributeText, id)} class='${fixedClasses}'>`;
+                        let tagEnd = `</${component.tagName}>`;
+                        returnValue += outerTag + tag + ComponentFilters.fixId(sample.text, id) + tagEnd + outerTagEnd;
+                        id = id + 1;
+                        component.classes.forEach(c => {
+                            if (c.type == 'dropdown') {
+                                c.values.forEach(v => {
                                     if (v != '') {
-                                        returnValue = returnValue + `<div class='il-formatted header-info'><h2>Class: ${v}</h2></div>`;
-                                        returnValue = returnValue + `<${componentName} ${attributes} class="${classes}${v.trim()}">${componentSampleText}</${componentName}>`;
-                                    } else {
-                                        returnValue = returnValue + `<div class='il-formatted header-info'><h2>No class information</h2></div>`;
-                                        returnValue = returnValue + `<${componentName} ${attributes} class="${classes}">${componentSampleText}</${componentName}>`;
+                                        returnValue += `<il-content><h3 class="builder-frame">${c.description}: ${v}</h3></il-content>`;
+                                        let tag = `<${component.tagName} ${fixedAttributes} ${ComponentFilters.fixId(sample.defaultAttributeText, id)} class='${fixedClasses} ${v}'>`;
+                                        returnValue += outerTag + tag + ComponentFilters.fixId(sample.text, id) + tagEnd + outerTagEnd;
+                                        id = id + 1;
                                     }
                                 });
-                            } else {
-                                constantClass.forEach((cclass, iclass) => {
-                                    c.values.forEach((v, i2) => {
+                            }
+                        });
+                        component.themes.forEach(theme => {
+                            returnValue += `<il-content><h3 class="builder-frame">Theme: ${theme}</h3></il-content>`;
+                            let tag = `<${component.tagName} ${fixedAttributes} ${ComponentFilters.fixId(sample.defaultAttributeText, id)} class='${fixedClasses} ${theme}'>`;
+                            returnValue += outerTag + tag + ComponentFilters.fixId(sample.text, id) + tagEnd + outerTagEnd;
+                            id = id + 1;
+                            component.classes.forEach(c => {
+                                if (c.type == 'dropdown') {
+                                    c.values.forEach(v => {
                                         if (v != '') {
-                                            returnValue = returnValue + `<div class='il-formatted header-info'><h2>Class: ${cclass} ${v}</h2></div>`;
-                                            returnValue = returnValue + `<${componentName} ${attributes} class="${classes} ${v.trim()} ${cclass.trim()}">${componentSampleText}</${componentName}>`;
+                                            returnValue += `<il-content><h3 class="builder-frame">Theme: ${theme} and ${c.description}: ${v}</h3></il-content>`;
+                                            let tag = `<${component.tagName} ${fixedAttributes} ${ComponentFilters.fixId(sample.defaultAttributeText, id)} class='${fixedClasses} ${theme} ${v}'>`;
+                                            returnValue += outerTag + tag + ComponentFilters.fixId(sample.text, id) + tagEnd + outerTagEnd;
+                                            id = id + 1;
                                         }
                                     });
-                                });
-                            }
-                        } 
-                    });
-                }
-                if (returnValue == '') {
-                    returnValue = returnValue + `<div class='il-formatted header-info'><h2>Default Information</h2></div>`;
-                    returnValue = returnValue + `<${componentName} ${attributes} class="${classes}">${componentSampleText}</${componentName}>`;
-                }
+                                }
+                            });
+                        });
+                    }
+                });
+
             }
         });
         return returnValue;
@@ -114,5 +106,9 @@ module.exports = class ComponentFilters {
             }
         });
         return returnValue;
+    }
+
+    static fixId(item, id) {
+        return item.replaceAll('\"example-id\"', '\"id' + id + '\"').replaceAll("'example-id'", "'id" + id + "'");
     }
 }

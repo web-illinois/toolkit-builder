@@ -1,0 +1,115 @@
+{
+    "name": "il-content-introduction",
+    "title": "Content Area, Introduction",
+    "tagName": "il-content",
+    "type": "Custom Element",
+    "version": "v3.0",
+    "description": "Introduction section at the beginning of the page",
+    "usePreview": true,
+    "samples": [
+        {
+            "name": "default",
+            "text": "<p><i>Discover your path, define your future.</i></p><p>No matter what path brought you to ACES, we're glad you're here. A strong education is just a stepping stone to all of the incredible opportunities that await you.</p><p>Join us in changing your future and the world when you accept your ACES admission.</p><p><a href='https://www.example.org' class='il-button'>Apply</a><a href='https://www.example.com' class='il-button'>Request Information</a></p>",
+            "defaultParentElement": "",
+            "defaultParentElementStyle": "",
+            "defaultAttributeText": ""
+        }
+    ],
+    "themes" : [
+        "il-theme-orange",
+        "il-theme-blue",
+        "il-theme-white",
+        "il-theme-blue-gradient",
+        "il-theme-gray"
+    ],
+    "classes": [
+        {
+            "type": "fixed",
+            "value": "il-introduction"
+        },
+        {
+            "description": "Size",
+            "type": "dropdown",
+            "values": [
+                "",
+                "il-size-small",
+                "il-size-large"
+            ]
+        },
+        {
+            "description": "Margin Option",
+            "type": "dropdown",
+            "values": [
+                "",
+                "il-fixed-width"
+            ]
+        }
+    ],
+    "cssVariables": [
+        {
+            "name": "--il-content--color",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-content--heading--color",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-content--font-weight",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-content--font-size",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-content--line-height",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-content--font-family",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-content-heading-base-size",
+            "description" : "also is the h6 size",
+            "type": "text"
+        },
+        {
+            "name": "--il-content-heading-ratio",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-content-h5-size",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-content-h4-size",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-content-h3-size",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-content-h2-size",
+            "description" : "",
+            "type": "text"
+        },
+        {
+            "name": "--il-content-h1-size",
+            "description" : "",
+            "type": "text"
+        }
+    ]
+}

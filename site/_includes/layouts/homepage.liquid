@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" class="il-toolkit">
+<head>
+    {% include head.liquid %}
+    <link rel="stylesheet" href="../styles/component.css" media="all">
+    <title>Home for {{ currentEnvironment.name }} | Toolkit Builder | U of I </title>
+</head>
+<body style="margin: 0;">
+    <main>
+    <il-content style="padding: 20px 50px; max-width: 1200px; margin: auto;">
+
+        <h1>Toolkit Builder for {{ currentEnvironment.name }} </h1>
+        <p>This is the landing page for the toolkit builder for this environment. The tests here represent tests used in the toolkit build, plus interesting combinations of CSS and HTML to demonstrate additional capacities of the toolkit.</p>
+        <p>You can <a href="../index.html"> go back to the environment list</a>.</p>
+        <p>This is obviously a work in progress.</p>
+<!--
+        <h2>Start Here</h2>
+        <p>You need to <a href="head-statement/index.html">include elements into the <em>&lt;head&gt;</em> element</a> of your HTML page.</p> 
+-->
+        <h2>Component List</h2>
+        {{ title | buildComponentTableOfContents: components, currentEnvironment }}
+
+        <h2>Preview List</h2>
+        {{ title | buildPreviewTableOfContents: themes }}
+
+        <h3>Run into an issue?</h3>
+        <p>Please create a Github issue so we can look into it.</p><a href="https://github.com/web-illinois/toolkit/issues/new" class="il-button">Report an issue</a>
+    </il-content>
+    </main>
+</body>
+</html>
+
+

@@ -4,20 +4,11 @@
   "order": 99,
   "environments": [
     {
-      "name": "Use your local machine for development (localhost)",
-      "notes": "",
-      "slug": "localhost",
-      "prefetch": "http://localhost:5173",
-      "path": "http://localhost:5173",
-      "externalCodePre": "",
-      "externalCodePost": ""
-    },
-    {
-      "name": "Vite branch",
-      "notes": "",
-      "slug": "vite",
-      "prefetch": "https://dev.toolkit.illinois.edu",
-      "path": "https://dev.toolkit.illinois.edu/vite",
+      "name": "3.0.0 Alpha 2",
+      "notes": "Alpha 2, released on 7/17/2023.",
+      "slug": "3.0.0-alpha.2",
+      "prefetch": "https://cdn.toolkit.illinois.edu",
+      "path": "https://cdn.toolkit.illinois.edu/3.0.0-alpha.2",
       "externalCodePre": "",
       "externalCodePost": ""
     }

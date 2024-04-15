@@ -1,0 +1,13 @@
+{
+    "name": "Vite branch",
+    "version": "3.0.0-dev",
+    "componentVersion": "3.0.0-dev",
+    "flagNewComponents": true,
+    "date": "",
+    "notes": "Vite branch -- this is the test area for the new code",
+    "slug": "vite",
+    "prefetch": "https://dev.toolkit.illinois.edu",
+    "path": "https://dev.toolkit.illinois.edu/vite",
+    "externalCodePre": "",
+    "externalCodePost": ""
+}

@@ -1,158 +1,215 @@
+:root {
+  --ilbuilder-content-max-width: 1140px;
+  --ilbuilder-content-margin: 30px;
+}
+
+button.il-button {
+  border-color: var(--il-content--button--border-color);
+  border-style: solid;
+  border-width: 2px;
+  background-color: var(--il-content--button--background-color);
+  border-radius: .25em;
+  color: var(--il-content--button--color, inherit);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--il-font-sans);
+  font-size: max(var(--il-content--button--font-size), 19px);
+  font-weight: 700;
+  letter-spacing: .01em;
+  line-height: 1em;
+  outline: 0;
+  margin: .25em .5em .25em 0;
+  padding: .5em 1em;
+  text-align: center;
+  text-decoration: none;
+}
+
+button.il-button:hover,
+button.il-button:focus {
+  outline: 0;
+  background-color: var(--il-blue);
+  border-color: var(--il-blue);
+  color: white;
+}
+
+table th, table td {
+  padding: 20px;
+}
+
+caption {
+  visibility: hidden;
+}
+
 .show {
-    opacity: 1;
+  opacity: 1;
 }
 
 .hide {
-    opacity: 0;
-    transition: opacity 400ms;
+  opacity: 0;
+  transition: opacity 400ms;
 }
+
 .warning {
-    color: red;
-    margin-left: 20px;
-    font-weight: bold;
+  color: red;
+  margin-left: 20px;
+  font-weight: bold;
 }
 
-.il-formatted h3.component-heading {
-    margin-top: 1.41379em;
+.hidden {
+  display: none;
 }
 
-.headingarea {
-    padding: 0 50px;
+code#buildingCode,
+code.building {
+  display: block;
+  padding: 30px;
+  background: var(--il-cloud);
+  margin: 20px 0;
+  border: thin solid black;
 }
 
-.headingarea.text {
-    max-width: var(--il-content-max-width);
-    margin: 40px auto;
-    padding: 0;
+.template-information,
+.template-information-parent,
+.template-information-parent-style,
+.template-information-attributes {
+  display: none;
 }
 
-.headingarea .built {
-    display: flex; 
-    column-gap: 50px;
+.builder-frame {
+  padding: 0 var(--ilbuilder-content-margin);
+  margin: 0 auto;
 }
 
-.headingarea .built .full-width {
-    flex-grow: 1;
+.builder-header {
+  border-bottom: 2px solid green;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
-.headingarea .built .children {
-    flex: 1 0 0;
+.builder-start {
+  border-top: 2px solid green;
+  margin-top: 20px;
+  padding-top: 20px;
 }
 
-#template-options {
-    padding: 10px;
-    font: 1rem var(--il-source-sans);
+.builder-frame-wide {
+  display: flex;
+  column-gap: 20px;
+  padding: 0 var(--ilbuilder-content-margin);
+  margin-bottom: 20px;
 }
 
-#options label.depreciated {
-    display: none;
+.builder-frame-wide .children {
+  flex: 0 1 50%;
+  background: var(--il-cloud);
+  padding: 20px;
+  border: thin dashed var(--il-blue);
 }
 
-#options label, #class-list label, #style-list label {
-    display: block;
-    margin-top: 10px;
-    background: var(--il-cloud-1);
-    padding: 10px;
-    font-family: var(--il-source-sans);
+.builder-limit {
+  max-width: var(--ilbuilder-content-max-width);
 }
 
-#options input, #options select, #class-list input, #class-list select, #style-list input, #style-list select {
-    margin-left: 10px;
-    font: 1rem var(--il-source-sans);
+select,
+input,
+textarea {
+  margin: 0;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #fff;
+  border: thin var(--il-blue) solid;
+  width: auto;
 }
 
-#options input, #class-list input, #style-list input {
-    width: 300px;
+input[type="checkbox"] {
+  width: 20px;
 }
 
-#options input.length {
-    width: 50px;
+select,
+input {
+  font: 16px/18px var(--il-source-sans);
 }
 
-#options input.single, #class-list input.single, #style-list input.single {
-    display: block;
+input:focus,
+textarea:focus,
+select:focus,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  background: var(--il-cloud);
+  outline: 3px solid var(--il-altgeld);
 }
 
-#options .checklink {
-    margin-left: 10px;
+input:hover,
+textarea:hover,
+select:hover {
+  background: var(--il-cloud);
 }
 
-#style-list input {
-    margin-left: 0px;
+textarea#template,
+textarea#pre {
+  width: 90%;
+  height: 200px;
 }
 
-code#buildingCode, code.building {
-    display: block;
-    padding: 30px;
-    background: var(--il-cloud);
-    margin:  20px 0;
-    border: thin solid black;
+.wrapping-group div,
+#cssVariable-list div,
+#class-list div,
+#options div,
+.template-option-group,
+.theme-option-group {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 300px auto;
+  margin: 20px 0;
 }
 
-textarea#template, textarea#pre {
-    width: 100%;
-    height: 200px;
+.template-option-group h3,
+.theme-option-group h3 {
+  font-size: var(--il-content--font-size);
+  text-align: right;
 }
 
-.template-information {
-    display: none;
+label {
+  margin: 0 15px 0 0;
+  text-align: right;
+  line-height: 1.3em;
 }
 
-#samples h2 {
-    margin: auto;
-    max-width: var(--il-content-max-width);
-    padding-top: 30px;
+
+.builder-preview .builder-frame {
+  margin-top: 50px;
 }
 
-.grid {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fill, 150px);
-    padding-top: 10px;
+.builder-preview .builder-frame-sample {
+  margin-top: 50px;
+  border-top: 1px solid var(--il-blue);
 }
 
-.grid > div {
-    border: thin solid var(--il-cloud-2);
-    text-align: center;
+main {
+  margin-top: 50px;
 }
 
-.headingarea .environment-production {
-    display: none;
+nav.builder-sidemenu {
+  position: absolute;
+  z-index: 10;
+  padding: 5px 10px;
+  right: 0;
+  top: 0;
+  display: flex;
+  height: 90px;
+  align-items: center;
+  width: 410px;
 }
 
-.headingarea .environment-development, .headingarea .environment-legacy {
-    border-top: thin solid var(--il-blue);
-    margin-top: 40px;
-    border-bottom: thin solid var(--il-blue);
-    margin-bottom: 40px;
+nav.builder-sidemenu ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
 }
 
-.builder-line {
-    width: 100%;
-    height: 10px;
-    background: #afa;
-    margin: 10px 0;
-}
-
-#builder {
-    margin: auto;
-}
-
-.width-500 {
-    width: 500px;
-    max-width: 500px;
-    margin: auto;
-}
-
-.width-800 {
-    width: 800px;
-    max-width: 800px;
-    margin: auto;
-}
-
-.fixed-background-color {
-    background-color: var(--il-background-color);
-    max-width: var(--il-content-max-width);
-    margin: auto;
-    padding: 50px;
+nav.builder-sidemenu ul li {
+  padding-left: 10px;
+  list-style: none;
+  margin-top: 0;
 }

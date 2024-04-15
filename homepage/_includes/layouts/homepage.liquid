@@ -14,6 +14,13 @@
     <main>
     <div class="il-formatted" style="padding: 20px 50px; max-width: var(--il-content-max-width); margin: auto;">
         {{ content }}
+
+        {{ title | buildHomepage: environments }}
+
+        <h2>What happened to the old Builder?</h2>
+
+        <p>When we moved to version 3, this included a revamp of the builder. However, <a href="https://builder.toolkit.illinois.edu">the old Toolkit Builder</a> is still available. However, this has been frozen and will not be maintained. </p>
+
         {% include footer.liquid %}
     </div>
     </main>

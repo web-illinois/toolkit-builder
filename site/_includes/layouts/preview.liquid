@@ -1,37 +1,25 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
+<html dir="ltr" lang="en" class="il-toolkit">
 <head>
     {% include head.liquid %}
     <link rel="stylesheet" href="/styles/component.css" media="all">    
-    <title>{{ title }} preview | U of I </title>
+    <title>{{ component.title }} on {{ currentEnvironment.name }} preview | U of I </title>
 </head>
 <body style="margin: 0;">
-<header>
-    <il-header>
-        <div slot="wordmark">
-            <il-unit-wordmark>
-                <h1><a href="https://builder.toolkit.illinois.edu/index.html">Component Builder Information</a></h1>
-            </il-unit-wordmark>
-        </div>
-        {% include menu.liquid %}
-    </il-header>
-</header>
+<nav class="builder-sidemenu il-theme-white">
+    <il-content>
+        <ul><li><a class="il-button" href="../../index.html">Home</a></li>
+        <li><a class="il-button" href="../build/{{ component.name }}/index.html">Build</a></li>
+        <li><a class="il-button" href="../notes/{{ component.name }}/index.html">Notes</a></li></ul>
+    </il-content>
+</nav>
+
 <main>
 
-<div class="il-formatted headingarea text">
-    <h1>{{ title }} Preview</h1>
-    {{ slug | addBuilder: components }}
-</div>
+<h1>{{ component.title }} on {{ currentEnvironment.name }} preview</h1>
 
-<div id="samples" class="{{ bodyClass }} {{ slug | addClassInfo: components }}">
-{{ slug | preview: componentName, components }}
-</div>
-
-<div>
-    {{ content }}
-</div>
-
-<div class="il-formatted headingarea text">
+<div class="builder-preview">
+{{ component.name | preview: components }}
 </div>
 
 </main>

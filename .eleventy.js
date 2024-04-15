@@ -8,6 +8,7 @@ const ColorCheck = require("./filters/colorCheck");
 const Preview = require("./filters/preview");
 const PreviewAll = require("./filters/previewAll");
 const Theme = require("./filters/theme");
+const ComponentChoices = require("./filters/componentChoices");
 
 module.exports = function (eleventyConfig) {
 
@@ -31,7 +32,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.setLibrary("md", markdownIt);
 
-  // Create description, builder, class information, icons, attributes, styles for components
+  // OLD -- Create description, builder, class information, icons, attributes, styles for components
   eleventyConfig.addFilter("addDescription", ComponentFilters.buildDescription);
 
   eleventyConfig.addFilter("addBuilder", ComponentFilters.buildBuilder);
@@ -40,41 +41,60 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("addClassInfo", ComponentFilters.buildClassInfo);
 
-  eleventyConfig.addFilter("buildAttributes", Attributes.build);
-
   eleventyConfig.addFilter("buildClassListHighlighted", ClassList.buildHighlighted);
   
   eleventyConfig.addFilter("buildClassList", ClassList.build);
 
   eleventyConfig.addFilter("buildStyles", Styles.build);
 
-  // Create environment list for dev/legacy
-  eleventyConfig.addFilter("buildEnvironmentList", TableOfContents.buildEnvironmentList);
+  // Used in site homepage 
+  eleventyConfig.addFilter("buildComponentTableOfContents", TableOfContents.buildComponents);
 
-  // Create table of contents (for production and all dev/legacy environments)
-  eleventyConfig.addFilter("buildTableOfContents", TableOfContents.build);
-  
-  eleventyConfig.addFilter("buildProductionTableOfContents", TableOfContents.buildProduction);
+  // Used in site homepage
+  eleventyConfig.addFilter("buildPreviewTableOfContents", TableOfContents.buildPreviews);
 
-  // Build header information for environment - main, pre, and post
+  // Used to build sample for component
+  eleventyConfig.addFilter("buildSamples", ComponentChoices.buildSamples);
+
+  // Used to build themes for component
+  eleventyConfig.addFilter("buildThemes", ComponentChoices.buildThemes);
+
+  // Used to build classes, attributes, css variables for component
+  eleventyConfig.addFilter("buildClasses", ComponentChoices.buildClasses);
+
+  eleventyConfig.addFilter("buildAttributes", ComponentChoices.buildAttributes);
+
+  eleventyConfig.addFilter("buildCssVariables", ComponentChoices.buildCssVariables);
+
+  // Used to get tag name for component
+  eleventyConfig.addFilter("getTagName", ComponentChoices.getTagName);
+
+  // Used to get tag name for component
+  eleventyConfig.addFilter("getDefaultParentElement", ComponentChoices.getDefaultParentElement);
+
+  // Used to get tag name for component
+  eleventyConfig.addFilter("getDefaultParentElementStyle", ComponentChoices.getDefaultParentElementStyle);
+
+  // OLD -- Build header information for environment - main, pre, and post
   eleventyConfig.addFilter("buildHeader", EnvironmentFilters.buildHeader);
 
   eleventyConfig.addFilter("buildPrecode", EnvironmentFilters.buildPreCode);
 
   eleventyConfig.addFilter("buildPostcode", EnvironmentFilters.buildPostCode);
 
-  // Build color array for color accessibility tester
+  // OLD -- Build color array for color accessibility tester
   eleventyConfig.addFilter("addColors", ColorCheck.build);
 
-  // Build previews
+  // Used to preview for component
   eleventyConfig.addFilter("preview", Preview.build);
 
+  // OLD -- Build previews
   eleventyConfig.addFilter("previewIcons", Preview.icons);
 
-  // Build themes (il-orange, il-blue, etc.)
+  // OLD -- Build themes (il-orange, il-blue, etc.)
   eleventyConfig.addFilter("theme", Theme.build);
 
-  // Build all components
+  // OLD -- Build all components
   eleventyConfig.addFilter("previewAll", PreviewAll.buildAll);
 
   eleventyConfig.addFilter("previewDefault", PreviewAll.buildDefault);
@@ -82,7 +102,8 @@ module.exports = function (eleventyConfig) {
 
   return {
     dir: {
-      input: "site"
+      input: "site",
+      output: "_site"
     }
   };
 };

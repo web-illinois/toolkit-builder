@@ -1,87 +1,42 @@
 module.exports = class TableOfContents {
-
-    static buildEnvironmentList(title, environments) {
-        let returnValue = '<h2>Web Component Alternate Environment List</h2> <table><caption class="il-invisible">Environment Information</caption>';
-        returnValue += "<tr><th scope='col'>Name</th><th scope='col'>Type</th><th scope='col'>Environment Details</th>";
-        environments.forEach(environment => {
-            if (environment.type != 'production' && environment.slug != 'localhost') {
-                returnValue += `<tr><td><a href='/${environment.type}/${environment.slug}/index.html'>${environment.name}</a></td>`;
-                returnValue += `<td>${environment.type}</td>`;
-                returnValue += `<td><a href='/${environment.slug}/index.html'>View environment details</a></td></tr>`;
-            }
-        });
-        returnValue += `</table>`;
-        return returnValue;
-    }
-
-    static buildProduction(title, components, environments) {
-        let returnValue = '';
-        environments.forEach(environment => {
-            if (environment.type == 'production') {
-                returnValue = "<h2>Web Component List for " + environment.name + "</h2><table><caption class='il-invisible'>Component Information</caption>";
-                returnValue += "<tr><th scope='col'>Name</th>";
-                returnValue += "<th scope='col'>Preview</th>";
-                returnValue += "<th scope='col'>Build</th>";
-                returnValue += "<th scope='col'>Introduced</th>";
-                returnValue += `<tr><th scope='row'>Setup Information (start with this)</th>`;
-                returnValue += `<td> -- </td><td><a href='/${environment.slug}/index.html'>Get HTML Header</a></td><td> -- </td>`;        
-                returnValue += "</tr>";
-                components.forEach(c => {
-                    if (c.environment == null || c.environment == '' || c.environment == environment.type) {
-                        returnValue += `<tr><th scope='row'>${c.title}</th>`;
-                        if (c.sample != null) {
-                            returnValue += `<td><a href='/${environment.slug}/${c.slug}-preview/index.html'>Preview</a></td>`;
-                        } else {
-                            returnValue += '<td> No preview </td>';
-                        }
-                        returnValue += `<td><a href='/${environment.slug}/${c.slug}/index.html'>Build</a></td>`;
-                        let statusItems = c.status.split(';');
-                        if (statusItems.length >= 3) {
-                            returnValue += `<td>${statusItems[1].trim()} (${statusItems[2].trim()})</td>`;
-                        } else if (statusItems.length >= 2) {
-                            returnValue += `<td>${statusItems[1].trim()}</td>`;
-                        } else {
-                            returnValue += `<td> no information </td>`;
-                        }
-                        returnValue += "</tr>";
-                    }
-                });
-                returnValue += "</table>";
-            }
-        });
-        return returnValue;
-    }
-
-    static build(environment, components) {
-        let returnValue = "<h2>Web Component List for " + environment.name + "</h2><table><caption class='il-invisible'>Component Information</caption>";
+    static buildComponents(title, components, currentEnvironment) {
+        let returnValue = "<table><caption class='il-invisible'>Component Information</caption>";
         returnValue += "<tr><th scope='col'>Name</th>";
-        returnValue += "<th scope='col'>Preview</th>";
+        returnValue += "<th scope='col'>Description</th>";
         returnValue += "<th scope='col'>Build</th>";
-        returnValue += "<th scope='col'>Introduced</th>";
-        returnValue += `<tr><th scope='row'>Setup Information (start with this)</th>`;
-        returnValue += `<td> -- </td><td><a href='/${environment.slug}/index.html'>Get HTML Header</a></td><td> -- </td>`;
-        returnValue += "</tr>";
+        returnValue += "<th scope='col'>Notes</th></tr>";
         components.forEach(c => {
-            if (c.environment == null || c.environment == '' || c.environment == environment.type) {
-                returnValue += `<tr><th scope='row'>${c.title}</th>`;
-                if (c.sample != null) {
-                    returnValue += `<td><a href='/${environment.slug}/${c.slug}-preview/index.html'>Preview</a></td>`;
-                } else {
-                    returnValue += '<td> No preview </td>';
+            if (c.title != null) {
+                returnValue += `<tr><th scope='row'>${c.title}`;
+                if (currentEnvironment.flagNewComponents && c.version != null && currentEnvironment.componentVersion == c.version) {
+                    returnValue += ' <span class="new-component"> (new component)</span>';
                 }
-                returnValue += `<td><a href='/${environment.slug}/${c.slug}/index.html'>Build</a></td>`;
-                let statusItems = c.status.split(';');
-                if (statusItems.length >= 3) {
-                    returnValue += `<td>${statusItems[1].trim()} (${statusItems[2].trim()})</td>`;
-                } else if (statusItems.length >= 2) {
-                    returnValue += `<td>${statusItems[1].trim()}</td>`;
+                returnValue += '</th>';
+                if (c.description != null && c.description != '') {
+                    returnValue += `<td>${c.description}</td>`;
                 } else {
-                    returnValue += `<td> no information </td>`;
+                    returnValue += `<td></td>`;
                 }
+                if (c.name != null && c.tagName != null && c.type != null) {
+                    returnValue += `<td><a href='builder-basic/${c.name}/index.html'>Basic</a> / <a href='builder/${c.name}/index.html'>Advanced</a></td>`;
+                } else {
+                    returnValue += '<td>See notes</td>';
+                }
+                returnValue += `<td><a href='notes/${c.name}/index.html'>Notes</a></td>`;
                 returnValue += "</tr>";
             }
         });
         returnValue += "</table>";
+        return returnValue;
+    }
+
+    static buildPreviews(title, themes) {
+        let returnValue = "<ul>";
+        returnValue += '<li><a href="preview-default/index.html">Default version of all the components</a></li>';
+        returnValue += '<li><a href="preview-all/index.html">All variations of all the components</a> (long)</li>';
+        themes.forEach(t => { returnValue += `<li><a href='themes/${t.name}/index.html'><strong>'${t.name}'</strong> theme</a></li>`; });
+        returnValue += "</ul>";
+        return '<p>Still working on this</p>';
         return returnValue;
     }
 }

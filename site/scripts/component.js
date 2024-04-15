@@ -1,25 +1,33 @@
 document.addEventListener("DOMContentLoaded", function(event) {
     let templates = document.querySelectorAll('.template-information');
-    let templateHeader = document.getElementById('template-header');
-    let templateOptions = document.getElementById('template-options');
+    let templateGroup = document.querySelector('.template-group');
+    let templateOptions = document.querySelector('.template-option-group');
     if (templates.length == 0) {
-        document.getElementById('template').disabled = true;
-        document.getElementById('template-title').innerHTML = 'This component does not support HTML';
-        templateHeader.style.display = 'none';
+        templateGroup.style.display = 'none';
         templateOptions.style.display = 'none';
     } else {
+        templateGroup.style.display = '';
         document.getElementById('template').innerHTML = templates[0].innerHTML;
+        document.getElementById('template').value = templates[0].innerHTML;
+        let templateParents = document.querySelectorAll('.template-information-parent');
+        let templateParentStyles = document.querySelectorAll('.template-information-parent-style');
+        let templateAttributeText = document.querySelectorAll('.template-information-attributes');
+        if (templateParents.length > 0) {
+            document.getElementById('wrapping-html').value = templateParents[0].innerHTML;
+            document.getElementById('wrapping-style').value = templateParentStyles[0].innerHTML;
+            document.getElementById('attribute-text').value = templateAttributeText[0].innerHTML;
+        }
+    
         if (templates.length == 1) {
-            templateHeader.style.display = 'none';
             templateOptions.style.display = 'none';
         } else {
-            templateHeader.style.display = '';
             templateOptions.style.display = '';
+            let templateSelectList = document.getElementById('template-options');
             templates.forEach((element, index) => {
                 let opt = document.createElement('option');
                 opt.value = index;
                 opt.innerHTML = element.getAttribute('data-name');
-                templateOptions.append(opt);
+                templateSelectList.append(opt);
             });
         }
     }
@@ -29,46 +37,98 @@ document.addEventListener("DOMContentLoaded", function(event) {
 function changeTemplate(e) {
     let templates = document.querySelectorAll('.template-information');
     document.getElementById('template').innerHTML = templates[e.value].innerHTML;
+    document.getElementById('template').value = templates[e.value].innerHTML;
+    let templateParents = document.querySelectorAll('.template-information-parent');
+    let templateParentStyles = document.querySelectorAll('.template-information-parent-style');
+    let templateAttributeText = document.querySelectorAll('.template-information-attributes');
+    if (templateParents.length > 0) {
+        document.getElementById('wrapping-html').value = templateParents[e.value].innerHTML;
+        document.getElementById('wrapping-style').value = templateParentStyles[e.value].innerHTML;
+        document.getElementById('attribute-text').value = templateAttributeText[e.value].innerHTML;
+    }
     build();
 }
 
 function build() {
     let builder = document.getElementById('builder');
-    builder.innerHTML = '';
-    let builderPre = document.getElementById('builder');
-    builderPre.innerHTML = document.getElementById('pre').value;
     let buildingCode = document.getElementById('buildingCode');
-    let builderObject = document.createElement(document.getElementById('component-name').value);
-    let attributes = document.querySelectorAll('#options input:not(.length):not(#depreciated), #options select:not(.unit)');
+    let htmlName = document.getElementById('component-name').value;
+    builder.innerHTML = '';
+    buildingCode.innerHTML = '';
+
+    // create object, add attributes, classes, theme
+    let builderObject = document.createElement(htmlName);
+
+    let attributes = document.querySelectorAll('#options input, #options select');
     attributes.forEach(a => { if (a.value != '') builderObject.setAttribute(a.id, a.value) });
-    let attributesLength = document.querySelectorAll('#options input.length');
-    attributesLength.forEach(a => { if (a.value != '') { 
-        let unit = document.getElementById(a.id + 'unit'); 
-        builderObject.setAttribute(a.id, a.value + unit.value); 
-    } });
+
     let classList = document.querySelectorAll('#class-list input, #class-list select');
     classList.forEach(c => { if (c.value != '') builderObject.classList.add(c.value) });
 
+    let themeOption = document.getElementById('theme-options');
+    if (themeOption != null && themeOption.value != "") { 
+        builderObject.classList.add(themeOption.value); 
+    }
+
+    var templateAttribute = document.getElementById('attribute-text').value;
+    if (templateAttribute != '') {
+        let templateArray = templateAttribute.split(" ");
+        templateArray.forEach(ta => {
+            let templateStringArray = ta.split("=");
+            if (templateStringArray.length > 1) {
+                builderObject.setAttribute(templateStringArray[0], templateStringArray[1].replaceAll("\"","").replaceAll("'",""));
+            } else {
+                builderObject.setAttribute(templateStringArray[0], true);
+            }
+        });
+    }
+
+    // add information from template
     builderObject.innerHTML = document.getElementById('template').value;
 
-    let styleObject =  document.createElement('style');
-    let useCustomStyles = false;
-    let styleList = document.querySelectorAll('#style-list input');
-    styleObject.innerHTML = `${document.getElementById('component-name').value}.builder-custom { `;
-    styleList.forEach(s => { if (s.value != '') { useCustomStyles = true; styleObject.innerHTML += s.id + ': ' + s.value + '; '; } });
-    styleObject.innerHTML += '}';
-    let warning = document.getElementById('buildingCode-warning');
+    // add style information
+    let cssStyle = '';
+    let cssVariableList = document.querySelectorAll('#cssVariable-list input');
+    cssVariableList.forEach(c => { if (c.value != '') cssStyle += c.getAttribute('data-name') + ': ' + c.value + '; '; });
 
-    if (useCustomStyles) {
-        builderObject.classList.add('builder-custom');
-        buildingCode.innerText = styleObject.outerHTML + '\n' + builderObject.outerHTML;
-        builder.append(styleObject);
-        builder.append(builderObject);
-        warning.style.display = '';
+    // check to see if there's a wrapping area - if there isn't and CSS styles are added, create one to add styles
+    let parentElement = document.getElementById('wrapping-html').value;
+    if (cssStyle != '' && parentElement == '') {
+        parentElement = 'div';
+    }
+    if (parentElement != '') {
+        let parentObject = document.createElement(parentElement);
+        if (document.getElementById('wrapping-class').value != '') {
+            parentObject.classList.add(document.getElementById('wrapping-class').value)
+        }
+        if (document.getElementById('wrapping-style').value != '') {
+            parentObject.style = document.getElementById('wrapping-style').value;
+        }
+        if (document.getElementById('wrapping-pre').value != '') {
+            let parentStyleObject = document.createElement('style');
+            parentStyleObject.innerHTML = document.getElementById('wrapping-pre').value;
+            parentObject.append(parentStyleObject);
+        }
+        if (cssStyle != '') {
+            let cssElement = document.createElement('style');
+            cssElement.innerHTML = htmlName + ' { ' + cssStyle + ' }';
+            parentObject.append(cssElement);
+        }
+        parentObject.append(builderObject);
+        builder.append(parentObject);
+        if (document.getElementById('wrapping-included').checked) {
+            buildingCode.innerText = builder.innerHTML.replace('#builder ', '');
+        } else {
+            buildingCode.innerText = builderObject.outerHTML;
+        }
     } else {
         buildingCode.innerText = builderObject.outerHTML;
         builder.append(builderObject);
-        warning.style.display = 'none';
+        if (cssStyle != '') {
+            let cssElement = document.createElement('style');
+            cssElement.innerHTML = '#builder ' + document.getElementById('component-name').value + ' { ' + cssStyle + ' }';
+            builder.append(cssElement);
+        }
     }
 }
 
@@ -93,13 +153,4 @@ function checkLink(id) {
         window.open(url, '_blank');
     }
     return false;
-}
-
-function toggleDepreciated(e) {
-    let list = document.querySelectorAll('.depreciated'); 
-    if (e.checked) { 
-        list.forEach(el => el.style.display = 'block');
-    } else {
-        list.forEach(el => el.style.display = 'none');
-    }
 }

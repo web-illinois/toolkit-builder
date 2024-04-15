@@ -23,13 +23,13 @@ gulp.task('concat-environments', () => {
 gulp.task('array-environments', () => {
   return gulp.src(['./homepage/array/start.txt', './homepage/array/environmentsPartial.txt', './homepage/array/end.txt'])
     .pipe(concat('environments.json'))
-    .pipe(gulp.dest('./site/_data'));
+    .pipe(gulp.dest('./homepage/_data'));
 });
 
 gulp.task('javascript', () => {
-  return gulp.src(['./site/scripts/clipboard.js', './site/scripts/component.js'])
+  return gulp.src(['./site/scripts/clipboard.js', './site/scripts/component.js', './site/scripts/codepen.js'])
     .pipe(concat('main.js'))
-    .pipe(uglify())
+//    .pipe(uglify())
     .pipe(gulp.dest('./site/scripts'));
 });
 
@@ -51,10 +51,8 @@ gulp.task('json-copy-homepage', () => {
     .pipe(gulp.dest('./homepage/data'));
 });
 
-gulp.task("site", gulp.series(["javascript", "javascript-preview", 
-"concat-components", "array-components", "json-copy"]));
+gulp.task("site", gulp.series(["javascript", "javascript-preview", "concat-components", "array-components", "json-copy"]));
 
-gulp.task("homepage", gulp.series(["concat-environments", 
-"array-environments", "json-copy-homepage"]));
+gulp.task("homepage", gulp.series(["concat-environments", "array-environments", "json-copy-homepage"]));
 
 gulp.task("default", gulp.series(["site", "homepage"]));

@@ -1,92 +1,103 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
+<html dir="ltr" lang="en" class="il-toolkit">
 <head>
-{% include head.liquid %}
-    <script src="/scripts/main.js"></script>
-    <link rel="stylesheet" href="/styles/component.css" media="all">
-    <title>{{ title }} on {{ environment.name }} | U of I </title>
+    {% include head.liquid %}
+    <script src="../../scripts/main.js"></script>
+    <link rel="stylesheet" href="../../styles/component.css" media="all">
+    <title>{{ component.title }} for {{ currentEnvironment.name }} | Toolkit Builder | U of I </title>
 </head>
 <body style="margin: 0;">
-<header>
-    <il-header>
-        <div slot="wordmark">
-            <il-unit-wordmark>
-                <h1><a href="https://builder.toolkit.illinois.edu/index.html">Component Builder Information (old v2 version)</a></h1>
-            </il-unit-wordmark>
-        </div>
-        {% include menu.liquid %}
-    </il-header>
-</header>
+<nav class="builder-sidemenu il-theme-white">
+    <il-content>
+        <ul><li><a class="il-button" href="../../index.html">Home</a></li>
+        <li><a class="il-button" href="../../builder-basic/{{ component.name }}/index.html">Basic</a></li>
+        <li><a class="il-button" href="../../notes/{{ component.name }}/index.html">Notes</a></li></ul>
+    </il-content>
+</nav>
 <main>
-
-<div class="il-formatted headingarea text">
-    <h1>{{ title }} on {{ environment.name }}</h1>
-
-    {{ slug | addDescription: components }}
-
-<div class="il-formatted headingarea text">
-{{ content }}
-</div>
-
-</div>
-<div class="il-formatted headingarea">
-<h2>Component Display</h2>
-</div>
-
-<div class="builder-line"></div>
-
-<div id="builder-pre" class="{{ bodyClass }}"></div>
-<div id="builder" class="{{ bodyClass }} {{ slug | addClassInfo: components }}"></div>
-
-<div class="builder-line"></div>
-
-<div class="il-formatted headingarea">
-<div class="built">
-    <h2 class="full-width">Change Your Content and Options</h2>
-</div>
-    <div class="built">
-        <div class="children">
-            <h3 id="template-title" class="component-heading">Template -- enter raw HTML here</h3>
-            <textarea id="template"></textarea>
-            <p><button class="il-button il-orange" onclick="build();">Rebuild Component With Selected Options</button></p>
-            <p><button class="il-button il-orange" onclick="buildNewWindow();">Rebuild Component In New Window</button></p>
-        </div>
-        <div class="children">
-            <h3 id="template-header" class="component-heading"><label for="template-options">Template Options</label></h3>
+<il-content class="builder-frame builder-header">
+    <h1>{{ component.title }} for {{ currentEnvironment.name }}</h1>
+</il-content>
+<div id="builder"></div>
+{{ component.name | buildSamples: components }}
+<input type="hidden" id="component-name" value="{{ component.name | getTagName: components }}">
+<il-content class="builder-start">
+<h2 class="builder-frame builder-edit">Edit Your Component</h2>
+<div class="builder-frame-wide">
+    <div class="children">
+        <div class="template-option-group">
+            <h3><label for="template-options">Choose a template option</label></h3>
             <select id="template-options" onchange="changeTemplate(this);"></select>
-            <h3 class="component-heading">Important Classes</h3>
-            <div id="class-list">
-            {{ slug | buildClassListHighlighted: components }}
-            </div>
-            <h3 class="component-heading">Classes</h3>
-            <div id="class-list">
-            {{ slug | buildClassList: components }}
-            </div>
-            <h3 class="component-heading">Attributes</h3>
-            <input type="hidden" id="component-name" value="{{ componentName }}">
-            <div id="options">
-            {{ slug | buildAttributes: components }}
-            </div>
-            <details style="margin-top: 40px;">
-            <summary style="font-size: 1rem;">
-            <h3 style="margin-top: 0;">Advanced Options</h3>
-            </summary>
-            <p>These options are only to be used in advanced situations -- most of your needs should be met through the attributes and classes, and this breaks the intent of having a unified design. </p>
-            <h3>Custom Style Tag before text</h3>
-            <textarea id="pre">&lt;style&gt;
-&lt;/style&gt;</textarea>
-            <div id="style-list">
-            {{ slug | buildStyles: components, colors }}
-            </div>
-            </details>
+        </div>
+        {{ component.name | buildThemes: components }}
+        {{ component.name | buildClasses: components }}
+        {{ component.name | buildAttributes: components }}
+    </div>
+    <div class="children">
+        <div class="template-group">
+            <h3 id="template-title" class="component-heading">Modify the raw HTML here</h3>
+            <textarea id="template"></textarea>
+            <p><button class="il-button il-orange" onclick="build();">Rebuild Component</button>
+            <button class="il-button il-orange" onclick="buildNewWindow();">Rebuild In New Window </button></p>
+            <p><a href="#instructions">Instructions on adding to your page</a></p>
         </div>
     </div>
-
-
+</div>
+<div class="builder-frame-wide">
+    <div class="children">
+        {{ component.name | buildCssVariables: components }}
+    </div>
+    <div class="children">
+        <h3>Wrapping information (advanced use only)</h3>
+        <div class="wrapping-group">
+        <div>
+            <label for="wrapping-html">Wrapping HTML item</label>
+            <input type="text" id="wrapping-html" name="wrapping-html" onchange="build();" value="{{ component.name | getDefaultParentElement: components }}" />
+        </div>
+        <div>
+            <label for="wrapping-class">Wrapping class</label>
+            <input type="text" id="wrapping-class" onchange="build();" name="wrapping-class">
+        </div>
+        <div>
+            <label for="wrapping-style">Wrapping style list</label>
+            <input type="text" id="wrapping-style" onchange="build();" name="wrapping-style" value="{{ component.name | getDefaultParentElementStyle: components }}">
+        </div>
+        <div>
+            <label for="wrapping-pre">Wrapping pre-code for styles</label>
+            <input type="text" id="wrapping-pre" onchange="build();" name="wrapping-pre">
+        </div>
+        <div>
+            <label for="attribute-text">Attribute text</label>
+            <input type="text" id="attribute-text" onchange="build();" name="attribute-text">
+        </div>
+        </div>
+    </div>
 </div>
 
-{% include buildingcode.liquid %}
-
+<div class="builder-frame">
+    <a name="instructions"></a>
+    <h2>How to add it to your page</h2>
+    <p>Copy and paste this in your page. Remember</p>
+    <ul>
+        <li>Make sure you have updated your component to make sure the below code is completed.</li>
+        <li> Make sure you have the <a href="../../head-statement/index.html">Header code</a> in your header.</li>
+    </ul>
+    <code id="buildingCode"></code>
+    <p id="buildingCode-warning">Note that this uses the custom style 'builder-custom'. You may need to change this if you are using multiple versions of this component with different styles.</p>
+    <p>
+        <label for="wrapping-included">Include advanced options (wrapping information and CSS variables) in HTML view?</label>
+        <input type="checkbox" id="wrapping-included" onchange="build();" name="wrapping-included">
+    </p>
+    <p>
+    <button class="il-button" onclick="sendToCodepen();">Create CodePen</button>
+    <button class="il-button" onclick="copyCode();">Copy to Clipboard</button>
+    <span id="buildingCodeCopied" class="warning hide">Copied to clipboard</span>
+    </p>
+    <form id="codepen-form" action="https://codepen.io/pen/define" method="POST" target="_blank">
+    <input id="codepen" type="hidden" name="data" value="">
+    </form>
+</div>
+</il-content>
 </main>
 </body>
 </html>

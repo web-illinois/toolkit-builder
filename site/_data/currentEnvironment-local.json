@@ -1,0 +1,13 @@
+{
+    "name": "localhost",
+    "version": "v2.16",
+    "componentVersion": "v2.16",
+    "flagNewComponents": true,
+    "date": "",
+    "notes": "Use your local machine for development -- this points to port 5173 on your local machine",
+    "slug": "localhost",
+    "prefetch": "http://localhost:5174",
+    "path": "http://localhost:5174",
+    "externalCodePre": "",
+    "externalCodePost": ""
+}

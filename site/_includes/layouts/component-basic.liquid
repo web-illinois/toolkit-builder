@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" class="il-toolkit">
+<head>
+    {% include head.liquid %}
+    <script src="../../scripts/main.js"></script>
+    <link rel="stylesheet" href="../../styles/component.css" media="all">
+    <title>Basic {{ component.title }} for {{ currentEnvironment.name }} | Toolkit Builder | U of I </title>
+</head>
+<body style="margin: 0;">
+<nav class="builder-sidemenu il-theme-white">
+    <il-content>
+        <ul><li><a class="il-button" href="../../index.html">Home</a></li>
+        <li><a class="il-button" href="../../builder/{{ component.name }}/index.html">Advanced</a></li>
+        <li><a class="il-button" href="../../notes/{{ component.name }}/index.html">Notes</a></li></ul>
+    </il-content>
+</nav>
+<main>
+<il-content class="builder-frame builder-header">
+    <h1>Basic {{ component.title }} for {{ currentEnvironment.name }}</h1>
+</il-content>
+<div id="builder"></div>
+{{ component.name | buildSamples: components }}
+<input type="hidden" id="component-name" value="{{ component.name | getTagName: components }}">
+<il-content class="builder-start">
+<div class="builder-frame builder-limit">
+    <h2>Edit Your Component</h2>
+    <div class="template-group">
+        <div class="template-option-group">
+            <h3><label for="template-options">Choose a template option</label></h3>
+            <select id="template-options" onchange="changeTemplate(this);"></select>
+        </div>
+        <textarea id="template" style="display: none;"></textarea>
+    </div>
+    {{ component.name | buildThemes: components }}
+    {{ component.name | buildClasses: components }}
+    {{ component.name | buildAttributes: components }}
+    <input type="hidden" id="wrapping-html" name="wrapping-html" onchange="build();" value="{{ component.name | getDefaultParentElement: components }}" />
+    <input type="hidden" id="wrapping-class" onchange="build();" name="wrapping-class">
+    <input type="hidden" id="wrapping-style" onchange="build();" name="wrapping-style" value="{{ component.name | getDefaultParentElementStyle: components }}">
+    <input type="hidden" id="wrapping-pre" onchange="build();" name="wrapping-pre">
+    <input type="hidden" id="attribute-text" onchange="build();" name="attribute-text">
+    <p><button class="il-button il-orange" onclick="build();">Rebuild Component</button>
+    <button class="il-button il-orange" onclick="buildNewWindow();">Rebuild In New Window </button></p>
+</div>
+
+<div class="builder-frame builder-limit">
+    <a name="instructions"></a>
+    <h2>How to add it to your page</h2>
+    <p>Copy and paste this in your page. Remember</p>
+    <ul>
+        <li>Make sure you have updated your component to make sure the below code is completed.</li>
+        <li> Make sure you have the <a href="../../head-statement/index.html">Header code</a> in your header.</li>
+    </ul>
+    <code id="buildingCode"></code>
+    <p id="buildingCode-warning">Note that this uses the custom style 'builder-custom'. You may need to change this if you are using multiple versions of this component with different styles.</p>
+    <p>
+        <label for="wrapping-included">Include advanced options (wrapping information and CSS variables) in HTML view?</label>
+        <input type="checkbox" id="wrapping-included" onchange="build();" name="wrapping-included">
+    </p>
+    <p>
+    <button class="il-button" onclick="sendToCodepen();">Create CodePen</button>
+    <button class="il-button" onclick="copyCode();">Copy to Clipboard</button>
+    <span id="buildingCodeCopied" class="warning hide">Copied to clipboard</span>
+    </p>
+    <form id="codepen-form" action="https://codepen.io/pen/define" method="POST" target="_blank">
+    <input id="codepen" type="hidden" name="data" value="">
+    </form>
+</div>
+</il-content>
+</main>
+</body>
+</html>
