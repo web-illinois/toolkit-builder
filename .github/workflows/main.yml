@@ -24,4 +24,4 @@ jobs:
     - name: Deploy examples to S3 bucket 
       run: aws s3 sync ./_site/ s3://builder2.toolkit.illinois.edu/content --delete --acl bucket-owner-full-control
     - name: Invalidate Cloudfront cache for 
-      run: aws cloudfront create-invalidation --distribution-id	7H24JF0N2G --paths "/*"
+      run: aws cloudfront create-invalidation --distribution-id	E1TMLCLAFNDZEZ --paths "/*"
